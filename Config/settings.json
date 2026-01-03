@@ -1,0 +1,53 @@
+﻿{
+    "Application": {
+        "Name": "InSight",
+        "Version": "1.0.0",
+        "Author": "Digital Workspace Engineering",
+        "ConfigVersion": 1
+    },
+    "Theme": {
+        "Mode": "Light",
+        "AccentColor": "#0078D4",
+        "FontFamily": "Segoe UI",
+        "FontSize": 12,
+        "EnableAnimations": true,
+        "EnableShadows": true
+    },
+    "Authentication": {
+        "TenantId": null,
+        "PreferredAuthMethod": "Interactive",
+        "RememberTenant": true,
+        "TokenRefreshBufferMinutes": 5,
+        "MaxSessionDurationHours": 10,
+        "EnforceSessionTimeout": true,
+        "ClearCacheOnTimeout": true
+    },
+    "UI": {
+        "WindowWidth": 1400,
+        "WindowHeight": 900,
+        "WindowState": "Normal",
+        "NavigationPaneWidth": 280,
+        "ShowStatusBar": true,
+        "ShowQuickActions": true,
+        "DefaultView": "Dashboard",
+        "GridPageSize": 50
+    },
+    "Data": {
+        "CacheEnabled": true,
+        "CacheDurationMinutes": 5,
+        "ExportPath": null,
+        "DefaultExportFormat": "CSV"
+    },
+    "Logging": {
+        "Level": "Information",
+        "EnableFileLogging": true,
+        "LogDirectory": "C:\\Logs\\IntuneAdmin",
+        "RetentionDays": 30
+    },
+    "Features": {
+        "EnableDeviceActions": true,
+        "EnableBulkOperations": false,
+        "EnableAdvancedFilters": true,
+        "ShowExperimentalItems": false
+    }
+}

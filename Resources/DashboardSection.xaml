@@ -1,0 +1,162 @@
+﻿<!--
+    InSight - Dashboard Section
+    Author: Kosta Wadenfalk
+    GitHub: https://github.com/MrOlof
+-->
+<ScrollViewer x:Name="DashboardView" Visibility="Collapsed" Padding="30">
+    <StackPanel>
+        <!-- Header -->
+        <StackPanel Margin="0,0,0,30">
+            <TextBlock Text="Dashboard" FontSize="{DynamicResource FontSizeHeader}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+            <TextBlock Text="Quick access to InSights and workflows" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,8,0,0"/>
+        </StackPanel>
+
+        <!-- Primary Actions Grid -->
+        <Grid Margin="0,0,0,30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Scripts & Queries -->
+            <Border Grid.Column="0" Style="{StaticResource CardStyle}" Cursor="Hand">
+                <StackPanel>
+                    <Grid Margin="0,0,0,16">
+                        <TextBlock Text="&#xE756;" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="{DynamicResource AccentBrush}"/>
+                    </Grid>
+                    <TextBlock Text="Scripts &amp; Queries" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                    <TextBlock Text="Run PowerShell scripts and Graph API queries against your environment" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,16"/>
+                    <Button Content="Open Scripts" Style="{StaticResource ModernButtonStyle}" HorizontalAlignment="Left"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Baseline Checks -->
+            <Border Grid.Column="2" Style="{StaticResource CardStyle}" Cursor="Hand">
+                <StackPanel>
+                    <Grid Margin="0,0,0,16">
+                        <TextBlock Text="&#xE73E;" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="{DynamicResource SuccessBrush}"/>
+                    </Grid>
+                    <TextBlock Text="Baseline Checks" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                    <TextBlock Text="Run NIST and CIS baseline compliance checks on devices and policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,16"/>
+                    <Button Content="Run Baseline Check" Style="{StaticResource ModernButtonStyle}" HorizontalAlignment="Left"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Config Export/Import -->
+            <Border Grid.Column="4" Style="{StaticResource CardStyle}" Cursor="Hand">
+                <StackPanel>
+                    <Grid Margin="0,0,0,16">
+                        <TextBlock Text="&#xE8E5;" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="{DynamicResource WarningBrush}"/>
+                    </Grid>
+                    <TextBlock Text="Config Export" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                    <TextBlock Text="Export device configs, policies, and settings as JSON for backup or migration" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,16"/>
+                    <Button Content="Export Configs" Style="{StaticResource ModernButtonStyle}" HorizontalAlignment="Left"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- Remediation Scripts Section -->
+        <Border Style="{StaticResource CardStyle}" Margin="0,0,0,30">
+            <StackPanel>
+                <Grid Margin="0,0,0,20">
+                    <TextBlock Text="Remediation Scripts" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                    <Button x:Name="ManageRemediationsButton" Content="Manage" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Right"/>
+                </Grid>
+                <TextBlock Text="Create, deploy, and manage Intune remediation scripts for proactive device management" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,20"/>
+                <WrapPanel>
+                    <Button x:Name="NewRemediationButton" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,12,12">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE710;" FontFamily="Segoe MDL2 Assets" Margin="0,0,8,0"/>
+                            <TextBlock Text="New Remediation"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="ImportRemediationButton" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,12,12">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE8B5;" FontFamily="Segoe MDL2 Assets" Margin="0,0,8,0"/>
+                            <TextBlock Text="Import from File"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="ExportRemediationButton" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,12,12">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE74E;" FontFamily="Segoe MDL2 Assets" Margin="0,0,8,0"/>
+                            <TextBlock Text="Export All"/>
+                        </StackPanel>
+                    </Button>
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Quick Actions -->
+        <Border Style="{StaticResource CardStyle}">
+            <StackPanel>
+                <TextBlock Text="Quick Actions" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,20"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="12"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="12"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Column="0" Grid.Row="0" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE721;" FontFamily="Segoe MDL2 Assets" FontSize="18" Margin="0,0,12,0"/>
+                            <StackPanel>
+                                <TextBlock Text="Device Search" FontWeight="SemiBold"/>
+                                <TextBlock Text="Find devices by name or serial" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Column="1" Grid.Row="0" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12" Margin="12,0,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE77B;" FontFamily="Segoe MDL2 Assets" FontSize="18" Margin="0,0,12,0"/>
+                            <StackPanel>
+                                <TextBlock Text="User Lookup" FontWeight="SemiBold"/>
+                                <TextBlock Text="Find user and their devices" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE8FE;" FontFamily="Segoe MDL2 Assets" FontSize="18" Margin="0,0,12,0"/>
+                            <StackPanel>
+                                <TextBlock Text="Bulk Operations" FontWeight="SemiBold"/>
+                                <TextBlock Text="Sync, retire, or wipe multiple devices" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12" Margin="12,0,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE9F9;" FontFamily="Segoe MDL2 Assets" FontSize="18" Margin="0,0,12,0"/>
+                            <StackPanel>
+                                <TextBlock Text="Generate Reports" FontWeight="SemiBold"/>
+                                <TextBlock Text="Create custom reports and exports" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE74E;" FontFamily="Segoe MDL2 Assets" FontSize="18" Margin="0,0,12,0"/>
+                            <StackPanel>
+                                <TextBlock Text="Export Everything as JSON" FontWeight="SemiBold"/>
+                                <TextBlock Text="Full tenant backup: policies, apps, compliance, configurations" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</ScrollViewer>

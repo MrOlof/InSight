@@ -1,0 +1,149 @@
+﻿<!--
+    InSight - Advanced Search Dialog
+    Author: Kosta Wadenfalk
+    GitHub: https://github.com/MrOlof
+-->
+<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Advanced Policy Search"
+    Width="1200"
+    Height="800"
+    MinWidth="900"
+    MinHeight="600"
+    WindowStartupLocation="CenterOwner"
+    Background="#F3F3F3">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="BackgroundBrush" Color="#F3F3F3"/>
+        <SolidColorBrush x:Key="SurfaceBrush" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="AccentBrush" Color="#0078D4"/>
+        <SolidColorBrush x:Key="AccentHoverBrush" Color="#106EBE"/>
+        <SolidColorBrush x:Key="TextPrimaryBrush" Color="#1A1A1A"/>
+        <SolidColorBrush x:Key="TextSecondaryBrush" Color="#605E5C"/>
+        <SolidColorBrush x:Key="TextTertiaryBrush" Color="#8A8886"/>
+        <SolidColorBrush x:Key="BorderBrush" Color="#E1E1E1"/>
+        <SolidColorBrush x:Key="NavItemHoverBrush" Color="#E5E5E5"/>
+
+        <sys:Double xmlns:sys="clr-namespace:System;assembly=mscorlib" x:Key="FontSizeNormal">13</sys:Double>
+        <sys:Double xmlns:sys="clr-namespace:System;assembly=mscorlib" x:Key="FontSizeLarge">18</sys:Double>
+
+        <Style x:Key="ModernButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource AccentBrush}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="FontSize" Value="{StaticResource FontSizeNormal}"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" CornerRadius="6" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True"><Setter TargetName="border" Property="Background" Value="{StaticResource AccentHoverBrush}"/></Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SearchBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="{StaticResource SurfaceBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextPrimaryBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="36,10,12,10"/>
+            <Setter Property="FontSize" Value="{StaticResource FontSizeNormal}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="6">
+                            <ScrollViewer x:Name="PART_ContentHost" Padding="{TemplateBinding Padding}" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header with Search -->
+        <Border Grid.Row="0" Background="{StaticResource SurfaceBrush}" BorderBrush="{StaticResource BorderBrush}" BorderThickness="0,0,0,1" Padding="30,20">
+            <StackPanel>
+                <TextBlock Text="Advanced Policy Search" FontSize="{StaticResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}"/>
+                <TextBlock x:Name="SearchSubtitle" Text="Search through policy names, descriptions, and settings (Settings Catalog and Device Configuration only)" FontSize="{StaticResource FontSizeNormal}" Foreground="{StaticResource TextSecondaryBrush}" Margin="0,4,0,0"/>
+
+                <!-- Search box with button -->
+                <Grid Margin="0,16,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="SearchBox" Style="{StaticResource SearchBoxStyle}"/>
+                        <TextBlock Text="&#xE721;" FontFamily="Segoe MDL2 Assets" FontSize="14" Foreground="{StaticResource TextTertiaryBrush}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="12,0,0,0" IsHitTestVisible="False"/>
+                        <TextBlock x:Name="SearchPlaceholder" Text="Search for settings (e.g., 'edge', 'firewall', 'password')..." FontSize="{StaticResource FontSizeNormal}" Foreground="{StaticResource TextTertiaryBrush}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="36,0,0,0" IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <Button x:Name="SearchButton" Grid.Column="1" Content="Search" Style="{StaticResource ModernButtonStyle}" Margin="12,0,0,0" Padding="30,10"/>
+                </Grid>
+
+                <!-- Status/Loading -->
+                <TextBlock x:Name="SearchStatus" Text="Ready to search" FontSize="{StaticResource FontSizeNormal}" Foreground="{StaticResource TextSecondaryBrush}" Margin="0,12,0,0" Visibility="Collapsed"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Results Area -->
+        <Border Grid.Row="1" Background="{StaticResource BackgroundBrush}" Padding="30,20">
+            <Grid>
+                <!-- Empty state -->
+                <StackPanel x:Name="EmptyState" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Visible">
+                    <TextBlock Text="&#xE721;" FontFamily="Segoe MDL2 Assets" FontSize="64" Foreground="{StaticResource TextTertiaryBrush}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Enter a search term to find policies" FontSize="{StaticResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center" Margin="0,16,0,0"/>
+                    <TextBlock Text="Search through policy names, descriptions, Settings Catalog settings, and Device Configuration properties. Administrative Templates are searchable by name only." FontSize="{StaticResource FontSizeNormal}" Foreground="{StaticResource TextSecondaryBrush}" HorizontalAlignment="Center" TextAlignment="Center" MaxWidth="500" TextWrapping="Wrap" Margin="0,8,0,0"/>
+                </StackPanel>
+
+                <!-- Results List - Simple DataGrid like Settings Catalog -->
+                <DataGrid x:Name="ResultsDataGrid"
+                          Visibility="Collapsed"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          GridLinesVisibility="None"
+                          HeadersVisibility="Column"
+                          SelectionMode="Single"
+                          CanUserAddRows="False"
+                          CanUserDeleteRows="False"
+                          CanUserResizeRows="False"
+                          Background="{StaticResource SurfaceBrush}"
+                          BorderBrush="{StaticResource BorderBrush}"
+                          BorderThickness="1"
+                          RowBackground="{StaticResource SurfaceBrush}"
+                          AlternatingRowBackground="#FAFAFA"
+                          FontSize="{StaticResource FontSizeNormal}"
+                          ColumnWidth="*">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Policy Name" Binding="{Binding PolicyName}" Width="3*"/>
+                        <DataGridTextColumn Header="Type" Binding="{Binding PolicyType}" Width="2*"/>
+                        <DataGridTextColumn Header="Matches" Binding="{Binding MatchCount}" Width="1.5*"/>
+                        <DataGridTextColumn Header="Match Details" Binding="{Binding MatchDetails}" Width="4*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
+
+        <!-- Footer -->
+        <Border Grid.Row="2" Background="{StaticResource SurfaceBrush}" BorderBrush="{StaticResource BorderBrush}" BorderThickness="0,1,0,0" Padding="30,20">
+            <Button x:Name="CloseButton" Content="Close" Style="{StaticResource ModernButtonStyle}" HorizontalAlignment="Right" IsCancel="True"/>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,3867 @@
+﻿{
+    "mappings":  [
+                     {
+                         "commonNames":  [
+                                             "7-Zip",
+                                             "7Zip",
+                                             "7 Zip"
+                                         ],
+                         "packageId":  "7zip.7zip",
+                         "publisher":  "Igor Pavlov"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Adobe Acrobat Reader",
+                                             "Adobe Reader",
+                                             "Acrobat Reader DC",
+                                             "Adobe Acrobat Reader DC"
+                                         ],
+                         "packageId":  "Adobe.Acrobat.Reader.64-bit",
+                         "publisher":  "Adobe"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Notepad++",
+                                             "Notepad Plus Plus"
+                                         ],
+                         "packageId":  "Notepad++.Notepad++",
+                         "publisher":  "Notepad++"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Google Chrome",
+                                             "Chrome"
+                                         ],
+                         "packageId":  "Google.Chrome",
+                         "publisher":  "Google"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Microsoft Edge",
+                                             "Edge"
+                                         ],
+                         "packageId":  "Microsoft.Edge",
+                         "publisher":  "Microsoft"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Mozilla Firefox",
+                                             "Firefox"
+                                         ],
+                         "packageId":  "Mozilla.Firefox",
+                         "publisher":  "Mozilla"
+                     },
+                     {
+                         "commonNames":  [
+                                             "VLC",
+                                             "VLC Player",
+                                             "VLC Media Player"
+                                         ],
+                         "packageId":  "VideoLAN.VLC",
+                         "publisher":  "VideoLAN"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Visual Studio Code",
+                                             "VS Code",
+                                             "VSCode",
+                                             "Code"
+                                         ],
+                         "packageId":  "Microsoft.VisualStudioCode",
+                         "publisher":  "Microsoft"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Git",
+                                             "Git for Windows"
+                                         ],
+                         "packageId":  "Git.Git",
+                         "publisher":  "Git"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Python",
+                                             "Python 3"
+                                         ],
+                         "packageId":  "Python.Python.3.12",
+                         "publisher":  "Python"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Node.js",
+                                             "NodeJS",
+                                             "Node"
+                                         ],
+                         "packageId":  "OpenJS.NodeJS",
+                         "publisher":  "OpenJS Foundation"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Zoom",
+                                             "Zoom Client",
+                                             "Zoom Meetings"
+                                         ],
+                         "packageId":  "Zoom.Zoom",
+                         "publisher":  "Zoom"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Slack"
+                                         ],
+                         "packageId":  "SlackTechnologies.Slack",
+                         "publisher":  "Slack Technologies"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Microsoft Teams",
+                                             "Teams"
+                                         ],
+                         "packageId":  "Microsoft.Teams",
+                         "publisher":  "Microsoft"
+                     },
+                     {
+                         "commonNames":  [
+                                             "WinRAR"
+                                         ],
+                         "packageId":  "RARLab.WinRAR",
+                         "publisher":  "RARLAB"
+                     },
+                     {
+                         "commonNames":  [
+                                             "FileZilla",
+                                             "FileZilla Client"
+                                         ],
+                         "packageId":  "TimKosse.FileZilla.Client",
+                         "publisher":  "Tim Kosse"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Putty",
+                                             "PuTTY"
+                                         ],
+                         "packageId":  "PuTTY.PuTTY",
+                         "publisher":  "Simon Tatham"
+                     },
+                     {
+                         "commonNames":  [
+                                             "WinSCP"
+                                         ],
+                         "packageId":  "WinSCP.WinSCP",
+                         "publisher":  "Martin Prikryl"
+                     },
+                     {
+                         "commonNames":  [
+                                             "OpenVPN Connect",
+                                             "OpenVPN"
+                                         ],
+                         "packageId":  "OpenVPNTechnologies.OpenVPNConnect",
+                         "publisher":  "OpenVPN"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Citrix Workspace",
+                                             "Citrix Workspace App"
+                                         ],
+                         "packageId":  "Citrix.Workspace",
+                         "publisher":  "Citrix"
+                     },
+                     {
+                         "commonNames":  [
+                                             "TeamViewer"
+                                         ],
+                         "packageId":  "TeamViewer.TeamViewer",
+                         "publisher":  "TeamViewer"
+                     },
+                     {
+                         "commonNames":  [
+                                             "AnyDesk"
+                                         ],
+                         "packageId":  "AnyDeskSoftwareGmbH.AnyDesk",
+                         "publisher":  "AnyDesk Software GmbH"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Paint.NET"
+                                         ],
+                         "packageId":  "dotPDN.PaintDotNet",
+                         "publisher":  "dotPDN"
+                     },
+                     {
+                         "commonNames":  [
+                                             "GIMP",
+                                             "GNU Image Manipulation Program"
+                                         ],
+                         "packageId":  "GIMP.GIMP",
+                         "publisher":  "GIMP"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Audacity"
+                                         ],
+                         "packageId":  "Audacity.Audacity",
+                         "publisher":  "Audacity Team"
+                     },
+                     {
+                         "commonNames":  [
+                                             "OBS Studio",
+                                             "OBS"
+                                         ],
+                         "packageId":  "OBSProject.OBSStudio",
+                         "publisher":  "OBS Project"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Discord"
+                                         ],
+                         "packageId":  "Discord.Discord",
+                         "publisher":  "Discord Inc"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Spotify"
+                                         ],
+                         "packageId":  "Spotify.Spotify",
+                         "publisher":  "Spotify AB"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Dropbox"
+                                         ],
+                         "packageId":  "Dropbox.Dropbox",
+                         "publisher":  "Dropbox"
+                     },
+                     {
+                         "commonNames":  [
+                                             "OneDrive",
+                                             "Microsoft OneDrive"
+                                         ],
+                         "packageId":  "Microsoft.OneDrive",
+                         "publisher":  "Microsoft"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Google Drive",
+                                             "Google Drive for Desktop"
+                                         ],
+                         "packageId":  "Google.GoogleDrive",
+                         "publisher":  "Google"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Adobe Creative Cloud"
+                                         ],
+                         "packageId":  "Adobe.CreativeCloud",
+                         "publisher":  "Adobe"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Java",
+                                             "Java Runtime Environment",
+                                             "JRE"
+                                         ],
+                         "packageId":  "Oracle.JavaRuntimeEnvironment",
+                         "publisher":  "Oracle"
+                     },
+                     {
+                         "commonNames":  [
+                                             ".NET Desktop Runtime",
+                                             "dotNET Desktop Runtime"
+                                         ],
+                         "packageId":  "Microsoft.DotNet.DesktopRuntime.8",
+                         "publisher":  "Microsoft"
+                     },
+                     {
+                         "commonNames":  [
+                                             "PowerShell",
+                                             "PowerShell Core"
+                                         ],
+                         "packageId":  "Microsoft.PowerShell",
+                         "publisher":  "Microsoft"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Windows Terminal",
+                                             "Terminal"
+                                         ],
+                         "packageId":  "Microsoft.WindowsTerminal",
+                         "publisher":  "Microsoft"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Docker Desktop",
+                                             "Docker"
+                                         ],
+                         "packageId":  "Docker.DockerDesktop",
+                         "publisher":  "Docker"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Postman"
+                                         ],
+                         "packageId":  "Postman.Postman",
+                         "publisher":  "Postman"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Insomnia"
+                                         ],
+                         "packageId":  "Insomnia.Insomnia",
+                         "publisher":  "Kong"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Sublime Text",
+                                             "Sublime"
+                                         ],
+                         "packageId":  "SublimeHQ.SublimeText.4",
+                         "publisher":  "Sublime HQ"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Atom"
+                                         ],
+                         "packageId":  "GitHub.Atom",
+                         "publisher":  "GitHub"
+                     },
+                     {
+                         "commonNames":  [
+                                             "IntelliJ IDEA Community"
+                                         ],
+                         "packageId":  "JetBrains.IntelliJIDEA.Community",
+                         "publisher":  "JetBrains"
+                     },
+                     {
+                         "commonNames":  [
+                                             "PyCharm Community"
+                                         ],
+                         "packageId":  "JetBrains.PyCharm.Community",
+                         "publisher":  "JetBrains"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Microsoft SQL Server Management Studio",
+                                             "SSMS"
+                                         ],
+                         "packageId":  "Microsoft.SQLServerManagementStudio",
+                         "publisher":  "Microsoft"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Azure Data Studio"
+                                         ],
+                         "packageId":  "Microsoft.AzureDataStudio",
+                         "publisher":  "Microsoft"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Logitech Options",
+                                             "Logitech Options+"
+                                         ],
+                         "packageId":  "Logitech.OptionsPlus",
+                         "publisher":  "Logitech"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Microsoft 365 Apps",
+                                             "Office 365",
+                                             "Microsoft Office"
+                                         ],
+                         "packageId":  "Microsoft.Office",
+                         "publisher":  "Microsoft"
+                     },
+                     {
+                         "commonNames":  [
+                                             "LibreOffice"
+                                         ],
+                         "packageId":  "TheDocumentFoundation.LibreOffice",
+                         "publisher":  "The Document Foundation"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Cisco AnyConnect",
+                                             "AnyConnect",
+                                             "Cisco AnyConnect Secure Mobility Client"
+                                         ],
+                         "packageId":  "Cisco.CiscoAnyConnect",
+                         "publisher":  "Cisco"
+                     },
+                     {
+                         "commonNames":  [
+                                             "FortiClient VPN"
+                                         ],
+                         "packageId":  "Fortinet.FortiClientVPN",
+                         "publisher":  "Fortinet"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Wireshark"
+                                         ],
+                         "packageId":  "WiresharkFoundation.Wireshark",
+                         "publisher":  "Wireshark Foundation"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Kali Linux",
+                                             "Kali"
+                                         ],
+                         "packageId":  "KaliLinux.KaliLinux",
+                         "publisher":  "Kali Linux"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Ubuntu"
+                                         ],
+                         "packageId":  "Canonical.Ubuntu.2204",
+                         "publisher":  "Canonical"
+                     },
+                     {
+                         "commonNames":  [
+                                             "PowerToys",
+                                             "Microsoft PowerToys"
+                                         ],
+                         "packageId":  "Microsoft.PowerToys",
+                         "publisher":  "Microsoft"
+                     },
+                     {
+                         "commonNames":  [
+                                             "ShareX"
+                                         ],
+                         "packageId":  "ShareX.ShareX",
+                         "publisher":  "ShareX"
+                     },
+                     {
+                         "commonNames":  [
+                                             "AutoHotkey",
+                                             "AutoHotKey"
+                                         ],
+                         "packageId":  "AutoHotkey.AutoHotkey",
+                         "publisher":  "AutoHotkey Foundation"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Greenshot"
+                                         ],
+                         "packageId":  "Greenshot.Greenshot",
+                         "publisher":  "Greenshot"
+                     },
+                     {
+                         "commonNames":  [
+                                             "KeePass",
+                                             "KeePass Password Safe"
+                                         ],
+                         "packageId":  "DominikReichl.KeePass",
+                         "publisher":  "Dominik Reichl"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Bitwarden"
+                                         ],
+                         "packageId":  "Bitwarden.Bitwarden",
+                         "publisher":  "Bitwarden"
+                     },
+                     {
+                         "commonNames":  [
+                                             "1Password"
+                                         ],
+                         "packageId":  "AgileBits.1Password",
+                         "publisher":  "AgileBits"
+                     },
+                     {
+                         "commonNames":  [
+                                             "LastPass"
+                                         ],
+                         "packageId":  "LastPass.LastPass",
+                         "publisher":  "LastPass"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Handbrake",
+                                             "HandBrake"
+                                         ],
+                         "packageId":  "HandBrake.HandBrake",
+                         "publisher":  "HandBrake"
+                     },
+                     {
+                         "commonNames":  [
+                                             "VirtualBox",
+                                             "Oracle VirtualBox"
+                                         ],
+                         "packageId":  "Oracle.VirtualBox",
+                         "publisher":  "Oracle"
+                     },
+                     {
+                         "commonNames":  [
+                                             "VMware Workstation Player"
+                                         ],
+                         "packageId":  "VMware.WorkstationPlayer",
+                         "publisher":  "VMware"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Balena Etcher",
+                                             "Etcher"
+                                         ],
+                         "packageId":  "Balena.Etcher",
+                         "publisher":  "Balena"
+                     },
+                     {
+                         "commonNames":  [
+                                             "Rufus"
+                                         ],
+                         "packageId":  "Rufus.Rufus",
+                         "publisher":  "Pete Batard"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             ".NET Framework"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "SweetScape Software",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "010 Editor"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "SweetScape Software",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "010 Memorizer"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Adobe Systems Incorporated",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Adobe Connect"
+                                         ],
+                         "publisherPrefix":  "Adobe"
+                     },
+                     {
+                         "publisher":  "Adobe Systems Incorporated",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Adobe DNG Converter"
+                                         ],
+                         "publisherPrefix":  "Adobe"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "AKS Engine - Units of Kubernetes on Azure Stack Hub"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Jan De Dobbeleer",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Aliae"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Xmarmalade",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "AlistHelper"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The digiKam team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Amarok"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "AWS Serverless Applications",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Amazon Chime"
+                                         ],
+                         "publisherPrefix":  "Amazon"
+                     },
+                     {
+                         "publisher":  "AWS Serverless Applications",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Amazon Kindle"
+                                         ],
+                         "publisherPrefix":  "Amazon"
+                     },
+                     {
+                         "publisher":  "AWS Serverless Applications",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Amazon Music"
+                                         ],
+                         "publisherPrefix":  "Amazon"
+                     },
+                     {
+                         "publisher":  "AWS Serverless Applications",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Amazon Send to Kindle"
+                                         ],
+                         "publisherPrefix":  "Amazon"
+                     },
+                     {
+                         "publisher":  "AWS Serverless Applications",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Amazon WorkSpaces"
+                                         ],
+                         "publisherPrefix":  "Amazon"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "App Installer"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "AppInstaller File Builder(Preview)"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Michael Tippach",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "ASIO4ALL"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Ben Smith",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Assessment Disaggregation"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "GitHub, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Atom Beta"
+                                         ],
+                         "publisherPrefix":  "GitHub"
+                     },
+                     {
+                         "publisher":  "The Sleuth Kit",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Autopsy"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Autoruns"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "AWS Serverless Applications",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "AWS Command Line Interface"
+                                         ],
+                         "publisherPrefix":  "Amazon"
+                     },
+                     {
+                         "publisher":  "AWS Serverless Applications",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "AWS Copilot CLI"
+                                         ],
+                         "publisherPrefix":  "Amazon"
+                     },
+                     {
+                         "publisher":  "AWS Serverless Applications",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "AWS SAM Command Line Interface"
+                                         ],
+                         "publisherPrefix":  "Amazon"
+                     },
+                     {
+                         "publisher":  "AWS Serverless Applications",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "AWS VPN Client"
+                                         ],
+                         "publisherPrefix":  "Amazon"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "AzCopy v10"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Abdelrahman Bayoumi",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Azkar"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Azure Cosmos DB Emulator"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Azure Data CLI"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Azure Developer CLI"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Azure Functions Core Tools"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Azure IoT Explorer Preview"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Azure Media Services Explorer"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Azure Terrafy"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Bandisoft.com",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Bandizip"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "BGInfo"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Bicep CLI"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Bing Wallpaper"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "BITS Manager"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Blender Foundation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Blender"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The Bluefish Developers",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Bluefish"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Bot Framework Composer"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Bot Framework Emulator"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Clement Tsang",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "bottom"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Adobe Systems Incorporated",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Brackets"
+                                         ],
+                         "publisherPrefix":  "Adobe"
+                     },
+                     {
+                         "publisher":  "Chen QingYu",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Brainf**k interpreter"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Chen QingYu",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Brainf**k interpreter"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "N/A",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Brainf**k interpreter"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "ChilliBits",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "CCom"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Electronic Frontier Foundation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Certbot"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Hiro Systems",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "clarinet"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "GitHub, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "classroom-assistant"
+                                         ],
+                         "publisherPrefix":  "GitHub"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "CLion"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "CLion (EAP)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "XIU2",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "CloudflareSpeedTest"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "ChilliBits",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Compose Generator"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Adobe Systems Incorporated",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Cryptr"
+                                         ],
+                         "publisherPrefix":  "Adobe"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "DataGrip"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "DataGrip (EAP)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "DataSpell"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Desktops"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "devtunnel"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "The digiKam team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "digiKam"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "DirectX End-User Runtime Web Installer"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "D Language Foundation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "DMD"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "dotUltimate"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "Dropbox, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Dropbox Capture"
+                                         ],
+                         "publisherPrefix":  "Dropbox"
+                     },
+                     {
+                         "publisher":  "ZHAO Xudong",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "electerm"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "MartÃ­ Climent",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "ElevenClock"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Corsair Memory, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Elgato 4K Capture Utility"
+                                         ],
+                         "publisherPrefix":  "Corsair"
+                     },
+                     {
+                         "publisher":  "Corsair Memory, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Elgato Camera Hub"
+                                         ],
+                         "publisherPrefix":  "Corsair"
+                     },
+                     {
+                         "publisher":  "Corsair Memory, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Elgato Control Center"
+                                         ],
+                         "publisherPrefix":  "Corsair"
+                     },
+                     {
+                         "publisher":  "Corsair Memory, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Elgato Stream Deck"
+                                         ],
+                         "publisherPrefix":  "Corsair"
+                     },
+                     {
+                         "publisher":  "Corsair Memory, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Elgato Wave Link"
+                                         ],
+                         "publisherPrefix":  "Corsair"
+                     },
+                     {
+                         "publisher":  "Emurasoft, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "EmEditor"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Corsair Memory, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "EpocCam drivers"
+                                         ],
+                         "publisherPrefix":  "Corsair"
+                     },
+                     {
+                         "publisher":  "Ericsson AB",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Erlang OTP"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Error Lookup Tool"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "voidtools",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Everything"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "voidtools",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Everything"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "voidtools",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Everything (Alpha)"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "voidtools",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Everything Lite"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The digiKam team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "falkon"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Progress Software Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Fiddler Everywhere"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "SnailDOS Team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Fifo"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The digiKam team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Filelight"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "FindLinks"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Mozilla Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Firefox Developer Edition"
+                                         ],
+                         "publisherPrefix":  "Mozilla"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Fleet Launcher (Early Access Program)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Fleet Launcher (Public Preview)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "FlyByWire Simulations",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "FlyByWire Installer"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Heinrich Heine University DÃ¼sseldorf - Cognitive and Industrial Psychology",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "G*Power"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Heinrich Heine University DÃ¼sseldorf - Cognitive and Industrial Psychology",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "G*Power"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Alex Redden",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "G14ControlV2"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Chris Maltby",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "GB Studio"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Mozilla Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "geckodriver"
+                                         ],
+                         "publisherPrefix":  "Mozilla"
+                     },
+                     {
+                         "publisher":  "QGIS.org",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "GeoServer"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The Git Development Community",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Git for Windows SDK"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "GitHub, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Git LFS"
+                                         ],
+                         "publisherPrefix":  "GitHub"
+                     },
+                     {
+                         "publisher":  "GitHub, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "GitHub CLI"
+                                         ],
+                         "publisherPrefix":  "GitHub"
+                     },
+                     {
+                         "publisher":  "GitHub, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "GitHub Desktop"
+                                         ],
+                         "publisherPrefix":  "GitHub"
+                     },
+                     {
+                         "publisher":  "GitHub, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "GitHub Desktop Beta"
+                                         ],
+                         "publisherPrefix":  "GitHub"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "GoLand"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "GoLand (EAP)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "GVFS"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "SweetScape Software",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Hamic"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Handle"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Hanword HWP document converter for Microsoft Word"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Ansgar Becker",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "HeidiSQL"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Bandisoft.com",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Honeyview"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Jake Robertson",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Houdoku"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "HP Development Company, L.P.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "HP Client Management Script Library"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "HP Development Company, L.P.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "HP Cloud Recovery Tool"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "HP Development Company, L.P.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "HP Image Assistant"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "HP Development Company, L.P.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "HP Prime Virtual Calculator"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "HTTP Toolkit",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "HTTP Toolkit"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Borvid",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "HttpMaster Express Edition"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Borvid",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "HttpMaster Professional Edition"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "PurpleI2P",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "i2pd"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "IntelliJ IDEA Community Edition"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "IntelliJ IDEA Community Edition (EAP)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "IntelliJ IDEA Ultimate Edition"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "IntelliJ IDEA Ultimate Edition (EAP)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "Protocol Labs, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "IPFS Desktop"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Ironpython 2"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "IronPython 3"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "IVPN Limited",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "IVPN Client"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JetBrains dotTrace 2023.3"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JetBrains Gateway"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JetBrains Hub"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JetBrains MPS"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JetBrains MPS (EAP)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JetBrains ReSharper"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JetBrains ReSharper (EAP)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JetBrains Rider"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JetBrains Rider (EAP)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JetBrains Space"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JetBrains TeamCity"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JetBrains Toolbox"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JetBrains YouTrack"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "Carsten Gehling",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Jira StopWatch"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "JTL-Software-GmbH",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "JTL-Wawi"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The digiKam team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Kate"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The digiKam team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "kdenlive"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The digiKam team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "KDiff3"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Keboola Industries SE",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Keboola CLI"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Kiwix",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Kiwix JS"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Kiwix",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Kiwix JS Electron"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The digiKam team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "KMyMoney"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The digiKam team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Krita"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The digiKam team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "LabPlot2"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Local Administrator Password Solution"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Log Parser 2.2"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Master Packager Ltd.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Master Packager"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Master Packager Ltd.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Master Packager Dev"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "www.microsip.org",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "MicroSIP"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "www.microsip.org",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "MicroSIP"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Core SDK Uninstall Tool (x86)"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Framework 4.5.1 Developer Pack (KB2861696)"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Runtime 3.1"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Runtime 5.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Runtime 6.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Runtime 7.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Runtime 8.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Runtime 8.0 Preview"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET SDK 3.1"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET SDK 5.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET SDK 6.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET SDK 7.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET SDK 7.0 Preview"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET SDK 8.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Windows Desktop Runtime 3.1"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Windows Desktop Runtime 5.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Windows Desktop Runtime 6.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Windows Desktop Runtime 7.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Windows Desktop Runtime 7.0 Preview"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft .NET Windows Desktop Runtime 8.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft 365 Apps for enterprise"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft ASP.NET Core Hosting Bundle 3.1"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft ASP.NET Core Hosting Bundle 5.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft ASP.NET Core Hosting Bundle 6.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft ASP.NET Core Hosting Bundle 7.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft ASP.NET Core Hosting Bundle 8.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft ASP.NET Core Hosting Bundle 8.0 Preview"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft ASP.NET Core Runtime 3.1"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft ASP.NET Core Runtime 5.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft ASP.NET Core Runtime 6.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft ASP.NET Core Runtime 7.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft ASP.NET Core Runtime 8.0"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft ASP.NET Core Runtime 8.0 Preview"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Azure CLI"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Azure Export for Terraform"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Azure Kubelogin"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Azure Quick Review"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Azure Service Fabric SDK"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Azure Storage Emulator"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Azure Storage Explorer"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Build of OpenJDK with Hotspot 11"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Build of OpenJDK with Hotspot 16"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Build of OpenJDK with Hotspot 17"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Build of OpenJDK with Hotspot 21"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Build Tools 2015"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Deployment Toolkit"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Edge Beta"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Edge Canary"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Edge Dev"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Edge WebDriver"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Edge WebView2 Runtime"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Garage Mouse without Borders"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Git"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Mouse and Keyboard Center"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft MPI"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft MPI SDK"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Network Monitor"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft PIX"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft PowerApps CLI"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Report Builder"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Small Basic"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft SQL Server 2017 Developer"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft SQL Server 2017 Express"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft SQL Server 2019 Developer"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft SQL Server 2019 Express"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft SQL Server 2022 Developer"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft SQL Server 2022 Express"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft System CLR Types for SQL Server 2019"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Teams Classic"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visio Viewer 2016"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual C++ 2005 Redistributable"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual C++ 2005 Redistributable (x64)"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual C++ 2008 Redistributable - x64"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual C++ 2008 Redistributable - x86"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual C++ 2010 x64 Redistributable"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual C++ 2010 x86 Redistributable"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual C++ 2012 Redistributable (x64)"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual C++ 2012 Redistributable (x86)"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual C++ 2013 Redistributable (x64)"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual C++ 2013 Redistributable (x86)"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual C++ 2015 UWP Desktop Runtime Package"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual C++ 2015-2022 Redistributable (x64)"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual C++ 2015-2022 Redistributable (x86)"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual Studio Code"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual Studio Code CLI"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual Studio Code Insiders"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Visual Studio Code Insiders CLI"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Web Deploy"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft Web Platform Installer"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft XNA Framework Redistributable Refresh"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft.UI.Xaml"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Microsoft.UI.Xaml"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "The Git Development Community",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "MinGit"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "MongoDB Inc",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "MongoDB Atlas CLI"
+                                         ],
+                         "publisherPrefix":  "MongoDB"
+                     },
+                     {
+                         "publisher":  "MongoDB Inc",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "MongoDB CLI"
+                                         ],
+                         "publisherPrefix":  "MongoDB"
+                     },
+                     {
+                         "publisher":  "MongoDB Inc",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "MongoDB Compass"
+                                         ],
+                         "publisherPrefix":  "MongoDB"
+                     },
+                     {
+                         "publisher":  "MongoDB Inc",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "MongoDB Compass Community"
+                                         ],
+                         "publisherPrefix":  "MongoDB"
+                     },
+                     {
+                         "publisher":  "MongoDB Inc",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "MongoDB Compass Isolated Edition"
+                                         ],
+                         "publisherPrefix":  "MongoDB"
+                     },
+                     {
+                         "publisher":  "MongoDB Inc",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "MongoDB Compass Readonly"
+                                         ],
+                         "publisherPrefix":  "MongoDB"
+                     },
+                     {
+                         "publisher":  "MongoDB Inc",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "MongoDB Server"
+                                         ],
+                         "publisherPrefix":  "MongoDB"
+                     },
+                     {
+                         "publisher":  "MongoDB Inc",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "MongoDB Shell"
+                                         ],
+                         "publisherPrefix":  "MongoDB"
+                     },
+                     {
+                         "publisher":  "MongoDB Inc",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "MongoDB Tools"
+                                         ],
+                         "publisherPrefix":  "MongoDB"
+                     },
+                     {
+                         "publisher":  "Mozilla Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Mozilla Firefox ESR"
+                                         ],
+                         "publisherPrefix":  "Mozilla"
+                     },
+                     {
+                         "publisher":  "Mozilla Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Mozilla Thunderbird"
+                                         ],
+                         "publisherPrefix":  "Mozilla"
+                     },
+                     {
+                         "publisher":  "Mozilla Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Mozilla VPN"
+                                         ],
+                         "publisherPrefix":  "Mozilla"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "MSIX Core"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Pierre de la MartiniÃ¨re",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Museeks"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The digiKam team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "NeoChat"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Node.js Foundation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Node.js LTS"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "AWS Serverless Applications",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "NoSQL Workbench"
+                                         ],
+                         "publisherPrefix":  "Amazon"
+                     },
+                     {
+                         "publisher":  "The Nu Project Contributors",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "nu"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "NuGet"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "NVIDIA Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "NVIDIA CUDA Toolkit"
+                                         ],
+                         "publisherPrefix":  "NVIDIA"
+                     },
+                     {
+                         "publisher":  "NVIDIA Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "NVIDIA GeForce NOW"
+                                         ],
+                         "publisherPrefix":  "NVIDIA"
+                     },
+                     {
+                         "publisher":  "NVIDIA Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "NVIDIA PhysX System Software"
+                                         ],
+                         "publisherPrefix":  "NVIDIA"
+                     },
+                     {
+                         "publisher":  "NVIDIA Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "NVIDIA Video Effects"
+                                         ],
+                         "publisherPrefix":  "NVIDIA"
+                     },
+                     {
+                         "publisher":  "Octopus Deploy Pty. Ltd.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Octopus Deploy Server"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Octopus Deploy Pty. Ltd.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Octopus Deploy Tentacle"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Office Deployment Tool"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Jan De Dobbeleer",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Oh My Posh"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The digiKam team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Okular"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "River",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "OneMoreAddIn"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "N/A",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "OpenCPN"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "AWS Serverless Applications",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "OpenSearch SQL ODBC Driver"
+                                         ],
+                         "publisherPrefix":  "Amazon"
+                     },
+                     {
+                         "publisher":  "OpenVR Advanced Settings Team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "OpenVR Advanced Settings"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "N/A",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "osu!(lazer)"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Patrik Laszlo",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "P3X Redis UI"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "UNKNOWN",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "pdfarranger"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "PerfView"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Heiko Sommerfeldt",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "PhonerLite"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "PhpStorm"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "PhpStorm (EAP)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "LoÃ¯c Nogues",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Picturama"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Plex, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Plex"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Plex, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Plex HTPC (for Windows Home Theater PCs)"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Plex, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Plex Media Server"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Plex, Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Plexamp"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Power BI Report Builder"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "PowerShell Preview"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "PowerToys (Preview)"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "å¸Œæ²ƒ",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "PPTå°å·¥å…·"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Kim Walisch",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Primecount"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Process Explorer"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Process Monitor"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Progress Software Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Progress Telerik Fiddler Classic"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Project My Screen App"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "N/A",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Prowlarr"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Pulumi Corp",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Pulumi"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "PyCharm Community Edition"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "PyCharm Community Edition (EAP)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "PyCharm Professional Edition"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "PyCharm Professional Edition (EAP)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "RedHat",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "QEMU"
+                                         ],
+                         "publisherPrefix":  "RedHat"
+                     },
+                     {
+                         "publisher":  "RedHat",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "QEMU guest agent"
+                                         ],
+                         "publisherPrefix":  "RedHat"
+                     },
+                     {
+                         "publisher":  "QGIS.org",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "QGIS"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "QGIS.org",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "QGIS LTR"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Qodana CLI"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "quicreach"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Remote Desktop"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Remote Desktop Agent Boot Loader"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Remote Desktop Connection Manager"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Remote Desktop Services Infrastructure Agent"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Antmicro",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Renode"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "VS Revo Group, Ltd.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Revo Uninstaller"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "VS Revo Group, Ltd.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Revo Uninstaller Pro"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "The digiKam team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "RKWard"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "N/A",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Robo 3T"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "NVIDIA Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "RTX Voice"
+                                         ],
+                         "publisherPrefix":  "NVIDIA"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "RubyMine"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "RubyMine (EAP)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "RustDesk",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "RustDesk"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "RustRover"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "SBOM Tool"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "kimhwan",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "ScreenRecorder"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Mozilla Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "SeaMonkey"
+                                         ],
+                         "publisherPrefix":  "Mozilla"
+                     },
+                     {
+                         "publisher":  "Mozilla Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Secrets OPerationS"
+                                         ],
+                         "publisherPrefix":  "Mozilla"
+                     },
+                     {
+                         "publisher":  "å¸Œæ²ƒ",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "seewo browser"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "AWS Serverless Applications",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Session Manager Plugin"
+                                         ],
+                         "publisherPrefix":  "Amazon"
+                     },
+                     {
+                         "publisher":  "Signal Messenger, LLC",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Signal"
+                                         ],
+                         "publisherPrefix":  "Signal"
+                     },
+                     {
+                         "publisher":  "Signal Messenger, LLC",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Signal Beta"
+                                         ],
+                         "publisherPrefix":  "Signal"
+                     },
+                     {
+                         "publisher":  "Yunnan Liandi Technology Co., Ltd.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "SiYuan"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Skype"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Slack Technologies Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Slack Beta"
+                                         ],
+                         "publisherPrefix":  "SlackTechnologies"
+                     },
+                     {
+                         "publisher":  "SnailDOS Team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "SnailFM"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "SnailDOS Team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "SnailKM"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Snyk",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Snyk"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "MartÃ­ Climent",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "SomePythonThings Zip Manager"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "ChilliBits",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Spice"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Sqlcmd Tools"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Stellarium team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Stellarium"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "SnailDOS Team",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "streambop"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Strings"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Surface Duo API30 Emulator"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Sysmon"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "TCPView"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "TeamMate"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Telegram FZ-LLC",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Telegram Desktop"
+                                         ],
+                         "publisherPrefix":  "Telegram"
+                     },
+                     {
+                         "publisher":  "Telegram FZ-LLC",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Telegram Desktop Beta"
+                                         ],
+                         "publisherPrefix":  "Telegram"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Time Travel Debugging (TTD)"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Ghisler Software GmbH",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Total Commander"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Inspect Element Inc.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Tweeten"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Oliver Schwendener",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Ueli"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "D Language Foundation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Visual D - Visual Studio Integration of the D Programming Language"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Visual Studio Build Tools 2019"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Visual Studio Build Tools 2022"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Visual Studio Community 2022"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Visual Studio Configuration Finder"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Visual Studio Enterprise 2019"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Visual Studio Enterprise 2022"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Visual Studio Locator"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Visual Studio Professional 2019"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Visual Studio Professional 2022"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "vott"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "VSCodium"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "VSCodium Insiders"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "VSIX Bootstrapper"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "N/A",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "WaveLogGate"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Yikuan Sun",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "WebKitty"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "WebStorm"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "JetBrains s.r.o.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "WebStorm (EAP)"
+                                         ],
+                         "publisherPrefix":  "JetBrains"
+                     },
+                     {
+                         "publisher":  "N/A",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "WhatsApp"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "N/A",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "WhatsApp Beta"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Kiwix",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "WikiMed by Kiwix"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Kiwix",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "WikiMed by Kiwix"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Kiwix",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Wikivoyage by Kiwix"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Kiwix",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Wikivoyage by Kiwix Electron Edition"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "WinDbg"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows 10 Update Assistant"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows 11 Installation Assistant"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows Admin Center"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows App Runtime"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows App Runtime"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows App SDK"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows App SDK"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows App SDK"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows Application Driver"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows Assessment and Deployment Kit - Windows 10"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows Driver Kit"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows Driver Kit - Windows 10.0.22621.2428"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows Driver Kit - Windows 10.1.22000.1"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows Journal"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows Package Manager Manifest Creator"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows PC Health Check"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows SDK"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows SDK"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows Software Development Kit"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows Software Development Kit"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows Software Development Kit"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows Software Development Kit - Windows 10.0.22621.2428"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Windows Terminal Preview"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "Timothy Johnson",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "WinDynamicDesktop"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "P-St Software",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "WinSSHTerm"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "oldj",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "WonderPen"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "XML Notepad"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     },
+                     {
+                         "publisher":  "purocean",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Yank Note"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Shanghai Zhegui Software Co., Ltd.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "zg-ipchat Peer-to-peer chat tool"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Shanghai Zhegui Software Co., Ltd.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "zg-zsso"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Shanghai Zhegui Software Co., Ltd.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Zhegui master data management platform system"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Shanghai Zhegui Software Co., Ltd.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Zhegui printing platform system"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Shanghai Zhegui Software Co., Ltd.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Zhegui turnover packaging appliance management system"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Shanghai Zhegui Software Co., Ltd.",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "Zhegui upload platform system"
+                                         ],
+                         "publisherPrefix":  null
+                     },
+                     {
+                         "publisher":  "Microsoft Corporation",
+                         "packageId":  "DISCOVER",
+                         "commonNames":  [
+                                             "ZoomIt"
+                                         ],
+                         "publisherPrefix":  "Microsoft"
+                     }
+                 ]
+}

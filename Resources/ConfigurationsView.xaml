@@ -1,0 +1,104 @@
+﻿<!--
+    InSight - Configurations View
+    Author: Kosta Wadenfalk
+    GitHub: https://github.com/MrOlof
+-->
+<ScrollViewer x:Name="ConfigurationsView" Visibility="Collapsed" Padding="30">
+    <StackPanel>
+        <!-- Header -->
+        <StackPanel Margin="0,0,0,30">
+            <Grid>
+                <StackPanel>
+                    <TextBlock Text="Configurations" FontSize="{DynamicResource FontSizeHeader}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                    <TextBlock Text="View and manage Intune configuration policies and app protection" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,8,0,0"/>
+                </StackPanel>
+                <Button x:Name="FetchAllConfigurationsButton" Content="Fetch All" Style="{StaticResource ModernButtonStyle}" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+            </Grid>
+        </StackPanel>
+
+        <!-- Configuration Profiles Section -->
+        <Border Style="{StaticResource CardStyle}" Margin="0,0,0,30">
+            <StackPanel>
+                <Grid Margin="0,0,0,20">
+                    <TextBlock Text="Configuration Profiles" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                    <Button x:Name="RefreshConfigProfilesButton" Content="Refresh" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Right"/>
+                </Grid>
+                <TextBlock Text="Device configuration profiles including settings catalog, restrictions, and templates" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,20"/>
+                <TextBlock x:Name="ConfigProfilesLoadingText" Text="Loading configuration profiles..." FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,20" Visibility="Collapsed"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Settings Catalog -->
+                    <Button Grid.Column="0" x:Name="SettingsCatalogButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
+                        <StackPanel>
+                            <TextBlock Text="&#xE713;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                            <TextBlock Text="Settings Catalog" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="SettingsCatalogCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Device Restrictions -->
+                    <Button Grid.Column="2" x:Name="DeviceRestrictionsButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
+                        <StackPanel>
+                            <TextBlock Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                            <TextBlock Text="Device Restrictions" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="DeviceRestrictionsCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Administrative Templates -->
+                    <Button Grid.Column="4" x:Name="AdminTemplatesButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
+                        <StackPanel>
+                            <TextBlock Text="&#xE8B7;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                            <TextBlock Text="Administrative Templates" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="AdminTemplatesCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </Border>
+
+        <!-- App Protection Section -->
+        <Border Style="{StaticResource CardStyle}">
+            <StackPanel>
+                <Grid Margin="0,0,0,20">
+                    <TextBlock Text="App Protection" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                    <Button x:Name="RefreshAppProtectionButton" Content="Refresh" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Right"/>
+                </Grid>
+                <TextBlock Text="Mobile application management (MAM) policies for iOS and Android" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,20"/>
+                <TextBlock x:Name="AppProtectionLoadingText" Text="Loading app protection policies..." FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,20" Visibility="Collapsed"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Android App Protection -->
+                    <Button Grid.Column="0" x:Name="AndroidAppProtectionButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
+                        <StackPanel>
+                            <TextBlock Text="&#xE8EA;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                            <TextBlock Text="Android" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="AndroidAppProtectionCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- iOS App Protection -->
+                    <Button Grid.Column="2" x:Name="iOSAppProtectionButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
+                        <StackPanel>
+                            <TextBlock Text="&#xE8B8;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                            <TextBlock Text="iOS/iPadOS" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="iOSAppProtectionCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</ScrollViewer>

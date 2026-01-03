@@ -1,0 +1,22 @@
+﻿# Logs
+*.log
+Logs/
+
+# User-specific config
+config.json
+
+# Token cache
+.graph/
+.IdentityService/
+TokenCache/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# VS Code
+.vscode/
+
+# Backups
+*.bak
+*~

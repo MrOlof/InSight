@@ -1,0 +1,1258 @@
+[
+    {
+        "Name":  "Activate NumLock",
+        "Category":  "User Experience",
+        "Description":  "Automatically activates NumLock on user login",
+        "DetectionScript":  "detection_Activate-Numlock.ps1",
+        "RemediationScript":  "remediation_Activate-Numlock.ps1",
+        "Tags":  [
+                     "keyboard",
+                     "numlock",
+                     "login"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Add Winget App",
+        "Category":  "Application Management",
+        "Description":  "Install applications using Windows Package Manager (Winget)",
+        "DetectionScript":  "detection_detect-app.ps1",
+        "RemediationScript":  "remediation_remediate-app.ps1",
+        "Tags":  [
+                     "winget",
+                     "installation",
+                     "apps"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Automatic Timezone",
+        "Category":  "System Configuration",
+        "Description":  "Enables automatic timezone detection and configuration",
+        "DetectionScript":  "detection_detect-automatictimezone.ps1",
+        "RemediationScript":  "remediation_remediate-automatictimezone.ps1",
+        "Tags":  [
+                     "timezone",
+                     "automatic",
+                     "location"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Block AAD Workplace Join",
+        "Category":  "Security",
+        "Description":  "Prevents unauthorized Azure AD workplace join on devices",
+        "DetectionScript":  "detection_Detection-BlockAADWorkplaceJoin.ps1",
+        "RemediationScript":  "remediation_Remediation-BlockAADWorkplaceJoin.ps1",
+        "Tags":  [
+                     "aad",
+                     "workplace join",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Change Multiple Registry Keys",
+        "Category":  "System Configuration",
+        "Description":  "Template for modifying multiple registry keys at once",
+        "DetectionScript":  "detection_Change-MultipleRegistryKeysDetection.ps1",
+        "RemediationScript":  "remediation_Change-MultipleRegistryKeysRemediaton.ps1",
+        "Tags":  [
+                     "registry",
+                     "configuration",
+                     "template"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Change Registry Key (Generic)",
+        "Category":  "System Configuration",
+        "Description":  "Generic template for registry key modifications",
+        "DetectionScript":  "detection_detect-regkey.ps1",
+        "RemediationScript":  "remediation_remediate-regkey.ps1",
+        "Tags":  [
+                     "registry",
+                     "generic",
+                     "template"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Check PNP Devices",
+        "Category":  "Hardware",
+        "Description":  "Detects and reports Plug and Play device issues",
+        "DetectionScript":  "detection_Check-PNPDevicesDetection.ps1",
+        "RemediationScript":  "remediation_Check-PNPDevicesRemediation.ps1",
+        "Tags":  [
+                     "hardware",
+                     "pnp",
+                     "devices"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Clear DNS Cache",
+        "Category":  "Network",
+        "Description":  "Clears the DNS resolver cache to fix connectivity issues",
+        "DetectionScript":  "detection_Clear-DnsCacheDetection.ps1",
+        "RemediationScript":  "remediation_Clear-DnsCacheRemediation.ps1",
+        "Tags":  [
+                     "dns",
+                     "cache",
+                     "network"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Clear Download Folder",
+        "Category":  "Maintenance",
+        "Description":  "Removes files from the Downloads folder to free up space",
+        "DetectionScript":  "detection_Clear-DownloadFolderDetection.ps1",
+        "RemediationScript":  "remediation_Clear-DownloadFolderRemediaton.ps1",
+        "Tags":  [
+                     "cleanup",
+                     "downloads",
+                     "storage"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Clear Outlook Cache",
+        "Category":  "Maintenance",
+        "Description":  "Clears Microsoft Outlook cache to resolve performance issues",
+        "DetectionScript":  "detection_Clear-OutlookCacheDetection.ps1",
+        "RemediationScript":  "remediation_Clear-OutlookCacheRemedaiton.ps1",
+        "Tags":  [
+                     "outlook",
+                     "cache",
+                     "email"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Clear Teams Cache",
+        "Category":  "Maintenance",
+        "Description":  "Clears Microsoft Teams cache to resolve app issues",
+        "DetectionScript":  "detection_Clear-TeamsCacheDetection.ps1",
+        "RemediationScript":  "remediation_Clear-TeamsCacheRemedaiton.ps1",
+        "Tags":  [
+                     "teams",
+                     "cache",
+                     "collaboration"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Create Local Admin",
+        "Category":  "Security",
+        "Description":  "Creates a local administrator account on the device",
+        "DetectionScript":  "detection_Create-LocalAdminDetection.ps1",
+        "RemediationScript":  "remediation_Create-LocalAdminRemediation.ps1",
+        "Tags":  [
+                     "admin",
+                     "local account",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Create Local Admin (LAPS)",
+        "Category":  "Security",
+        "Description":  "Creates local admin with Local Administrator Password Solution integration",
+        "DetectionScript":  "detection_Create-LocalAdminLAPSDetection.ps1",
+        "RemediationScript":  "remediation_Create-LocalAdminLAPSRemediation.ps1",
+        "Tags":  [
+                     "laps",
+                     "admin",
+                     "password rotation"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Delete Local Admin",
+        "Category":  "Security",
+        "Description":  "Removes specified local administrator account",
+        "DetectionScript":  "detection_Delete-LocalAdminDetection.ps1",
+        "RemediationScript":  "remediation_Delete-LocalAdminRemediation.ps1",
+        "Tags":  [
+                     "admin",
+                     "removal",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Detect SCCM",
+        "Category":  "Migration",
+        "Description":  "Detects and optionally removes SCCM client for Intune migration",
+        "DetectionScript":  "detection_Detect.ps1",
+        "RemediationScript":  "remediation_RemoveSCCM.ps1",
+        "Tags":  [
+                     "sccm",
+                     "migration",
+                     "intune"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Device Auto-Syncer",
+        "Category":  "OneDrive",
+        "Description":  "Ensures OneDrive Known Folders are automatically syncing",
+        "DetectionScript":  "detection_AutoSyncDetect.ps1",
+        "RemediationScript":  "remediation_AutoSyncRemediate.ps1",
+        "Tags":  [
+                     "onedrive",
+                     "sync",
+                     "backup"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Disable Co-Installer",
+        "Category":  "Security",
+        "Description":  "Disables device co-installers for enhanced security",
+        "DetectionScript":  "detection_detect-coinstaller.ps1",
+        "RemediationScript":  "remediation_remediate-coinstaller.ps1",
+        "Tags":  [
+                     "security",
+                     "drivers",
+                     "coinstaller"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Disable Fast Boot",
+        "Category":  "System Configuration",
+        "Description":  "Disables Windows Fast Boot to resolve driver issues",
+        "DetectionScript":  "detection_detect-fastboot.ps1",
+        "RemediationScript":  "remediation_remediate-fastboot.ps1",
+        "Tags":  [
+                     "fastboot",
+                     "startup",
+                     "drivers"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Disable SMBv1",
+        "Category":  "Security",
+        "Description":  "Disables insecure SMB version 1 protocol",
+        "DetectionScript":  "detection_detect-smbv1.ps1",
+        "RemediationScript":  "remediation_remediate-smbv1.ps1",
+        "Tags":  [
+                     "smb",
+                     "security",
+                     "network"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Disable Start Menu Web Search",
+        "Category":  "Privacy",
+        "Description":  "Disables web search in Windows Start Menu",
+        "DetectionScript":  "detection_detect-WebSearch.ps1",
+        "RemediationScript":  "remediation_remediate-WebSearch.ps1",
+        "Tags":  [
+                     "privacy",
+                     "start menu",
+                     "search"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Disk Repair",
+        "Category":  "Maintenance",
+        "Description":  "Runs CHKDSK to detect and repair disk errors",
+        "DetectionScript":  "detection_detect-diskrepair.ps1",
+        "RemediationScript":  "remediation_remediate-diskrepair.ps1",
+        "Tags":  [
+                     "disk",
+                     "repair",
+                     "chkdsk"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Enable Delivery Optimization Logging",
+        "Category":  "Troubleshooting",
+        "Description":  "Enables verbose logging for Windows Delivery Optimization",
+        "DetectionScript":  "detection_Enable-VerboseLoggingDetection.ps1",
+        "RemediationScript":  "remediation_Enable-VerboseLoggingRemedaiton.ps1",
+        "Tags":  [
+                     "logging",
+                     "delivery optimization",
+                     "troubleshooting"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Enable .NET 3.5",
+        "Category":  "Application Management",
+        "Description":  "Installs and enables .NET Framework 3.5",
+        "DetectionScript":  "detection_DetectDotNet35.ps1",
+        "RemediationScript":  "remediation_RemediateDotNet35.ps1",
+        "Tags":  [
+                     ".net",
+                     "framework",
+                     "legacy apps"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Enable RDP",
+        "Category":  "Remote Access",
+        "Description":  "Enables Remote Desktop Protocol on the device",
+        "DetectionScript":  "detection_Enable-RDPDetection.ps1",
+        "RemediationScript":  "remediation_Enable-RDPRemedaiton.ps1",
+        "Tags":  [
+                     "rdp",
+                     "remote desktop",
+                     "access"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Enable Signature Validation",
+        "Category":  "Security",
+        "Description":  "Enables Windows Defender signature validation",
+        "DetectionScript":  "detection_Detect_Signature_Validation.ps1",
+        "RemediationScript":  "remediation_Remediate_Signature_Validation.ps1",
+        "Tags":  [
+                     "defender",
+                     "signatures",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Enforce SMB Signing",
+        "Category":  "Security",
+        "Description":  "Enforces SMB packet signing for secure file sharing",
+        "DetectionScript":  "detection_Detect_SMBSigning.ps1",
+        "RemediationScript":  "remediation_Remediate-SMB-Signing.ps1",
+        "Tags":  [
+                     "smb",
+                     "signing",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Fortinet VPN Profile",
+        "Category":  "Network",
+        "Description":  "Configures Fortinet VPN connection profile",
+        "DetectionScript":  "detection_FortinetVPNProfile-Detect.ps1",
+        "RemediationScript":  "remediation_FortinetVPNProfile-Remediation.ps1",
+        "Tags":  [
+                     "vpn",
+                     "fortinet",
+                     "network"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Get Adobe DC Java Settings",
+        "Category":  "Security",
+        "Description":  "Checks and configures Java settings in Adobe Acrobat DC",
+        "DetectionScript":  "detection_Detect_AdobeDC_Java.ps1",
+        "RemediationScript":  "remediation_Remediate_AdobeDC_Java.ps1",
+        "Tags":  [
+                     "adobe",
+                     "java",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Get Adobe Reader Java Settings",
+        "Category":  "Security",
+        "Description":  "Checks and configures Java settings in Adobe Reader",
+        "DetectionScript":  "detection_Detect_AdobeReader_Java.ps1",
+        "RemediationScript":  "remediation_Remediate_AdobeReader_Java.ps1",
+        "Tags":  [
+                     "adobe",
+                     "java",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Get Adobe Reader Flash Settings",
+        "Category":  "Security",
+        "Description":  "Disables Flash content in Adobe Reader",
+        "DetectionScript":  "detection_Detect_AdobeReader_Flash.ps1",
+        "RemediationScript":  "remediation_Remediate_AdobeReader_Flash.ps1",
+        "Tags":  [
+                     "adobe",
+                     "flash",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Check Always Elevated",
+        "Category":  "Security",
+        "Description":  "Detects and remediates AlwaysInstallElevated vulnerability",
+        "DetectionScript":  "detection_Detect_Always_Elevated.ps1",
+        "RemediationScript":  "remediation_Remediate_Always_Elevated.ps1",
+        "Tags":  [
+                     "privilege escalation",
+                     "security",
+                     "vulnerability"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "BitLocker Recovery Key",
+        "Category":  "Security",
+        "Description":  "Backs up BitLocker recovery keys to Azure AD",
+        "DetectionScript":  "detection_BitlockerRecoveryKey.ps1",
+        "RemediationScript":  "remediation_BitlockerRecoveryKey.ps1",
+        "Tags":  [
+                     "bitlocker",
+                     "encryption",
+                     "recovery"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Disk Cleanup",
+        "Category":  "Maintenance",
+        "Description":  "Runs Windows Disk Cleanup to free up space",
+        "DetectionScript":  "detection_Get-CleanUpDiskDetection.ps1",
+        "RemediationScript":  "remediation_Get-CleanUpDiskRemedaiton.ps1",
+        "Tags":  [
+                     "cleanup",
+                     "disk space",
+                     "maintenance"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Cloud Delivered Protection",
+        "Category":  "Security",
+        "Description":  "Enables Windows Defender cloud-delivered protection",
+        "DetectionScript":  "detection_Detect_CloudDeliveredProtection.ps1",
+        "RemediationScript":  "remediation_Remediate_CloudDeliveredProtection.ps1",
+        "Tags":  [
+                     "defender",
+                     "cloud protection",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Get Connected Devices",
+        "Category":  "Reporting",
+        "Description":  "Reports all connected devices (USB, Bluetooth, etc.)",
+        "DetectionScript":  "detection_Get-ConnectedDevicesDetection.ps1",
+        "RemediationScript":  null,
+        "Tags":  [
+                     "devices",
+                     "inventory",
+                     "reporting"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Device Uptime Check \u0026 Reboot",
+        "Category":  "Maintenance",
+        "Description":  "Checks device uptime and reboots if exceeds 7 days",
+        "DetectionScript":  "detection_Detect_DeviceUptime7.ps1",
+        "RemediationScript":  "remediation_Remediate_DeviceUptime7.ps1",
+        "Tags":  [
+                     "uptime",
+                     "reboot",
+                     "maintenance"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "LSA Protection",
+        "Category":  "Security",
+        "Description":  "Enables Local Security Authority (LSA) protection",
+        "DetectionScript":  "detection_Detect_LSA_Protection.ps1",
+        "RemediationScript":  "remediation_Remediate_LSA_Protection.ps1",
+        "Tags":  [
+                     "lsa",
+                     "credential protection",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Network Protection",
+        "Category":  "Security",
+        "Description":  "Enables Windows Defender Network Protection",
+        "DetectionScript":  "detection_Detect_NetworkProtection.ps1",
+        "RemediationScript":  "remediation_Remediate_NetworkProtection.ps1",
+        "Tags":  [
+                     "defender",
+                     "network protection",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Office Telemetry",
+        "Category":  "Privacy",
+        "Description":  "Configures Microsoft Office telemetry settings",
+        "DetectionScript":  "detection_Detect_Office_Telemetry.ps1",
+        "RemediationScript":  "remediation_Remediate_Office_Telemetry.ps1",
+        "Tags":  [
+                     "office",
+                     "telemetry",
+                     "privacy"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "PUA Protection",
+        "Category":  "Security",
+        "Description":  "Enables Windows Defender Potentially Unwanted Application protection",
+        "DetectionScript":  "detection_Detect_PUA-Protection.ps1",
+        "RemediationScript":  "remediation_Remediate_PUA-Protection.ps1",
+        "Tags":  [
+                     "defender",
+                     "pua",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Real-Time Behavior Monitoring",
+        "Category":  "Security",
+        "Description":  "Enables Windows Defender real-time behavior monitoring",
+        "DetectionScript":  "detection_Detect_RealTimeBehavior.ps1",
+        "RemediationScript":  "remediation_Remediate_RealTimeBehavior.ps1",
+        "Tags":  [
+                     "defender",
+                     "behavior monitoring",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Real-Time Protection",
+        "Category":  "Security",
+        "Description":  "Enables Windows Defender real-time protection",
+        "DetectionScript":  "detection_Detect_RealTimeProtection.ps1",
+        "RemediationScript":  "remediation_Remediate_RealTimeProtection.ps1",
+        "Tags":  [
+                     "defender",
+                     "real-time protection",
+                     "security"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Set Timezone (W. Europe)",
+        "Category":  "System Configuration",
+        "Description":  "Sets timezone to Western Europe Standard Time",
+        "DetectionScript":  "detection_Get-TimeZone_W_Europe.ps1",
+        "RemediationScript":  "remediation_Remediate_TimeZone_W_Europe.ps1",
+        "Tags":  [
+                     "timezone",
+                     "europe",
+                     "configuration"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Windows Hello Enrolled Methods",
+        "Category":  "Reporting",
+        "Description":  "Reports Windows Hello for Business enrollment methods",
+        "DetectionScript":  "detection_Get-WH4BEnrolledMethodsDetection.ps1",
+        "RemediationScript":  null,
+        "Tags":  [
+                     "windows hello",
+                     "reporting",
+                     "authentication"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Windows Hello Last Used Method",
+        "Category":  "Reporting",
+        "Description":  "Reports the last Windows Hello authentication method used",
+        "DetectionScript":  "detection_Get-WH4BLastUsedMethodDetection.ps1",
+        "RemediationScript":  null,
+        "Tags":  [
+                     "windows hello",
+                     "reporting",
+                     "authentication"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Install CMTrace",
+        "Category":  "Tools",
+        "Description":  "Installs CMTrace log viewer utility",
+        "DetectionScript":  "detection_detect-cmtrace.ps1",
+        "RemediationScript":  "remediation_install-cmtrace-remediate.ps1",
+        "Tags":  [
+                     "cmtrace",
+                     "tools",
+                     "logging"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Clear Recycle Bin",
+        "Category":  "Maintenance",
+        "Description":  "Empties the Recycle Bin to free up disk space",
+        "DetectionScript":  "detection_Invoke-ClearRecycleBinDetection.ps1",
+        "RemediationScript":  "remediation_Invoke-ClearRecycleBinRemedaiton.ps1",
+        "Tags":  [
+                     "cleanup",
+                     "recycle bin",
+                     "storage"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Logoff Current User",
+        "Category":  "User Management",
+        "Description":  "Logs off the currently signed-in user",
+        "DetectionScript":  "detection_Get-CurrentUserLoggedOffDetection.ps1",
+        "RemediationScript":  "remediation_Get-CurrentUserLoggedOffRemedaiton.ps1",
+        "Tags":  [
+                     "logoff",
+                     "session",
+                     "user"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Invoke Shutdown",
+        "Category":  "System Management",
+        "Description":  "Initiates a graceful system shutdown",
+        "DetectionScript":  "detection_Invoke-ShutdownDetection.ps1",
+        "RemediationScript":  "remediation_Invoke-ShutdownRemedaiton.ps1",
+        "Tags":  [
+                     "shutdown",
+                     "power",
+                     "management"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Install Teams",
+        "Category":  "Application Management",
+        "Description":  "Installs Microsoft Teams application",
+        "DetectionScript":  "detection_Invoke-TeamsInstallationDetection.ps1",
+        "RemediationScript":  "remediation_Invoke-TeamsInstallationRemedaiton.ps1",
+        "Tags":  [
+                     "teams",
+                     "installation",
+                     "collaboration"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Reinstall Teams",
+        "Category":  "Application Management",
+        "Description":  "Uninstalls and reinstalls Microsoft Teams",
+        "DetectionScript":  "detection_Invoke-TeamsReinstallationDetection.ps1",
+        "RemediationScript":  "remediation_Invoke-TeamsReinstallationRemedaiton.ps1",
+        "Tags":  [
+                     "teams",
+                     "reinstall",
+                     "troubleshooting"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Run Speed Test",
+        "Category":  "Network",
+        "Description":  "Performs network speed test and reports results",
+        "DetectionScript":  "detection_Run-SpeedttestDetection.ps1",
+        "RemediationScript":  "remediation_Run-SpeedttestRemediation.ps1",
+        "Tags":  [
+                     "network",
+                     "speed test",
+                     "diagnostics"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "OneDrive Folder Always Offline",
+        "Category":  "OneDrive",
+        "Description":  "Sets OneDrive folders to always available offline",
+        "DetectionScript":  "detection_detection-ODFolderOffline.ps1",
+        "RemediationScript":  "remediation_remediation-ODFolderOffline.ps1",
+        "Tags":  [
+                     "onedrive",
+                     "offline",
+                     "sync"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Profile Backup",
+        "Category":  "Backup",
+        "Description":  "Backs up user profile data",
+        "DetectionScript":  "detection_detect-backup.ps1",
+        "RemediationScript":  "remediation_remediate-backup.ps1",
+        "Tags":  [
+                     "backup",
+                     "profile",
+                     "data"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Profile Cleanup",
+        "Category":  "Maintenance",
+        "Description":  "Removes old and unused user profiles",
+        "DetectionScript":  "detection_detect-old-profiles.ps1",
+        "RemediationScript":  "remediation_remediate-old-profiles.ps1",
+        "Tags":  [
+                     "cleanup",
+                     "profiles",
+                     "storage"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Remove Teams Chat",
+        "Category":  "Application Management",
+        "Description":  "Removes consumer Teams Chat from Windows 11",
+        "DetectionScript":  "detection_detect-teams-chat.ps1",
+        "RemediationScript":  "remediation_remediate-teams-chat.ps1",
+        "Tags":  [
+                     "teams",
+                     "chat",
+                     "removal"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Remove Consumer Apps",
+        "Category":  "Application Management",
+        "Description":  "Removes pre-installed consumer applications",
+        "DetectionScript":  "detection_Remove-ConsumerAppsDetection.ps1",
+        "RemediationScript":  "remediation_Remove-ConsumerAppsRemediation.ps1",
+        "Tags":  [
+                     "bloatware",
+                     "consumer apps",
+                     "cleanup"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Remove Proxy Settings",
+        "Category":  "Network",
+        "Description":  "Removes proxy server configuration",
+        "DetectionScript":  "detection_Remove-ProxySettingsDetection.ps1",
+        "RemediationScript":  "remediation_Remove-ProxySettingsRemedaiton.ps1",
+        "Tags":  [
+                     "proxy",
+                     "network",
+                     "configuration"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Reset Windows Update",
+        "Category":  "Maintenance",
+        "Description":  "Resets Windows Update components to fix update issues",
+        "DetectionScript":  "detection_ResetWindowsUpdateDetection.ps1",
+        "RemediationScript":  "remediation_ResetWindowsUpdateRemediation.ps1",
+        "Tags":  [
+                     "windows update",
+                     "reset",
+                     "troubleshooting"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Reset Software Distribution Folder",
+        "Category":  "Maintenance",
+        "Description":  "Clears the Windows Update cache folder",
+        "DetectionScript":  "detection_Detect-Reset-SoftwareDistributionFolder.ps1",
+        "RemediationScript":  "remediation_Remediate-Reset-SoftwareDistributionFolder.ps1",
+        "Tags":  [
+                     "windows update",
+                     "cache",
+                     "troubleshooting"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Restart Service (Generic)",
+        "Category":  "System Management",
+        "Description":  "Template for restarting Windows services",
+        "DetectionScript":  "detection_detect-service.ps1",
+        "RemediationScript":  "remediation_restart-service.ps1",
+        "Tags":  [
+                     "services",
+                     "restart",
+                     "template"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Restart Windows Search Service",
+        "Category":  "Troubleshooting",
+        "Description":  "Restarts the Windows Search service to fix indexing issues",
+        "DetectionScript":  "detection_detect-search-service.ps1",
+        "RemediationScript":  "remediation_restart-search-service.ps1",
+        "Tags":  [
+                     "search",
+                     "indexing",
+                     "services"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Restart Windows Update Service",
+        "Category":  "Troubleshooting",
+        "Description":  "Restarts Windows Update service to resolve update issues",
+        "DetectionScript":  "detection_detect-wu-service.ps1",
+        "RemediationScript":  "remediation_restart-wu-service.ps1",
+        "Tags":  [
+                     "windows update",
+                     "services",
+                     "troubleshooting"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Run Browser Connection Test",
+        "Category":  "Network",
+        "Description":  "Tests browser connectivity to common websites",
+        "DetectionScript":  "detection_Run-ConnectionTestDetection.ps1",
+        "RemediationScript":  null,
+        "Tags":  [
+                     "browser",
+                     "connectivity",
+                     "diagnostics"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Set Cached Logon Count to 0",
+        "Category":  "Security",
+        "Description":  "Sets cached domain credentials count to zero",
+        "DetectionScript":  "detection_Detect_Cached_Logon_Count.ps1",
+        "RemediationScript":  "remediation_Remediate_Cached_Logon_Count.ps1",
+        "Tags":  [
+                     "security",
+                     "credentials",
+                     "cache"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Set Canary Token Registry Key",
+        "Category":  "Security",
+        "Description":  "Creates a registry-based canary token for intrusion detection",
+        "DetectionScript":  "detection_DetectCanaryToken.ps1",
+        "RemediationScript":  "remediation_RemediateCanaryToken.ps1",
+        "Tags":  [
+                     "security",
+                     "canary token",
+                     "detection"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Set Service (Generic)",
+        "Category":  "System Management",
+        "Description":  "Template for configuring Windows service startup type",
+        "DetectionScript":  "detection_detect-service.ps1",
+        "RemediationScript":  "remediation_set-service.ps1",
+        "Tags":  [
+                     "services",
+                     "configuration",
+                     "template"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Test LAPS User",
+        "Category":  "Security",
+        "Description":  "Verifies LAPS managed local admin account exists",
+        "DetectionScript":  "detection_detect-LAPSUser.ps1",
+        "RemediationScript":  "remediation_new-LAPSUser.ps1",
+        "Tags":  [
+                     "laps",
+                     "admin",
+                     "verification"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Toast Reboot Message",
+        "Category":  "User Experience",
+        "Description":  "Displays a toast notification prompting user to reboot",
+        "DetectionScript":  "detection_detect-reboot.ps1",
+        "RemediationScript":  "remediation_remediate-reboot.ps1",
+        "Tags":  [
+                     "notification",
+                     "reboot",
+                     "ux"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Uninstall Application",
+        "Category":  "Application Management",
+        "Description":  "Generic template for uninstalling applications",
+        "DetectionScript":  "detection_detect.ps1",
+        "RemediationScript":  "remediation_remediate.ps1",
+        "Tags":  [
+                     "uninstall",
+                     "apps",
+                     "template"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Uninstall Visual C++ 2010",
+        "Category":  "Application Management",
+        "Description":  "Removes Microsoft Visual C++ 2010 Redistributable",
+        "DetectionScript":  "detection_Detect_C++2010.ps1",
+        "RemediationScript":  "remediation_Remediate_C++2010.ps1",
+        "Tags":  [
+                     "uninstall",
+                     "visual c++",
+                     "cleanup"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Uninstall Dell SupportAssist",
+        "Category":  "Application Management",
+        "Description":  "Removes Dell SupportAssist application",
+        "DetectionScript":  "detection_Detect_DellSupportassist.ps1",
+        "RemediationScript":  "remediation_Remediate_DellSupportassist.ps1",
+        "Tags":  [
+                     "dell",
+                     "supportassist",
+                     "uninstall"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Uninstall Private Teams",
+        "Category":  "Application Management",
+        "Description":  "Removes consumer/private Microsoft Teams installations",
+        "DetectionScript":  "detection_Uninstall-PrivateTeamsDetection.ps1",
+        "RemediationScript":  "remediation_Uninstall-PrivateTeamsRemedaiton.ps1",
+        "Tags":  [
+                     "teams",
+                     "consumer",
+                     "uninstall"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Uninstall UserChrome",
+        "Category":  "Application Management",
+        "Description":  "Removes custom Firefox userChrome.css modifications",
+        "DetectionScript":  "detection_detect.ps1",
+        "RemediationScript":  "remediation_remediate.ps1",
+        "Tags":  [
+                     "firefox",
+                     "userchrome",
+                     "cleanup"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Unpin Microsoft Store",
+        "Category":  "User Experience",
+        "Description":  "Removes Microsoft Store from taskbar",
+        "DetectionScript":  "detection_detect-store.ps1",
+        "RemediationScript":  "remediation_remediate-store.ps1",
+        "Tags":  [
+                     "store",
+                     "taskbar",
+                     "ux"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Update Chocolatey Apps",
+        "Category":  "Application Management",
+        "Description":  "Updates all applications managed by Chocolatey",
+        "DetectionScript":  "detection_detection-choco-upgrade.ps1",
+        "RemediationScript":  "remediation_remediation-choco-upgrade.ps1",
+        "Tags":  [
+                     "chocolatey",
+                     "updates",
+                     "package manager"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Winget Install Apps from URL",
+        "Category":  "Application Management",
+        "Description":  "Installs applications from a URL list using Winget",
+        "DetectionScript":  "detection_detect-install-url-changes.ps1",
+        "RemediationScript":  "remediation_remediate-install-apps-from-url.ps1",
+        "Tags":  [
+                     "winget",
+                     "installation",
+                     "url"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Winget Uninstall Apps from URL",
+        "Category":  "Application Management",
+        "Description":  "Uninstalls applications from a URL list using Winget",
+        "DetectionScript":  "detection_detect-uninstall-url-changes.ps1",
+        "RemediationScript":  "remediation_remediate-uninstall-apps-from-url.ps1",
+        "Tags":  [
+                     "winget",
+                     "uninstall",
+                     "url"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Winget Update All",
+        "Category":  "Application Management",
+        "Description":  "Updates all applications managed by Windows Package Manager",
+        "DetectionScript":  "detection_winget-update-detect.ps1",
+        "RemediationScript":  "remediation_winget-upgrade-remediate.ps1",
+        "Tags":  [
+                     "winget",
+                     "updates",
+                     "package manager"
+                 ],
+        "Source":  "https://github.com/JayRHa/EndpointAnalyticsRemediationScripts"
+    },
+    {
+        "Name":  "Auto Remove Proactive Remediation",
+        "Category":  "Maintenance",
+        "Description":  "Automatically removes proactive remediation scripts from devices",
+        "DetectionScript":  "Auto remove Proactive Remediation script\\Proactive_Remediation_AutoRemove.ps1",
+        "RemediationScript":  null,
+        "Tags":  [
+                     "cleanup",
+                     "automation",
+                     "proactive remediation"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Block Keyboard Shortcuts",
+        "Category":  "Security",
+        "Description":  "Prevents specific keyboard shortcuts from being used",
+        "DetectionScript":  "Block keyboard shortcuts\\Detection.ps1",
+        "RemediationScript":  "Block keyboard shortcuts\\Remediation.ps1",
+        "Tags":  [
+                     "security",
+                     "keyboard",
+                     "restrictions"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Collect Lenovo BIOS Settings (Log Analytics v1)",
+        "Category":  "Troubleshooting",
+        "Description":  "Collects Lenovo BIOS settings and sends to Log Analytics workspace version 1",
+        "DetectionScript":  "Collect Lenovo BIOS settings in Log Analytics\\Detection_LogAnalyticsv1.ps1",
+        "RemediationScript":  null,
+        "Tags":  [
+                     "lenovo",
+                     "bios",
+                     "log analytics",
+                     "inventory"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Collect Lenovo BIOS Settings (Log Analytics v2)",
+        "Category":  "Troubleshooting",
+        "Description":  "Collects Lenovo BIOS settings and sends to Log Analytics workspace version 2",
+        "DetectionScript":  "Collect Lenovo BIOS settings in Log Analytics\\Detection_LogAnalyticsv2.ps1",
+        "RemediationScript":  null,
+        "Tags":  [
+                     "lenovo",
+                     "bios",
+                     "log analytics",
+                     "inventory"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Compare Lenovo BIOS Version",
+        "Category":  "Maintenance",
+        "Description":  "Compares current BIOS version with latest available version",
+        "DetectionScript":  "Compare Lenovo BIOS version\\Compare_BIOS_version_Detection.ps1",
+        "RemediationScript":  null,
+        "Tags":  [
+                     "lenovo",
+                     "bios",
+                     "version",
+                     "update"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Detect BSOD and Send Logs",
+        "Category":  "Troubleshooting",
+        "Description":  "Detects Blue Screen of Death events and sends logs for analysis",
+        "DetectionScript":  "Detect BSOD and send logs\\BSOD_Detection.ps1",
+        "RemediationScript":  "Detect BSOD and send logs\\BSOD_Remediation.ps1",
+        "Tags":  [
+                     "bsod",
+                     "crash",
+                     "logs",
+                     "diagnostics"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Detect Driver Issues",
+        "Category":  "Troubleshooting",
+        "Description":  "Identifies problematic or missing device drivers",
+        "DetectionScript":  "Detect drivers issues\\Drivers_Detection.ps1",
+        "RemediationScript":  "Detect drivers issues\\Drivers_Remediation.ps1",
+        "Tags":  [
+                     "drivers",
+                     "hardware",
+                     "troubleshooting"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Export Proactive Remediation to CSV",
+        "Category":  "Troubleshooting",
+        "Description":  "Exports proactive remediation script results to CSV file",
+        "DetectionScript":  "Export Proactive Remediation to CSV\\export_ProactiveRemediation_CSV.ps1",
+        "RemediationScript":  null,
+        "Tags":  [
+                     "export",
+                     "csv",
+                     "reporting",
+                     "proactive remediation"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Low Disk Space Notification",
+        "Category":  "User Experience",
+        "Description":  "Alerts users when disk space is running low",
+        "DetectionScript":  "Low disk space notification\\Disk_Space_Detection.ps1",
+        "RemediationScript":  "Low disk space notification\\Disk_Space_Remediation.ps1",
+        "Tags":  [
+                     "disk space",
+                     "notification",
+                     "storage"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Reboot Warning",
+        "Category":  "User Experience",
+        "Description":  "Notifies users when a reboot is required",
+        "DetectionScript":  "Reboot warning\\Last_Reboot_Detection.ps1",
+        "RemediationScript":  "Reboot warning\\Last_Reboot_Remediation.ps1",
+        "Tags":  [
+                     "reboot",
+                     "notification",
+                     "uptime"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Recycle Bin Size Alert",
+        "Category":  "Maintenance",
+        "Description":  "Alerts when Recycle Bin exceeds size threshold",
+        "DetectionScript":  "Recycle Bin size alert\\RecycleBin_Size_Detection.ps1",
+        "RemediationScript":  "Recycle Bin size alert\\RecycleBin_Size_Remediation.ps1",
+        "Tags":  [
+                     "recycle bin",
+                     "cleanup",
+                     "storage"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Remediate Local Admin",
+        "Category":  "Security",
+        "Description":  "Manages local administrator accounts on devices",
+        "DetectionScript":  "Remediate local admin\\Detection.ps1",
+        "RemediationScript":  "Remediate local admin\\Remediation.ps1",
+        "Tags":  [
+                     "local admin",
+                     "security",
+                     "accounts"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "CVE-2554100 Report",
+        "Category":  "Security",
+        "Description":  "Reports on CVE-2554100 vulnerability status",
+        "DetectionScript":  "RemediationScript_CVE2554100_Report\\Remediation_CVE2554100_Report.ps1",
+        "RemediationScript":  null,
+        "Tags":  [
+                     "cve",
+                     "vulnerability",
+                     "security",
+                     "reporting"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Search String in Remediations",
+        "Category":  "Troubleshooting",
+        "Description":  "Searches for specific strings within remediation scripts",
+        "DetectionScript":  "Search string in Remediations\\IntuneRemediations_SearchString.ps1",
+        "RemediationScript":  null,
+        "Tags":  [
+                     "search",
+                     "utility",
+                     "management"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Set BIOS Password",
+        "Category":  "Security",
+        "Description":  "Sets or updates BIOS password on devices",
+        "DetectionScript":  "Set BIOS password\\Check_BIOS_Password_Detection.ps1",
+        "RemediationScript":  "Set BIOS password\\Check_BIOS_Password_Remediation.ps1",
+        "Tags":  [
+                     "bios",
+                     "password",
+                     "security",
+                     "hardware"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Toast Notification SYSTEM (Install Module)",
+        "Category":  "User Experience",
+        "Description":  "Displays toast notifications in SYSTEM context with module installation",
+        "DetectionScript":  "Toast notification SYSTEM context\\Toast_Remediation_SYSTEM_InstallModule.ps1",
+        "RemediationScript":  null,
+        "Tags":  [
+                     "toast",
+                     "notification",
+                     "system context",
+                     "module"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    },
+    {
+        "Name":  "Toast Notification SYSTEM (No Module)",
+        "Category":  "User Experience",
+        "Description":  "Displays toast notifications in SYSTEM context without module installation",
+        "DetectionScript":  "Toast notification SYSTEM context\\Toast_Remediation_SYSTEM_NoModuleInstall.ps1",
+        "RemediationScript":  null,
+        "Tags":  [
+                     "toast",
+                     "notification",
+                     "system context"
+                 ],
+        "Source":  "https://github.com/damienvanrobaeys/Intune-Remediation-scripts"
+    }
+]

@@ -1,0 +1,124 @@
+﻿<!--
+    InSight - Remediation Scripts View
+    Author: Kosta Wadenfalk
+    GitHub: https://github.com/MrOlof
+-->
+<ScrollViewer x:Name="RemediationScriptsView" Visibility="Collapsed" Padding="30">
+    <StackPanel>
+        <!-- Header -->
+        <StackPanel Margin="0,0,0,30">
+            <TextBlock Text="Remediation Scripts" FontSize="{DynamicResource FontSizeHeader}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+            <TextBlock Text="Browse and deploy community remediation scripts for common IT management tasks" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,8,0,0"/>
+        </StackPanel>
+
+        <!-- Search and Filter -->
+        <Border Style="{StaticResource CardStyle}" Margin="0,0,0,30">
+            <StackPanel>
+                <TextBlock Text="Search Scripts" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,16"/>
+
+                <!-- Search Box -->
+                <TextBox x:Name="RemediationSearchBox"
+                         Style="{StaticResource ModernTextBoxStyle}"
+                         Padding="12,10"
+                         Margin="0,0,0,16"
+                         Text="Search by name, category, or tag..."/>
+
+                <!-- Category Filter -->
+                <TextBlock Text="Filter by Category:" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
+                <WrapPanel x:Name="RemediationCategoryFilter" Margin="0,0,0,0">
+                    <Button x:Name="CategoryAll" Content="All" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,8,8" Padding="12,6" FontSize="{DynamicResource FontSizeSmall}" Tag="All"/>
+                    <Button x:Name="CategorySecurity" Content="Security" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,8,8" Padding="12,6" FontSize="{DynamicResource FontSizeSmall}" Tag="Security"/>
+                    <Button x:Name="CategoryMaintenance" Content="Maintenance" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,8,8" Padding="12,6" FontSize="{DynamicResource FontSizeSmall}" Tag="Maintenance"/>
+                    <Button x:Name="CategoryApplicationManagement" Content="Application Management" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,8,8" Padding="12,6" FontSize="{DynamicResource FontSizeSmall}" Tag="Application Management"/>
+                    <Button x:Name="CategorySystemConfiguration" Content="System Configuration" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,8,8" Padding="12,6" FontSize="{DynamicResource FontSizeSmall}" Tag="System Configuration"/>
+                    <Button x:Name="CategoryNetwork" Content="Network" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,8,8" Padding="12,6" FontSize="{DynamicResource FontSizeSmall}" Tag="Network"/>
+                    <Button x:Name="CategoryUserExperience" Content="User Experience" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,8,8" Padding="12,6" FontSize="{DynamicResource FontSizeSmall}" Tag="User Experience"/>
+                    <Button x:Name="CategoryTroubleshooting" Content="Troubleshooting" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,8,8" Padding="12,6" FontSize="{DynamicResource FontSizeSmall}" Tag="Troubleshooting"/>
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Results Summary -->
+        <StackPanel x:Name="RemediationResultsSummary" Margin="0,0,0,16" Visibility="Collapsed">
+            <TextBlock x:Name="RemediationResultsCount" Text="Showing 89 scripts" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}"/>
+        </StackPanel>
+
+        <!-- Scripts Grid -->
+        <ItemsControl x:Name="RemediationScriptsGrid">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="2" HorizontalAlignment="Stretch"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Style="{StaticResource CardStyle}" Margin="0,0,16,16" Padding="20">
+                        <StackPanel>
+                            <!-- Script Header -->
+                            <Grid Margin="0,0,0,12">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Name}" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" TextWrapping="Wrap"/>
+                                    <TextBlock Text="{Binding Category}" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource AccentBrush}" Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </Grid>
+
+                            <!-- Description -->
+                            <TextBlock Text="{Binding Description}"
+                                       FontSize="{DynamicResource FontSizeNormal}"
+                                       Foreground="{DynamicResource TextSecondaryBrush}"
+                                       TextWrapping="Wrap"
+                                       Margin="0,0,0,12"/>
+
+                            <!-- Tags -->
+                            <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextTertiaryBrush}" Margin="0,0,0,12">
+                                <Run Text="Tags:"/>
+                                <Run Text="{Binding TagsString}"/>
+                            </TextBlock>
+
+                            <!-- Action Buttons -->
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                                    <Button Content="View Detection"
+                                            Style="{StaticResource SecondaryButtonStyle}"
+                                            Padding="10,6"
+                                            FontSize="{DynamicResource FontSizeSmall}"
+                                            Tag="{Binding DetectionScript}"
+                                            Margin="0,0,8,0"/>
+                                    <Button Content="View Remediation"
+                                            Style="{StaticResource SecondaryButtonStyle}"
+                                            Padding="10,6"
+                                            FontSize="{DynamicResource FontSizeSmall}"
+                                            Tag="{Binding RemediationScript}"
+                                            Visibility="{Binding HasRemediation}"/>
+                                </StackPanel>
+
+                                <Button Grid.Column="1"
+                                        Content="Deploy"
+                                        Style="{StaticResource ModernButtonStyle}"
+                                        Padding="16,6"
+                                        FontSize="{DynamicResource FontSizeSmall}"
+                                        Tag="{Binding Name}"
+                                        IsEnabled="False"
+                                        Opacity="0.5"/>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <!-- No Results Message -->
+        <Border x:Name="RemediationNoResults" Style="{StaticResource CardStyle}" Padding="40" Visibility="Collapsed">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="&#xE11A;" FontFamily="Segoe MDL2 Assets" FontSize="48" HorizontalAlignment="Center" Foreground="{DynamicResource TextTertiaryBrush}" Margin="0,0,0,16"/>
+                <TextBlock Text="No scripts found" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                <TextBlock Text="Try adjusting your search or filter criteria" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</ScrollViewer>
