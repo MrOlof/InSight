@@ -81,6 +81,11 @@ Export your entire Intune configuration
 View policy and app assignments
 <img width="1605" height="1212" alt="image" src="https://github.com/user-attachments/assets/7e53e46d-078e-4110-8915-d30c13d7c717" />
 
+### Applications
+View updates for applications and possible MSstore availability 
+<img width="1605" height="1219" alt="image" src="https://github.com/user-attachments/assets/940d24bb-86da-4c0f-9a65-d9d5b0d08ef3" />
+
+
 
 ## Features in Detail
 
