@@ -8,7 +8,7 @@ A PowerShell GUI tool for Microsoft Intune that provides insights and visibility
 
 ## Features
 
-📊 **Device Ownership **: Analyze device ownership for user groups.
+📊 **Device Ownership**: Analyze device ownership for user groups.
 
 💾 **Configuration Backup**: Export your entire Intune configuration to JSON files. 
 
