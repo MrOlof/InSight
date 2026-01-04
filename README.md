@@ -37,7 +37,7 @@ Run the application:
 ## Usage
 
 1. **Launch the Application**: Run `Start-InSight.ps1`
-2. **Sign In**: Authenticate with your Microsoft 365 account
+2. **Sign In**: Authenticate with your Microsoft Account
 3. **Grant Permissions**: Accept the required Microsoft Graph API permissions
 4. **Select a Tool**: Choose from the left sidebar (Applications, Configurations, Assignments, etc.)
 5. **Perform Analysis**: Use the tool's features to analyze or export data
