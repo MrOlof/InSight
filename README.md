@@ -18,13 +18,6 @@ A PowerShell GUI tool for Microsoft Intune administrators that provides insights
 
 🔨 **Remediation Scripts**: Browse a library of community remediation scripts ready for deployment.
 
-## Requirements
-
-- Windows 10/11 or Windows Server 2016+
-- PowerShell 5.1 or later
-- .NET Framework 4.7.2 or later
-- Microsoft Intune administrator account
-
 ## Installation
 
 ### From Source
@@ -73,20 +66,20 @@ Run the application:
 ## Screenshots
 
 ### Main Dashboard
-Sign in screen with Microsoft authentication
-![Dashboard](screenshot-dashboard.png)
+<img width="1505" height="929" alt="image" src="https://github.com/user-attachments/assets/3bd5c8bc-cae2-4bc2-819e-7fae1d11e257" />
 
 ### Device Ownership Analysis
 Analyze device ownership for user groups
-![Device Ownership](screenshot-device-ownership.png)
+<img width="1504" height="928" alt="image" src="https://github.com/user-attachments/assets/1cf922a2-5556-40b5-a51e-3c43f365a9ce" />
 
 ### Configuration Backup
 Export your entire Intune configuration
-![Backup](screenshot-backup.png)
+<img width="1566" height="1123" alt="image" src="https://github.com/user-attachments/assets/2e3cc0e6-6165-4dfe-a471-0e95f7c40d1c" />
 
 ### Assignment Tracking
 View policy and app assignments
-![Assignments](screenshot-assignments.png)
+<img width="1605" height="1212" alt="image" src="https://github.com/user-attachments/assets/7e53e46d-078e-4110-8915-d30c13d7c717" />
+
 
 ## Features in Detail
 
@@ -125,7 +118,6 @@ Optional features:
 
 Built with:
 - **UI Framework**: Windows Presentation Foundation (WPF)
-- **Language**: PowerShell 5.1+
 - **Authentication**: Microsoft Authentication Library (MSAL)
 - **API**: Microsoft Graph API
 - **Data Format**: JSON
