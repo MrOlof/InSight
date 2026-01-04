@@ -21,8 +21,8 @@ A PowerShell GUI tool for Microsoft Intune that provides insights and visibility
 
 ## Screenshots
 
-### Main Dashboard
-<img width="1505" height="929" alt="image" src="https://github.com/user-attachments/assets/3bd5c8bc-cae2-4bc2-819e-7fae1d11e257" />
+### Main 
+<img width="1612" height="1212" alt="image" src="https://github.com/user-attachments/assets/c701aff6-a5a7-454f-9477-55b092089a77" />
 
 ### Device Ownership 
 Analyze device ownership for user groups
