@@ -2,7 +2,7 @@
 
 # InSight
 
-A PowerShell GUI tool for Microsoft Intune administrators that provides insights and visibility where the Intune portal falls short.
+A PowerShell GUI tool for Microsoft Intune that provides insights and visibility where the Intune portal falls short.
 
 </div>
 
