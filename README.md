@@ -1,74 +1,196 @@
 # InSight
 
-InSights where Intune falls short.
+A PowerShell GUI tool for Microsoft Intune administrators that provides insights and visibility where the Intune portal falls short.
 
-A PowerShell GUI tool that gives you better visibility into your Microsoft Intune environment. Built because the Intune portal doesn't always show you what you need to know.
+## Features
 
-## What it does
+📊 **Device Ownership Analysis**: Analyze device ownership for user groups. See who has zero devices, one device, or multiple devices.
 
-**Device Ownership Analysis**
-Ever wonder which users in a group actually have devices? This tool analyzes group memberships and shows you who has zero devices, one device, or multiple devices. Export the results to CSV for reporting.
+💾 **Configuration Backup**: Export your entire Intune configuration to JSON files. Includes compliance policies, device configurations, settings catalog, scripts, app protection policies, and endpoint security settings.
 
-**Configuration Backup**
-Export your entire Intune configuration to JSON files. Includes compliance policies, device configs, settings catalog, scripts, app protection policies, and endpoint security settings. Choose between v1.0 or Beta API.
+🎯 **Assignment Tracking**: View policy and app assignments for specific groups. Find orphaned policies that aren't assigned to anyone. Identify empty groups.
 
-**Assignment Tracking**
-See what policies and apps are assigned to specific groups. Find orphaned policies that aren't assigned to anyone. Identify empty groups wasting your assignments.
+📱 **Application Insights**: View all Intune applications with version tracking and export capabilities.
 
-**Application Insights**
-View all your Intune apps in one place. Check versions and export to CSV/JSON for documentation.
+🔨 **Remediation Scripts**: Browse a library of community remediation scripts ready for deployment.
 
-**Remediation Scripts**
-Browse a library of community remediation scripts you can deploy to Intune.
+## Requirements
 
-## Getting Started
-
-**Requirements:**
-- Windows 10/11
+- Windows 10/11 or Windows Server 2016+
 - PowerShell 5.1 or later
-- An Intune admin account
+- .NET Framework 4.7.2 or later
+- Microsoft Intune administrator account
 
-**Install:**
+## Installation
+
+### From Source
+
+Clone the repository:
 ```powershell
 git clone https://github.com/MrOlof/InSight.git
 cd InSight
+```
+
+Run the application:
+```powershell
 .\Start-InSight.ps1
 ```
 
-Sign in with your Microsoft account and grant the permissions when prompted. The app uses read-only permissions by default.
+## Usage
 
-## How to Use
+1. **Launch the Application**: Run `Start-InSight.ps1`
+2. **Sign In**: Authenticate with your Microsoft 365 account
+3. **Grant Permissions**: Accept the required Microsoft Graph API permissions
+4. **Select a Tool**: Choose from the left sidebar (Applications, Configurations, Assignments, etc.)
+5. **Perform Analysis**: Use the tool's features to analyze or export data
 
-The interface is straightforward. Sign in, pick a tool from the left sidebar, and go.
+### Common Workflows
 
-**Quick example - Backup your config:**
-1. Click Backup
-2. Choose where to save it
-3. Click Start Backup
-4. Done in about 30-60 seconds
+**Backup Intune Configuration:**
+1. Click Backup in the left menu
+2. Select destination folder
+3. Configure options (include assignments, exclude built-in policies, API version)
+4. Click Start Backup
+5. Wait 30-60 seconds for completion
 
-**Find users with no devices:**
+**Analyze Device Ownership:**
 1. Click Device Ownership
-2. Search for your group
-3. Click Analyze
-4. See the results sorted by device count
+2. Search for a user group
+3. Click Analyze Devices
+4. Review results categorized by device count
+5. Export to CSV if needed
 
-## Technical Details
+**Find Orphaned Policies:**
+1. Click Assignments
+2. Scroll to Orphaned Policies section
+3. Click Find Orphaned Policies
+4. Review configurations without assignments
 
-Built with PowerShell and WPF. Uses MSAL for authentication and Microsoft Graph API for data. Logs are saved to `C:\Logs\IntuneAdmin\` and config is stored in your local AppData folder.
+## Features in Detail
 
-The tool is read-only by default. Nothing gets modified in your tenant unless you explicitly deploy something.
+### Authentication
+- MSAL-based OAuth2 authentication
+- Automatic token refresh
+- Session management with PIM support
+- Permission tracking and validation
 
-## About
+### Configuration Backup
+Supported resource types:
+- Device Compliance Policies
+- Device Configuration Profiles
+- Settings Catalog Policies
+- Device Management Scripts
+- Proactive Remediations (Health Scripts)
+- Applications (metadata)
+- Autopilot Profiles
+- Endpoint Security Policies
+- Administrative Templates
 
-Created by [MrOlof](https://github.com/MrOlof) for anyone managing Intune who wishes the portal did more.
+Optional features:
+- Include policy and profile assignments
+- Exclude built-in policies
+- API version selection (v1.0 or Beta)
+- Timestamped backup folders
 
-Licensed under MIT. Use it however you want.
+### Assignment Analysis
+- Device group assignment tracking
+- User group assignment tracking
+- Orphaned policy detection
+- Empty group identification
+- Export capabilities
+
+## Architecture
+
+Built with:
+- **UI Framework**: Windows Presentation Foundation (WPF)
+- **Language**: PowerShell 5.1+
+- **Authentication**: Microsoft Authentication Library (MSAL)
+- **API**: Microsoft Graph API
+- **Data Format**: JSON
+
+## Project Structure
+
+```
+InSight/
+├── Start-InSight.ps1              # Main launcher
+├── Modules/
+│   ├── AuthenticationManager.psm1  # MSAL authentication
+│   ├── ConfigurationManager.psm1   # App settings
+│   ├── LoggingManager.psm1         # Logging functions
+│   ├── PermissionManager.psm1      # Permission validation
+│   ├── ScriptManager.psm1          # Script registry
+│   └── AssignmentHelpers.psm1      # Assignment analysis
+├── Resources/
+│   ├── MainWindow.xaml             # Main UI definition
+│   ├── DeviceOwnershipView.xaml    # Device ownership UI
+│   └── RemediationScripts.json     # Script library
+├── Scripts/
+│   ├── Get-GroupDeviceOwnershipAnalysis.ps1
+│   └── ScriptTemplate.ps1
+└── Logs/                           # Application logs
+```
+
+## Configuration
+
+Settings are stored in `%LOCALAPPDATA%\IntuneAdmin\config.json`:
+
+```json
+{
+  "Data": {
+    "ExportPath": "C:\\IntuneExports"
+  },
+  "Logging": {
+    "Level": "Info",
+    "RetentionDays": 30
+  }
+}
+```
+
+## Security
+
+- Read-only by default for safety
+- MSAL OAuth2 authentication
+- Local token caching with encryption
+- Automatic token refresh
+- No credentials stored in code
+- Comprehensive logging with sensitive data redaction
+
+## Required Permissions
+
+The application requests the following Microsoft Graph API permissions:
+- `DeviceManagementManagedDevices.Read.All`
+- `DeviceManagementApps.Read.All`
+- `DeviceManagementConfiguration.Read.All`
+- `User.Read.All`
+- `Directory.Read.All`
+- `Group.Read.All`
+
+## Logging
+
+Logs are stored in `C:\Logs\IntuneAdmin\`:
+- File format: `IntuneAdmin_YYYY-MM-DD.log`
+- Levels: DEBUG, INFO, WARNING, ERROR
+- Automatic rotation with configurable retention (default 30 days)
 
 ## Contributing
 
-Found a bug? Have an idea? Open an issue or submit a PR. Just keep it simple and test it first.
+Contributions are welcome. Please:
+1. Fork the repository
+2. Create a feature branch
+3. Test in your Intune environment
+4. Submit a Pull Request
 
----
+## License
 
-If this saves you time, star the repo.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+**Kosta Wadenfalk**
+- GitHub: [@MrOlof](https://github.com/MrOlof)
+
+## Acknowledgments
+
+- Microsoft Graph API
+- Microsoft Authentication Library (MSAL)
+- PowerShell Community
