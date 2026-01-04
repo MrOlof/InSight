@@ -1,6 +1,10 @@
+<div align="center">
+
 # InSight
 
 A PowerShell GUI tool for Microsoft Intune administrators that provides insights and visibility where the Intune portal falls short.
+
+</div>
 
 ## Features
 
