@@ -1,0 +1,84 @@
+param(
+[switch]$GridView,		
+[switch]$CSV
+)
+
+# Prompt credentials
+Connect-MgGraph
+
+# With a secret
+# $tenantID = ""
+# $clientId = ""
+# $Secret = ""
+# $myAccessToken = Get-MsalToken -ClientId $clientID -TenantId $tenantID -ClientSecret $Secret
+# Connect-MgGraph -TenantId $tenantID -ClientSecretCredential $ClientSecretCredential
+
+# With a certificate
+# $Script:tenantID = ""
+# $Script:clientId = ""	
+# $Script:Thumbprint = ""
+# Connect-MgGraph -Certificate $ClientCertificate -TenantId $TenantId -ClientId $ClientId  | out-null		
+		
+$Remediations_URL = "https://graph.microsoft.com/beta/deviceManagement/deviceHealthScripts"
+$Get_Scripts = (Invoke-MgGraphRequest -Uri $Remediations_URL  -Method GET).value	
+$Data_Array = @()
+ForEach($Script in $Get_Scripts)
+{
+	$Script_Name = $Script.displayName
+	$Script_Id = $Script.id
+
+	$Script_info = "$Remediations_URL/$Script_Id"
+	$Get_Script_info = (Invoke-MgGraphRequest -Uri $Script_info  -Method GET)	
+
+	$Detection = $Get_Script_info.detectionScriptContent	
+	If($Detection -eq $null){
+		$String_Found = "Empty"
+		$String_in_detection = "Empty"		
+	}Else{
+		$Detection_Decoded = [Text.Encoding]::Utf8.GetString([Convert]::FromBase64String($Detection))
+		$Detection_check = $Detection_Decoded | Select-String "Invoke-WebRequest" | Where-Object {$_.Line -notmatch "-UseBasicParsing"}		
+		If($Detection_check -ne $null)
+		{
+			$String_in_detection = "Yes"
+		}Else{
+			$String_in_detection = "No"
+		}				
+	}
+	
+	$Remediation = $Get_Script_info.remediationScriptContent	
+	If($Remediation -eq $null){
+		$String_Found = "Empty"
+		$String_in_remediation = "Empty"		
+	}Else{
+		$Remediation_Decoded = [Text.Encoding]::Utf8.GetString([Convert]::FromBase64String($Remediation))
+		$Remediation_Check = $Remediation_Decoded | Select-String "Invoke-WebRequest" | Where-Object {$_.Line -notmatch "-UseBasicParsing"}				
+		If($Remediation_Check -ne $null)
+		{
+			$String_in_remediation = "Yes"
+		}Else{
+			$String_in_remediation = "No"
+		}				
+	}	
+	
+	If(($Detection_check -ne $null) -or ($Remediation_Check -ne $null))
+		{
+			$String_Found = "Yes"		
+		}Else{
+			$String_Found = "No"		
+		}
+			
+	
+	$Obj = [PSCustomObject]@{
+		Name     				= $Script_Name
+		ID     					= $Script_Id
+		"Issue"     			= $String_Found		
+		"Issue in detection" 	= $String_in_detection
+		"Issue in remediation"  = $String_in_remediation		
+	}
+	
+	$Data_Array += $Obj
+}	
+
+$Data_With_String = $Data_Array | where {$_."Issue" -eq "Yes"}
+If($GridView){$Data_With_String | Out-GridView}
+If($CSV){$Data_With_String | Export-Csv -Path "$env:temp\CVE-202554100_Script_Report.csv" -NoTypeInformation -Encoding UTF8;invoke-item $env:temp}

@@ -4703,8 +4703,8 @@ if ($controls['ExportOwnershipButton']) {
 # Load remediation scripts from JSON
 $script:RemediationScripts = @()
 $script:CurrentCategory = "All"
-$script:RemediationScriptsSourcePath = "C:\Users\Snorlax\OneDrive\Work\Scripts\Reporting\Intune\EndpointAnalyticsRemediationScripts"
-$script:RemediationScriptsSourcePath2 = "C:\Users\Snorlax\OneDrive\Work\Scripts\Reporting\Intune\Intune-Remediation-scripts"
+$script:RemediationScriptsSourcePath = Join-Path $PSScriptRoot "Resources\RemediationScripts"
+$script:RemediationScriptsSourcePath2 = Join-Path $PSScriptRoot "Resources\RemediationScripts"
 
 function Show-ScriptViewer {
     param(
