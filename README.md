@@ -12,7 +12,7 @@ A PowerShell GUI tool for Microsoft Intune administrators that provides insights
 
 💾 **Configuration Backup**: Export your entire Intune configuration to JSON files. 
 
-🎯 **Assignment Tracking**: View policy and app assignments for specific groups. Find orphaned policies that aren't assigned to anyone.
+🎯 **Assignment Tracking**: View policy and app assignments for specific groups and find orphaned policies.
 
 📱 **Application Insights**: View all Intune applications with version tracking and export capabilities.
 
