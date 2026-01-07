@@ -229,6 +229,41 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Style x:Key="ModernComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="Background" Value="{DynamicResource CardBackgroundBrush}"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="FontSize" Value="{DynamicResource FontSizeSmall}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="MinHeight" Value="32"/>
+        </Style>
+
+        <Style TargetType="ComboBoxItem">
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="FontSize" Value="{DynamicResource FontSizeSmall}"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBoxItem">
+                        <Border x:Name="border" Background="Transparent" Padding="{TemplateBinding Padding}" CornerRadius="4" Margin="2">
+                            <ContentPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{DynamicResource NavItemHoverBrush}"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{DynamicResource NavItemSelectedBrush}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
 
     <Grid>
@@ -282,13 +317,13 @@
                             <Button x:Name="NavDashboard" Style="{StaticResource NavButtonStyle}" Tag="Dashboard"><TextBlock Text="&#xE80F;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button>
                             <Border Height="1" Background="{DynamicResource DividerBrush}" Margin="20,12"/>
                             <TextBlock Text="TOOLS" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource TextTertiaryBrush}" Margin="20,8,20,8"/>
-                            <Grid><Button x:Name="NavApps" Style="{StaticResource NavButtonStyle}" Tag="Applications" IsEnabled="False"><TextBlock Text="&#xE71D;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavAppsLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
-                            <Grid><Button x:Name="NavConfiguration" Style="{StaticResource NavButtonStyle}" Tag="Configurations" IsEnabled="False"><TextBlock Text="&#xE713;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavConfigurationLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
-                            <Grid><Button x:Name="NavAssignments" Style="{StaticResource NavButtonStyle}" Tag="Assignments" IsEnabled="False"><TextBlock Text="&#xE8F4;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavAssignmentsLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
-                            <Grid><Button x:Name="NavDeviceOwnership" Style="{StaticResource NavButtonStyle}" Tag="Device Ownership" IsEnabled="False"><TextBlock Text="&#xE770;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavDeviceOwnershipLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
-                            <Grid><Button x:Name="NavRemediation" Style="{StaticResource NavButtonStyle}" Tag="Remediation Scripts" IsEnabled="False"><TextBlock Text="&#xE90F;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavRemediationLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
-                            <Grid><Button x:Name="NavBackup" Style="{StaticResource NavButtonStyle}" Tag="Backup" IsEnabled="False"><TextBlock Text="&#xE8C8;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavBackupLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
-                            <Grid><Button x:Name="NavReports" Style="{StaticResource NavButtonStyle}" Tag="Reports - Coming soon" IsEnabled="False"><TextBlock Text="&#xE9F9;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavReportsLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
+                            <Button x:Name="NavApps" Style="{StaticResource NavButtonStyle}" Tag="Applications"><TextBlock Text="&#xE71D;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button>
+                            <Button x:Name="NavConfiguration" Style="{StaticResource NavButtonStyle}" Tag="Configurations"><TextBlock Text="&#xE713;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button>
+                            <Button x:Name="NavAssignments" Style="{StaticResource NavButtonStyle}" Tag="Assignments"><TextBlock Text="&#xE8F4;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button>
+                            <Button x:Name="NavDeviceOwnership" Style="{StaticResource NavButtonStyle}" Tag="Device Ownership"><TextBlock Text="&#xE770;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button>
+                            <Button x:Name="NavRemediation" Style="{StaticResource NavButtonStyle}" Tag="Remediation Scripts"><TextBlock Text="&#xE90F;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button>
+                            <Button x:Name="NavBackup" Style="{StaticResource NavButtonStyle}" Tag="Backup"><TextBlock Text="&#xE8C8;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button>
+                            <Grid><Button x:Name="NavReports" Style="{StaticResource NavButtonStyle}" Tag="Reports"><TextBlock Text="&#xE9F9;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><Border Background="{DynamicResource SuccessBrush}" CornerRadius="8" Padding="4,2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,8,20,0"><TextBlock Text="New" FontSize="9" FontWeight="Bold" Foreground="White"/></Border></Grid>
                         </StackPanel>
                     </ScrollViewer>
                     <Border Grid.Row="2" BorderBrush="{DynamicResource DividerBrush}" BorderThickness="0,1,0,0" Padding="16,12">
@@ -300,7 +335,7 @@
                                     <Run Text="MrOlof"/>
                                 </Hyperlink>
                             </TextBlock>
-                            <TextBlock Text="v1.0.0" FontSize="10" Foreground="{DynamicResource TextTertiaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                            <TextBlock Text="v1.3.0" FontSize="10" Foreground="{DynamicResource TextTertiaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                         </StackPanel>
                     </Border>
                 </Grid>
@@ -313,20 +348,84 @@
                         <Grid Margin="60,50"><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
                             <StackPanel Grid.Row="0" Margin="0,0,0,50">
                                 <TextBlock Text="Welcome to InSight" FontSize="36" FontWeight="Light" Foreground="{DynamicResource TextPrimaryBrush}"/>
-                                <TextBlock Text="Sign in with your Microsoft account to access Intune management features" FontSize="{DynamicResource FontSizeMedium}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,12,0,0"/>
-                                <Button x:Name="WelcomeSignInButton" Style="{StaticResource ModernButtonStyle}" Margin="0,30,0,0" HorizontalAlignment="Left" Padding="24,14"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE77B;" FontFamily="Segoe Fluent Icons" FontSize="16" Margin="0,0,12,0" VerticalAlignment="Center"/><TextBlock Text="Sign in with Microsoft" FontSize="{DynamicResource FontSizeMedium}" VerticalAlignment="Center"/></StackPanel></Button>
+                                <TextBlock Text="Your comprehensive toolkit for Intune management and reporting" FontSize="{DynamicResource FontSizeMedium}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,12,0,0"/>
+
+                                <Border Background="{DynamicResource InfoBrush}" CornerRadius="8" Padding="24,20" Margin="0,40,0,0" MaxWidth="900" HorizontalAlignment="Left">
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal" Margin="0,0,0,16">
+                                            <TextBlock Text="&#xE946;" FontFamily="Segoe Fluent Icons" FontSize="22" Foreground="White" VerticalAlignment="Center" Margin="0,0,12,0"/>
+                                            <TextBlock Text="What's New in v1.3.0" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center"/>
+                                        </StackPanel>
+
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="20"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <StackPanel Grid.Column="0">
+                                                <TextBlock Text="New Feature" FontSize="{DynamicResource FontSizeSmall}" FontWeight="SemiBold" Foreground="White" Opacity="0.8" Margin="0,0,0,12"/>
+
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="&#xE8C8;" FontFamily="Segoe Fluent Icons" FontSize="18" Foreground="White" VerticalAlignment="Top" Margin="0,2,12,0"/>
+                                                    <StackPanel>
+                                                        <TextBlock Text="Reports" FontWeight="SemiBold" FontSize="{DynamicResource FontSizeMedium}" Foreground="White"/>
+                                                        <TextBlock Text="Generate comprehensive reports for your Intune and Entra ID environment:" FontSize="{DynamicResource FontSizeSmall}" Foreground="White" Opacity="0.9" TextWrapping="Wrap" Margin="0,6,0,8"/>
+                                                        <StackPanel Margin="12,0,0,0">
+                                                            <TextBlock Text="&#x2022; Authentication Methods Analysis" FontSize="{DynamicResource FontSizeSmall}" Foreground="White" Opacity="0.9" Margin="0,2,0,0"/>
+                                                            <TextBlock Text="&#x2022; Inactive Users Detection" FontSize="{DynamicResource FontSizeSmall}" Foreground="White" Opacity="0.9" Margin="0,2,0,0"/>
+                                                            <TextBlock Text="&#x2022; Conditional Access Effectiveness" FontSize="{DynamicResource FontSizeSmall}" Foreground="White" Opacity="0.9" Margin="0,2,0,0"/>
+                                                            <TextBlock Text="&#x2022; Shadow IT and Unmanaged Devices" FontSize="{DynamicResource FontSizeSmall}" Foreground="White" Opacity="0.9" Margin="0,2,0,0"/>
+                                                        </StackPanel>
+                                                        <TextBlock Text="More reports coming soon!" FontSize="{DynamicResource FontSizeSmall}" FontStyle="Italic" Foreground="White" Opacity="0.8" Margin="0,8,0,0"/>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                            </StackPanel>
+
+                                            <Border Grid.Column="1" Width="1" Background="White" Opacity="0.2" Margin="0,8"/>
+
+                                            <StackPanel Grid.Column="2">
+                                                <TextBlock Text="Improvements" FontSize="{DynamicResource FontSizeSmall}" FontWeight="SemiBold" Foreground="White" Opacity="0.8" Margin="0,0,0,12"/>
+
+                                                <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                                                    <TextBlock Text="&#xE945;" FontFamily="Segoe Fluent Icons" FontSize="16" Foreground="White" VerticalAlignment="Top" Margin="0,2,10,0"/>
+                                                    <StackPanel>
+                                                        <TextBlock Text="Device Ownership Performance" FontWeight="SemiBold" FontSize="{DynamicResource FontSizeNormal}" Foreground="White"/>
+                                                        <TextBlock Text="Faster queries for large user groups in enterprise deployments." FontSize="{DynamicResource FontSizeSmall}" Foreground="White" Opacity="0.9" TextWrapping="Wrap" Margin="0,4,0,0"/>
+                                                    </StackPanel>
+                                                </StackPanel>
+
+                                                <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                                                    <TextBlock Text="&#xE71B;" FontFamily="Segoe Fluent Icons" FontSize="16" Foreground="White" VerticalAlignment="Top" Margin="0,2,10,0"/>
+                                                    <StackPanel>
+                                                        <TextBlock Text="Nested Groups Support" FontWeight="SemiBold" FontSize="{DynamicResource FontSizeNormal}" Foreground="White"/>
+                                                        <TextBlock Text="Recursive processing of nested Entra ID groups for complete visibility." FontSize="{DynamicResource FontSizeSmall}" Foreground="White" Opacity="0.9" TextWrapping="Wrap" Margin="0,4,0,0"/>
+                                                    </StackPanel>
+                                                </StackPanel>
+
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="&#xE74E;" FontFamily="Segoe Fluent Icons" FontSize="16" Foreground="White" VerticalAlignment="Top" Margin="0,2,10,0"/>
+                                                    <StackPanel>
+                                                        <TextBlock Text="Save Remediation Scripts" FontWeight="SemiBold" FontSize="{DynamicResource FontSizeNormal}" Foreground="White"/>
+                                                        <TextBlock Text="Export scripts for version control and automation workflows." FontSize="{DynamicResource FontSizeSmall}" Foreground="White" Opacity="0.9" TextWrapping="Wrap" Margin="0,4,0,0"/>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </Grid>
+                                    </StackPanel>
+                                </Border>
                             </StackPanel>
                             <StackPanel Grid.Row="1">
                                 <TextBlock Text="Available Features" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,20"/>
                                 <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="20"/><ColumnDefinition Width="*"/><ColumnDefinition Width="20"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="20"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
-                                    <Border Grid.Column="0" Grid.Row="0" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE71D;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource AccentBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Applications" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="View Intune applications with version checking and export capabilities" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
-                                    <Border Grid.Column="2" Grid.Row="0" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE713;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource InfoBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Configurations" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="View and browse device configuration policies and app protection" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
-                                    <Border Grid.Column="4" Grid.Row="0" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE8F4;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource SuccessBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Assignments" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Check policy and profile assignments across your tenant" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
-                                    <Border Grid.Column="0" Grid.Row="2" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE770;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource WarningBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Device Ownership" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Check and verify device ownership status" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
-                                    <Border Grid.Column="2" Grid.Row="2" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE90F;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource AccentBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Remediation Scripts" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Browse community remediation scripts for deployment to Intune" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
-                                    <Border Grid.Column="4" Grid.Row="2" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE8C8;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource InfoBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Backup" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Create a comprehensive backup of your Intune environment as JSON" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
+                                    <Border Grid.Column="0" Grid.Row="0" Style="{StaticResource CardStyle}"><StackPanel><TextBlock Text="&#xE71D;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource AccentBrush}" Margin="0,0,0,12"/><TextBlock Text="Applications" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="View Intune applications with version checking and export capabilities" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
+                                    <Border Grid.Column="2" Grid.Row="0" Style="{StaticResource CardStyle}"><StackPanel><TextBlock Text="&#xE713;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource InfoBrush}" Margin="0,0,0,12"/><TextBlock Text="Configurations" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="View and browse device configuration policies and app protection" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
+                                    <Border Grid.Column="4" Grid.Row="0" Style="{StaticResource CardStyle}"><StackPanel><TextBlock Text="&#xE8F4;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource SuccessBrush}" Margin="0,0,0,12"/><TextBlock Text="Assignments" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Check policy and profile assignments across your tenant" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
+                                    <Border Grid.Column="0" Grid.Row="2" Style="{StaticResource CardStyle}"><StackPanel><TextBlock Text="&#xE770;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource WarningBrush}" Margin="0,0,0,12"/><TextBlock Text="Device Ownership" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Check and verify device ownership status" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
+                                    <Border Grid.Column="2" Grid.Row="2" Style="{StaticResource CardStyle}"><StackPanel><TextBlock Text="&#xE90F;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource AccentBrush}" Margin="0,0,0,12"/><TextBlock Text="Remediation Scripts" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Browse community remediation scripts for deployment to Intune" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
+                                    <Border Grid.Column="4" Grid.Row="2" Style="{StaticResource CardStyle}"><StackPanel><TextBlock Text="&#xE8C8;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource InfoBrush}" Margin="0,0,0,12"/><TextBlock Text="Backup" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Create a comprehensive backup of your Intune environment as JSON" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
                                 </Grid>
-                                <Border Background="{DynamicResource NavItemSelectedBrush}" BorderBrush="{DynamicResource AccentBrush}" BorderThickness="1" CornerRadius="8" Padding="20" Margin="0,30,0,0"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="20" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,16,0"/><StackPanel><TextBlock Text="Sign in required" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Sign in with your Microsoft account to unlock all features and access your Intune environment." FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,4,0,0"/></StackPanel></StackPanel></Border>
                             </StackPanel>
                         </Grid>
                     </ScrollViewer>
@@ -661,6 +760,272 @@
                             <StackPanel x:Name="OwnershipResultsPanel" Visibility="Collapsed"/>
                         </StackPanel>
                     </ScrollViewer>
+                    <ScrollViewer x:Name="ReportsView" Visibility="Collapsed" Padding="30">
+                        <StackPanel>
+                            <!-- Header -->
+                            <StackPanel Margin="0,0,0,30">
+                                <TextBlock Text="Reports" FontSize="{DynamicResource FontSizeHeader}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                                <TextBlock Text="Generate comprehensive HTML reports for your Microsoft Entra environment" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,8,0,0"/>
+                            </StackPanel>
+
+                            <!-- Report Cards Grid -->
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Authentication Methods Report Card -->
+                                <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource CardStyle}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <!-- Content Area -->
+                                        <StackPanel Grid.Row="0">
+                                            <Grid Margin="0,0,0,20">
+                                                <TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="48" Foreground="{DynamicResource AccentBrush}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                            </Grid>
+                                            <TextBlock Text="Authentication Methods" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,12"/>
+                                            <TextBlock TextWrapping="Wrap" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,20">
+                                                <Run Text="Analyze MFA registration, passwordless capabilities, and strong authentication methods across your user base. Includes phishing-resistant method tracking for privileged users."/>
+                                            </TextBlock>
+                                            <TextBlock Text="Includes:" FontSize="{DynamicResource FontSizeSmall}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
+                                            <StackPanel Margin="0,0,0,20">
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; MFA-capable users"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Passwordless capability progress"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Strong vs weak authentication methods"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Privileged user security analysis"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}"><Run Text="&#x2022; Interactive HTML report with filters"/></TextBlock>
+                                            </StackPanel>
+                                        </StackPanel>
+
+                                        <!-- Bottom Section (Results + Button) -->
+                                        <StackPanel Grid.Row="1">
+                                            <!-- Status Text (Hidden by default) -->
+                                            <TextBlock x:Name="AuthReportStatusText" Text="Generating report..." FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource AccentBrush}" FontStyle="Italic" Margin="0,0,0,12" Visibility="Collapsed" HorizontalAlignment="Center"/>
+
+                                            <!-- Results Area (Hidden by default) -->
+                                            <StackPanel x:Name="AuthReportResultsPanel" Visibility="Collapsed" Margin="0,0,0,12">
+                                                <TextBlock x:Name="AuthReportResultMessage" TextWrapping="Wrap" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,12"/>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="12"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Button x:Name="OpenAuthReportButton" Grid.Column="0" Content="Open Report" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch"/>
+                                                    <Button x:Name="OpenAuthFolderButton" Grid.Column="2" Content="Open Folder" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch"/>
+                                                </Grid>
+                                            </StackPanel>
+
+                                            <!-- Generate Button -->
+                                            <Button x:Name="GenerateAuthReportButton" Content="Generate Report" Style="{StaticResource ModernButtonStyle}" HorizontalAlignment="Stretch"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+
+                                <!-- Inactive Users Report Card -->
+                                <Border Grid.Row="0" Grid.Column="2" Style="{StaticResource CardStyle}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <!-- Content Area -->
+                                        <StackPanel Grid.Row="0">
+                                            <Grid Margin="0,0,0,20">
+                                                <TextBlock Text="&#xE77B;" FontFamily="Segoe Fluent Icons" FontSize="48" Foreground="{DynamicResource AccentBrush}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                            </Grid>
+                                            <TextBlock Text="Inactive Users" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,12"/>
+                                            <TextBlock TextWrapping="Wrap" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,20">
+                                                <Run Text="Identify inactive user accounts based on sign-in activity. Track both interactive and non-interactive sign-ins with customizable filters."/>
+                                            </TextBlock>
+                                            <TextBlock Text="Includes:" FontSize="{DynamicResource FontSizeSmall}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
+                                            <StackPanel Margin="0,0,0,20">
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Last interactive sign-in dates"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Last non-interactive sign-in dates"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Inactive days breakdown (&lt;=30, 31-90, &gt;90)"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; License assignment details"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}"><Run Text="&#x2022; Interactive HTML report with CSV export"/></TextBlock>
+                                            </StackPanel>
+                                        </StackPanel>
+
+                                        <!-- Bottom Section (Results + Button) -->
+                                        <StackPanel Grid.Row="1">
+                                            <!-- Status Text (Hidden by default) -->
+                                            <TextBlock x:Name="InactiveReportStatusText" Text="Generating report..." FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource AccentBrush}" FontStyle="Italic" Margin="0,0,0,12" Visibility="Collapsed" HorizontalAlignment="Center"/>
+
+                                            <!-- Results Area (Hidden by default) -->
+                                            <StackPanel x:Name="InactiveReportResultsPanel" Visibility="Collapsed" Margin="0,0,0,12">
+                                                <TextBlock x:Name="InactiveReportResultMessage" TextWrapping="Wrap" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,12"/>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="12"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Button x:Name="OpenInactiveReportButton" Grid.Column="0" Content="Open Report" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch"/>
+                                                    <Button x:Name="OpenInactiveFolderButton" Grid.Column="2" Content="Open Folder" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch"/>
+                                                </Grid>
+                                            </StackPanel>
+
+                                            <!-- Generate Button -->
+                                            <Button x:Name="GenerateInactiveReportButton" Content="Generate Report" Style="{StaticResource ModernButtonStyle}" HorizontalAlignment="Stretch"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+
+                                <!-- Conditional Access Effectiveness Report Card -->
+                                <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource CardStyle}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <!-- Content Area -->
+                                        <StackPanel Grid.Row="0">
+                                            <Grid Margin="0,0,0,20">
+                                                <TextBlock Text="&#xE72C;" FontFamily="Segoe Fluent Icons" FontSize="48" Foreground="{DynamicResource AccentBrush}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                            </Grid>
+                                            <TextBlock Text="Conditional Access Effectiveness" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,12"/>
+                                            <TextBlock TextWrapping="Wrap" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,20">
+                                                <Run Text="Analyze Conditional Access policy effectiveness and impact on sign-in activity. Identify dead policies, blocked sign-ins, and geographic patterns."/>
+                                            </TextBlock>
+                                            <TextBlock Text="Includes:" FontSize="{DynamicResource FontSizeSmall}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
+                                            <StackPanel Margin="0,0,0,20">
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Sign-ins blocked by each policy"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Policies that never block (dead policies)"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Users frequently triggering blocks"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Geographic patterns of blocks"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}"><Run Text="&#x2022; Report-only vs enabled policy comparison"/></TextBlock>
+                                            </StackPanel>
+                                        </StackPanel>
+
+                                        <!-- Bottom Section (Config + Results + Button) -->
+                                        <StackPanel Grid.Row="1">
+                                            <!-- Days Selector -->
+                                            <StackPanel Margin="0,0,0,12">
+                                                <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
+                                                    <TextBlock Text="Analyze last:" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                                    <ComboBox x:Name="CAReportDaysComboBox" SelectedIndex="0" MinWidth="100" Style="{StaticResource ModernComboBoxStyle}">
+                                                        <ComboBoxItem Content="7 days" Tag="7"/>
+                                                        <ComboBoxItem Content="14 days" Tag="14"/>
+                                                        <ComboBoxItem Content="30 days" Tag="30"/>
+                                                    </ComboBox>
+                                                </StackPanel>
+                                                <TextBlock FontSize="11" Foreground="{DynamicResource TextSecondaryBrush}" Opacity="0.8" TextWrapping="Wrap">
+                                                    <Run Text="&#xE946;" FontFamily="Segoe Fluent Icons" FontSize="10"/>
+                                                    <Run Text="Larger time ranges may take longer depending on sign-in activity"/>
+                                                </TextBlock>
+                                            </StackPanel>
+
+                                            <!-- Status Text (Hidden by default) -->
+                                            <TextBlock x:Name="CAReportStatusText" Text="Generating report..." FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource AccentBrush}" FontStyle="Italic" Margin="0,0,0,12" Visibility="Collapsed" HorizontalAlignment="Center"/>
+
+                                            <!-- Results Area (Hidden by default) -->
+                                            <StackPanel x:Name="CAReportResultsPanel" Visibility="Collapsed" Margin="0,0,0,12">
+                                                <TextBlock x:Name="CAReportResultMessage" TextWrapping="Wrap" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,12"/>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="12"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Button x:Name="OpenCAReportButton" Grid.Column="0" Content="Open Report" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch"/>
+                                                    <Button x:Name="OpenCAFolderButton" Grid.Column="2" Content="Open Folder" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch"/>
+                                                </Grid>
+                                            </StackPanel>
+
+                                            <!-- Generate Button -->
+                                            <Button x:Name="GenerateCAReportButton" Content="Generate Report" Style="{StaticResource ModernButtonStyle}" HorizontalAlignment="Stretch"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+
+                                <!-- Shadow IT & Unmanaged Devices Report Card -->
+                                <Border Grid.Row="2" Grid.Column="2" Style="{StaticResource CardStyle}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <!-- Content Area -->
+                                        <StackPanel Grid.Row="0">
+                                            <Grid Margin="0,0,0,20">
+                                                <TextBlock Text="&#xE7BA;" FontFamily="Segoe Fluent Icons" FontSize="48" Foreground="{DynamicResource AccentBrush}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                            </Grid>
+                                            <TextBlock Text="Shadow IT &amp; Unmanaged Devices" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,12"/>
+                                            <TextBlock TextWrapping="Wrap" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,20">
+                                                <Run Text="Identify unmanaged device access and shadow IT risks. Track users accessing corporate resources from devices not enrolled in Intune."/>
+                                            </TextBlock>
+                                            <TextBlock Text="Includes:" FontSize="{DynamicResource FontSizeSmall}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/>
+                                            <StackPanel Margin="0,0,0,20">
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Users with unmanaged device access"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Top applications accessed from unmanaged devices"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Users without enrolled Intune devices"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,4"><Run Text="&#x2022; Risk level analysis and filtering"/></TextBlock>
+                                                <TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}"><Run Text="&#x2022; Interactive HTML report with CSV export"/></TextBlock>
+                                            </StackPanel>
+                                        </StackPanel>
+
+                                        <!-- Bottom Section (Config + Results + Button) -->
+                                        <StackPanel Grid.Row="1">
+                                            <!-- Days Selector -->
+                                            <StackPanel Margin="0,0,0,12">
+                                                <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
+                                                    <TextBlock Text="Analyze last:" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                                                    <ComboBox x:Name="ShadowITReportDaysComboBox" SelectedIndex="0" MinWidth="100" Style="{StaticResource ModernComboBoxStyle}">
+                                                        <ComboBoxItem Content="7 days" Tag="7"/>
+                                                        <ComboBoxItem Content="10 days" Tag="10"/>
+                                                        <ComboBoxItem Content="14 days" Tag="14"/>
+                                                        <ComboBoxItem Content="30 days" Tag="30"/>
+                                                        <ComboBoxItem Content="60 days" Tag="60"/>
+                                                        <ComboBoxItem Content="90 days" Tag="90"/>
+                                                    </ComboBox>
+                                                </StackPanel>
+                                                <TextBlock FontSize="11" Foreground="{DynamicResource TextSecondaryBrush}" Opacity="0.8" TextWrapping="Wrap">
+                                                    <Run Text="&#xE946;" FontFamily="Segoe Fluent Icons" FontSize="10"/>
+                                                    <Run Text="Larger time ranges may take longer depending on sign-in activity"/>
+                                                </TextBlock>
+                                            </StackPanel>
+
+                                            <!-- Status Text (Hidden by default) -->
+                                            <TextBlock x:Name="ShadowITReportStatusText" Text="Generating report..." FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource AccentBrush}" FontStyle="Italic" Margin="0,0,0,12" Visibility="Collapsed" HorizontalAlignment="Center"/>
+
+                                            <!-- Results Area (Hidden by default) -->
+                                            <StackPanel x:Name="ShadowITReportResultsPanel" Visibility="Collapsed" Margin="0,0,0,12">
+                                                <TextBlock x:Name="ShadowITReportResultMessage" TextWrapping="Wrap" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,0,0,12"/>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="12"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Button x:Name="OpenShadowITReportButton" Grid.Column="0" Content="Open Report" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch"/>
+                                                    <Button x:Name="OpenShadowITFolderButton" Grid.Column="2" Content="Open Folder" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch"/>
+                                                </Grid>
+                                            </StackPanel>
+
+                                            <!-- Generate Button -->
+                                            <Button x:Name="GenerateShadowITReportButton" Content="Generate Report" Style="{StaticResource ModernButtonStyle}" HorizontalAlignment="Stretch"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </StackPanel>
+                    </ScrollViewer>
                     <ScrollViewer x:Name="PlaceholderView" Visibility="Collapsed" Padding="30">
                         <StackPanel MaxWidth="900">
                             <!-- Hidden icon for compatibility (not displayed) -->
@@ -741,7 +1106,7 @@
                             <TextBlock Text="Settings" FontSize="{DynamicResource FontSizeHeader}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,30"/>
                             <Border Style="{StaticResource CardStyle}" Margin="0,0,0,20"><StackPanel><TextBlock Text="Appearance" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,20"/><Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><StackPanel><TextBlock Text="Enable Animations" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Show smooth transitions and effects" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,4,0,0"/></StackPanel><CheckBox x:Name="AnimationsToggle" Grid.Column="1" Style="{StaticResource ToggleSwitchStyle}" VerticalAlignment="Center" IsChecked="True"/></Grid></StackPanel></Border>
                             <Border Style="{StaticResource CardStyle}" Margin="0,0,0,20"><StackPanel><TextBlock Text="Data" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,20"/><Grid Margin="0,0,0,16"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><StackPanel><TextBlock Text="Enable Caching" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Cache API responses for faster navigation" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,4,0,0"/></StackPanel><CheckBox x:Name="CachingToggle" Grid.Column="1" Style="{StaticResource ToggleSwitchStyle}" VerticalAlignment="Center" IsChecked="True"/></Grid><StackPanel Margin="0,0,0,16"><TextBlock Text="Export Path" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,8"/><Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBox x:Name="ExportPathTextBox" Style="{StaticResource ModernTextBoxStyle}" Text="Desktop" IsReadOnly="True"/><Button x:Name="BrowseExportPath" Grid.Column="1" Content="Browse" Style="{StaticResource SecondaryButtonStyle}" Margin="10,0,0,0"/></Grid></StackPanel></StackPanel></Border>
-                            <Border Style="{StaticResource CardStyle}"><StackPanel><TextBlock Text="About" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,20"/><TextBlock Text="InSight v1.0.0" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,4,0,16"><Run Text="Created by MrOlof "/><Hyperlink NavigateUri="https://github.com/MrOlof"><Run Text="@github"/></Hyperlink></TextBlock><Button x:Name="ViewLogsButton" Content="View Logs" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Left"/></StackPanel></Border>
+                            <Border Style="{StaticResource CardStyle}"><StackPanel><TextBlock Text="About" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,20"/><TextBlock Text="InSight v1.3.0" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,4,0,16"><Run Text="Created by MrOlof "/><Hyperlink NavigateUri="https://github.com/MrOlof"><Run Text="@github"/></Hyperlink></TextBlock><Button x:Name="ViewLogsButton" Content="View Logs" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Left"/></StackPanel></Border>
                         </StackPanel>
                     </ScrollViewer>
                     <ScrollViewer x:Name="RemediationScriptsView" Visibility="Collapsed" Padding="30">

@@ -133,13 +133,19 @@ $controlNames = @(
     # Navigation buttons
     'NavDashboard', 'NavApps', 'NavConfiguration', 'NavAssignments', 'NavDeviceOwnership',
     'NavRemediation', 'NavBackup', 'NavReports',
-    # Navigation lock icons
-    'NavAppsLock', 'NavConfigurationLock', 'NavAssignmentsLock', 'NavDeviceOwnershipLock',
-    'NavRemediationLock', 'NavBackupLock', 'NavReportsLock',
     # Views
-    'WelcomeView', 'WelcomeSignInButton',
-    'DashboardView', 'ApplicationsView', 'ConfigurationsView', 'AssignmentsView', 'DeviceOwnershipView', 'PlaceholderView', 'SettingsView', 'RemediationScriptsView', 'BackupView',
+    'WelcomeView',
+    'DashboardView', 'ApplicationsView', 'ConfigurationsView', 'AssignmentsView', 'DeviceOwnershipView', 'ReportsView', 'PlaceholderView', 'SettingsView', 'RemediationScriptsView', 'BackupView',
     'PlaceholderIcon', 'PlaceholderTitle', 'PlaceholderDescription', 'PlaceholderPermission',
+    # Reports view controls
+    'GenerateAuthReportButton', 'AuthReportStatusText', 'AuthReportResultsPanel', 'AuthReportResultMessage',
+    'OpenAuthReportButton', 'OpenAuthFolderButton',
+    'GenerateInactiveReportButton', 'InactiveReportStatusText', 'InactiveReportResultsPanel', 'InactiveReportResultMessage',
+    'OpenInactiveReportButton', 'OpenInactiveFolderButton',
+    'GenerateCAReportButton', 'CAReportStatusText', 'CAReportResultsPanel', 'CAReportResultMessage',
+    'OpenCAReportButton', 'OpenCAFolderButton', 'CAReportDaysComboBox',
+    'GenerateShadowITReportButton', 'ShadowITReportStatusText', 'ShadowITReportResultsPanel', 'ShadowITReportResultMessage',
+    'OpenShadowITReportButton', 'OpenShadowITFolderButton', 'ShadowITReportDaysComboBox',
     # Remediation Scripts view controls
     'RemediationSearchBox', 'RemediationCategoryFilter', 'RemediationResultsSummary', 'RemediationResultsCount',
     'RemediationScriptsContainer', 'RemediationNoResults',
@@ -197,15 +203,6 @@ foreach ($name in $controlNames) {
     }
 }
 
-# Lock icon control mappings
-$script:LockIcons = @{
-    'Applications'  = $controls['NavAppsLock']
-    'Configuration' = $controls['NavConfigurationLock']
-    'Assignments'   = $controls['NavAssignmentsLock']
-    'Remediation'   = $controls['NavRemediationLock']
-    'Backup'        = $controls['NavBackupLock']
-    'Reports'       = $controls['NavReportsLock']
-}
 #endregion
 
 #region Theme Functions
@@ -270,53 +267,23 @@ function Update-Theme {
 $script:CurrentView = 'Welcome'
 $script:NavButtons = @{
     'Dashboard'        = @{ Button = $controls['NavDashboard']; Icon = [char]0xE80F; Feature = $null; Lock = $null }
-    'Applications'     = @{ Button = $controls['NavApps']; Icon = [char]0xE71D; Feature = 'Apps.View'; Lock = $controls['NavAppsLock'] }
-    'Configuration'    = @{ Button = $controls['NavConfiguration']; Icon = [char]0xE713; Feature = 'Configuration.View'; Lock = $controls['NavConfigurationLock'] }
-    'Assignments'      = @{ Button = $controls['NavAssignments']; Icon = [char]0xE8F4; Feature = 'Assignments.View'; Lock = $controls['NavAssignmentsLock'] }
-    'Device Ownership' = @{ Button = $controls['NavDeviceOwnership']; Icon = [char]0xE770; Feature = $null; Lock = $controls['NavDeviceOwnershipLock'] }
-    'Remediation'      = @{ Button = $controls['NavRemediation']; Icon = [char]0xE90F; Feature = $null; Lock = $controls['NavRemediationLock'] }
-    'Backup'           = @{ Button = $controls['NavBackup']; Icon = [char]0xE8C8; Feature = $null; Lock = $controls['NavBackupLock'] }
-    'Reports'          = @{ Button = $controls['NavReports']; Icon = [char]0xE9F9; Feature = 'Reports.Export'; Lock = $controls['NavReportsLock'] }
+    'Applications'     = @{ Button = $controls['NavApps']; Icon = [char]0xE71D; Feature = 'Apps.View' }
+    'Configuration'    = @{ Button = $controls['NavConfiguration']; Icon = [char]0xE713; Feature = 'Configuration.View' }
+    'Assignments'      = @{ Button = $controls['NavAssignments']; Icon = [char]0xE8F4; Feature = 'Assignments.View' }
+    'Device Ownership' = @{ Button = $controls['NavDeviceOwnership']; Icon = [char]0xE770; Feature = $null }
+    'Remediation'      = @{ Button = $controls['NavRemediation']; Icon = [char]0xE90F; Feature = $null }
+    'Backup'           = @{ Button = $controls['NavBackup']; Icon = [char]0xE8C8; Feature = $null }
+    'Reports'          = @{ Button = $controls['NavReports']; Icon = [char]0xE9F9; Feature = 'Reports.Export' }
 }
 
 function Update-NavigationState {
-    param([bool]$IsAuthenticated = $false)
-
-    # Update navigation button enabled states based on authentication and permissions
+    # All navigation buttons are always enabled
     foreach ($viewName in $script:NavButtons.Keys) {
         $navInfo = $script:NavButtons[$viewName]
         $button = $navInfo.Button
-        $featureId = $navInfo.Feature
-        $lockIcon = $navInfo.Lock
 
         if ($button) {
-            if ($viewName -eq 'Dashboard') {
-                # Dashboard is always enabled
-                $button.IsEnabled = $true
-            }
-            elseif (-not $IsAuthenticated) {
-                # Not authenticated: all other buttons disabled
-                $button.IsEnabled = $false
-                if ($lockIcon) {
-                    $lockIcon.Visibility = 'Visible'
-                }
-            }
-            else {
-                # Authenticated: check permissions
-                if ([string]::IsNullOrEmpty($featureId)) {
-                    $button.IsEnabled = $true
-                    if ($lockIcon) {
-                        $lockIcon.Visibility = 'Collapsed'
-                    }
-                }
-                else {
-                    $access = Test-FeatureAccess -FeatureId $featureId
-                    $button.IsEnabled = $access.HasAccess
-                    if ($lockIcon) {
-                        $lockIcon.Visibility = if ($access.HasAccess) { 'Collapsed' } else { 'Visible' }
-                    }
-                }
-            }
+            $button.IsEnabled = $true
         }
     }
 
@@ -339,6 +306,7 @@ function Show-View {
     if ($controls['ConfigurationsView']) { $controls['ConfigurationsView'].Visibility = 'Collapsed' }
     if ($controls['AssignmentsView']) { $controls['AssignmentsView'].Visibility = 'Collapsed' }
     if ($controls['DeviceOwnershipView']) { $controls['DeviceOwnershipView'].Visibility = 'Collapsed' }
+    if ($controls['ReportsView']) { $controls['ReportsView'].Visibility = 'Collapsed' }
     if ($controls['PlaceholderView']) { $controls['PlaceholderView'].Visibility = 'Collapsed' }
     if ($controls['SettingsView']) { $controls['SettingsView'].Visibility = 'Collapsed' }
     if ($controls['RemediationScriptsView']) { $controls['RemediationScriptsView'].Visibility = 'Collapsed' }
@@ -375,6 +343,9 @@ function Show-View {
         }
         'Backup' {
             $controls['BackupView'].Visibility = 'Visible'
+        }
+        'Reports' {
+            $controls['ReportsView'].Visibility = 'Visible'
         }
         'Settings' {
             $controls['SettingsView'].Visibility = 'Visible'
@@ -852,8 +823,10 @@ function Load-Applications {
     # Check if authenticated
     $authState = Get-AuthenticationState
     if (-not $authState.IsAuthenticated) {
-        [System.Windows.MessageBox]::Show("Please sign in to view applications.", "Authentication Required", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Warning)
-        return
+        $authenticated = Show-AuthenticationPrompt -Message "You must be signed in to view applications.`n`nWould you like to sign in now?"
+        if (-not $authenticated) {
+            return
+        }
     }
 
     # Fetch applications using Microsoft Graph (runs synchronously to avoid runspace issues)
@@ -1162,8 +1135,10 @@ function Clear-AdvancedSearchCache {
 function Fetch-ConfigurationProfiles {
     $authState = Get-AuthenticationState
     if (-not $authState.IsAuthenticated) {
-        [System.Windows.MessageBox]::Show("Please sign in to fetch configuration profiles.", "Not Authenticated", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Warning)
-        return
+        $authenticated = Show-AuthenticationPrompt -Message "You must be signed in to fetch configuration profiles.`n`nWould you like to sign in now?"
+        if (-not $authenticated) {
+            return
+        }
     }
 
     # Clear search cache when fetching new data
@@ -1308,8 +1283,10 @@ function Fetch-ConfigurationProfiles {
 function Fetch-EndpointSecurity {
     $authState = Get-AuthenticationState
     if (-not $authState.IsAuthenticated) {
-        [System.Windows.MessageBox]::Show("Please sign in to fetch endpoint security policies.", "Not Authenticated", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Warning)
-        return
+        $authenticated = Show-AuthenticationPrompt -Message "You must be signed in to fetch endpoint security policies.`n`nWould you like to sign in now?"
+        if (-not $authenticated) {
+            return
+        }
     }
 
     # Clear search cache when fetching new data
@@ -1450,8 +1427,10 @@ function Fetch-EndpointSecurity {
 function Fetch-AppProtection {
     $authState = Get-AuthenticationState
     if (-not $authState.IsAuthenticated) {
-        [System.Windows.MessageBox]::Show("Please sign in to fetch app protection policies.", "Not Authenticated", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Warning)
-        return
+        $authenticated = Show-AuthenticationPrompt -Message "You must be signed in to fetch app protection policies.`n`nWould you like to sign in now?"
+        if (-not $authenticated) {
+            return
+        }
     }
 
     # Clear search cache when fetching new data
@@ -1537,8 +1516,10 @@ function Fetch-AppProtection {
 function Fetch-AllConfigurations {
     $authState = Get-AuthenticationState
     if (-not $authState.IsAuthenticated) {
-        [System.Windows.MessageBox]::Show("Please sign in to fetch all configurations.", "Not Authenticated", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Warning)
-        return
+        $authenticated = Show-AuthenticationPrompt -Message "You must be signed in to fetch all configurations.`n`nWould you like to sign in now?"
+        if (-not $authenticated) {
+            return
+        }
     }
 
     # Disable the Fetch All button during processing
@@ -1768,8 +1749,10 @@ function Show-AdvancedSearch {
     try {
         $authState = Get-AuthenticationState
         if (-not $authState.IsAuthenticated) {
-            [System.Windows.MessageBox]::Show("Please sign in first.", "Not Authenticated", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Warning)
-            return
+            $authenticated = Show-AuthenticationPrompt -Message "You must be signed in to use Advanced Search.`n`nWould you like to sign in now?"
+            if (-not $authenticated) {
+                return
+            }
         }
 
         # Check if policies are loaded
@@ -2441,11 +2424,120 @@ function Update-PermissionsDisplay {
 #endregion
 
 #region Authentication Functions
+function Show-AuthenticationPrompt {
+    <#
+    .SYNOPSIS
+        Shows a modern authentication prompt and authenticates if user accepts.
+
+    .DESCRIPTION
+        Displays a styled prompt asking if the user wants to sign in, then authenticates if they click Yes.
+        Returns $true if authentication succeeded, $false otherwise.
+
+    .PARAMETER Message
+        The message to display in the prompt
+    #>
+    param(
+        [string]$Message = "You must be signed in to use this feature.`n`nWould you like to sign in now?"
+    )
+
+    try {
+        # Load the custom auth dialog XAML
+        $authDialogPath = Join-Path -Path $PSScriptRoot -ChildPath "Resources\AuthDialog.xaml"
+
+        Write-LogInfo -Message "Looking for AuthDialog at: $authDialogPath" -Source 'Authentication'
+
+        if (-not (Test-Path $authDialogPath)) {
+            # Fallback to standard MessageBox if XAML not found
+            Write-LogWarning -Message "AuthDialog.xaml not found at $authDialogPath, using standard MessageBox" -Source 'Authentication'
+            $result = [System.Windows.MessageBox]::Show(
+                $Message,
+                "Authentication Required",
+                [System.Windows.MessageBoxButton]::YesNo,
+                [System.Windows.MessageBoxImage]::Question
+            )
+
+            if ($result -eq [System.Windows.MessageBoxResult]::Yes) {
+                Start-Authentication
+                $authState = Get-AuthenticationState
+                return $authState.IsAuthenticated
+            }
+            return $false
+        }
+
+        # Load XAML
+        $xaml = [System.IO.File]::ReadAllText($authDialogPath)
+        $reader = [System.Xml.XmlReader]::Create([System.IO.StringReader]::new($xaml))
+        $authDialog = [System.Windows.Markup.XamlReader]::Load($reader)
+        $reader.Close()
+
+        # Set the message
+        $messageControl = $authDialog.FindName('MessageText')
+        if ($messageControl) {
+            $messageControl.Text = $Message
+        }
+
+        # Set up button handlers
+        $dialogResult = $false
+        $yesButton = $authDialog.FindName('YesButton')
+        $noButton = $authDialog.FindName('NoButton')
+
+        if ($yesButton) {
+            $yesButton.Add_Click({
+                $authDialog.DialogResult = $true
+                $authDialog.Close()
+            })
+        }
+
+        if ($noButton) {
+            $noButton.Add_Click({
+                $authDialog.DialogResult = $false
+                $authDialog.Close()
+            })
+        }
+
+        # Set owner to main window if available
+        if ($Window) {
+            $authDialog.Owner = $Window
+        }
+
+        # Show dialog modally
+        $result = $authDialog.ShowDialog()
+
+        if ($result -eq $true) {
+            Start-Authentication
+
+            # Check if authentication succeeded
+            $authState = Get-AuthenticationState
+            return $authState.IsAuthenticated
+        }
+
+        return $false
+    }
+    catch {
+        Write-LogError -Message "Error showing authentication prompt: $($_.Exception.Message)" -Source 'Authentication'
+        Write-LogError -Message "Stack trace: $($_.ScriptStackTrace)" -Source 'Authentication'
+
+        # Fallback to standard MessageBox on error
+        $result = [System.Windows.MessageBox]::Show(
+            $Message,
+            "Authentication Required",
+            [System.Windows.MessageBoxButton]::YesNo,
+            [System.Windows.MessageBoxImage]::Question
+        )
+
+        if ($result -eq [System.Windows.MessageBoxResult]::Yes) {
+            Start-Authentication
+            $authState = Get-AuthenticationState
+            return $authState.IsAuthenticated
+        }
+        return $false
+    }
+}
+
 function Start-Authentication {
     # Update UI to show signing in state
     if ($controls['HeaderSignInButton']) { $controls['HeaderSignInButton'].Visibility = 'Collapsed' }
     if ($controls['SigningInPanel']) { $controls['SigningInPanel'].Visibility = 'Visible' }
-    if ($controls['WelcomeSignInButton']) { $controls['WelcomeSignInButton'].IsEnabled = $false }
 
     Write-LogInfo -Message "Starting authentication..." -Source 'Authentication'
 
@@ -2489,7 +2581,6 @@ function Start-Authentication {
     if (-not $msalAvailable) {
         if ($controls['HeaderSignInButton']) { $controls['HeaderSignInButton'].Visibility = 'Visible' }
         if ($controls['SigningInPanel']) { $controls['SigningInPanel'].Visibility = 'Collapsed' }
-        if ($controls['WelcomeSignInButton']) { $controls['WelcomeSignInButton'].IsEnabled = $true }
 
         $result = [System.Windows.MessageBox]::Show(
             "The Microsoft Authentication Library (MSAL) is required for sign-in.`n`nWould you like to install it now?`n`nThis will run:`nInstall-Module Az.Accounts -Scope CurrentUser -Force",
@@ -2593,9 +2684,7 @@ function Start-Authentication {
         if ($controls['ConnectionStatusText']) { $controls['ConnectionStatusText'].Text = "Connected" }
         if ($controls['ConnectionIndicator']) { $controls['ConnectionIndicator'].Fill = $Window.Resources['SuccessBrush'] }
 
-        # Hide welcome view and show dashboard
-        if ($controls['WelcomeView']) { $controls['WelcomeView'].Visibility = 'Collapsed' }
-        if ($controls['DashboardView']) { $controls['DashboardView'].Visibility = 'Visible' }
+        # Keep current view (don't force dashboard view)
 
         # Enable navigation buttons and hide lock icons based on permissions
         foreach ($viewName in $script:NavButtons.Keys) {
@@ -2612,8 +2701,6 @@ function Start-Authentication {
         # Enable search box
         if ($controls['SearchBox']) { $controls['SearchBox'].IsEnabled = $true }
 
-        # Re-enable welcome sign in button (in case they sign out later)
-        if ($controls['WelcomeSignInButton']) { $controls['WelcomeSignInButton'].IsEnabled = $true }
 
         Write-LogInfo -Message "UI update completed successfully" -Source "Authentication"
     }
@@ -2623,7 +2710,6 @@ function Start-Authentication {
         # Show error and restore sign in button
         if ($controls['SigningInPanel']) { $controls['SigningInPanel'].Visibility = 'Collapsed' }
         if ($controls['HeaderSignInButton']) { $controls['HeaderSignInButton'].Visibility = 'Visible' }
-        if ($controls['WelcomeSignInButton']) { $controls['WelcomeSignInButton'].IsEnabled = $true }
         if ($controls['StatusMessageText']) { $controls['StatusMessageText'].Text = "Authentication failed. Please try again." }
     }
 }
@@ -2959,13 +3045,6 @@ function Get-GroupDeviceOwnershipAnalysis {
 # Header sign-in button click
 if ($controls['HeaderSignInButton']) {
     $controls['HeaderSignInButton'].Add_Click({
-        Start-Authentication
-    })
-}
-
-# Welcome view sign-in button click
-if ($controls['WelcomeSignInButton']) {
-    $controls['WelcomeSignInButton'].Add_Click({
         Start-Authentication
     })
 }
@@ -3489,13 +3568,10 @@ if ($controls['StartBackupButton']) {
         # Verify authentication
         $authState = Get-AuthenticationState
         if (-not $authState.IsAuthenticated) {
-            [System.Windows.MessageBox]::Show(
-                "You must be signed in to perform a backup.",
-                "Authentication Required",
-                [System.Windows.MessageBoxButton]::OK,
-                [System.Windows.MessageBoxImage]::Warning
-            )
-            return
+            $authenticated = Show-AuthenticationPrompt -Message "You must be signed in to perform a backup.`n`nWould you like to sign in now?"
+            if (-not $authenticated) {
+                return
+            }
         }
 
         # Disable controls during backup
@@ -3554,6 +3630,453 @@ if ($controls['NavReports']) {
     $controls['NavReports'].Add_Click({
         Show-View -ViewName 'Reports'
         Update-SelectedNavButton -ViewName 'Reports'
+    })
+}
+
+# Reports state management
+$script:ReportJobs = @{
+    AuthMethods = $null
+    InactiveUsers = $null
+    ConditionalAccess = $null
+    ShadowIT = $null
+}
+$script:AuthReportPath = $null
+$script:InactiveReportPath = $null
+$script:CAReportPath = $null
+$script:ShadowITReportPath = $null
+$script:ReportFolder = Join-Path -Path ([Environment]::GetFolderPath('Desktop')) -ChildPath 'InSight Reports'
+
+# Report job monitor timer
+$script:ReportTimer = New-Object System.Windows.Threading.DispatcherTimer
+$script:ReportTimer.Interval = [TimeSpan]::FromMilliseconds(500)
+$script:ReportTimer.Add_Tick({
+    # Check Auth Methods Report job
+    if ($script:ReportJobs.AuthMethods) {
+        $job = $script:ReportJobs.AuthMethods
+        if ($job.State -eq 'Completed') {
+            $result = Receive-Job -Job $job
+            Remove-Job -Job $job
+            $script:ReportJobs.AuthMethods = $null
+
+            # Hide status, show results
+            $controls['AuthReportStatusText'].Visibility = 'Collapsed'
+            $controls['GenerateAuthReportButton'].IsEnabled = $true
+
+            if ($result.Success) {
+                $script:AuthReportPath = $result.ReportPath
+                $controls['AuthReportResultMessage'].Text = "Report generated successfully!"
+                $controls['AuthReportResultsPanel'].Visibility = 'Visible'
+                Write-LogInfo -Message "Authentication Methods Report completed: $($result.ReportPath)" -Source 'Reports'
+            }
+            else {
+                $controls['AuthReportResultMessage'].Text = "Error: $($result.Error)"
+                $controls['AuthReportResultMessage'].Foreground = $Window.Resources['ErrorBrush']
+                $controls['AuthReportResultsPanel'].Visibility = 'Visible'
+                Write-LogError -Message "Authentication Methods Report failed: $($result.Error)" -Source 'Reports'
+            }
+        }
+        elseif ($job.State -eq 'Failed') {
+            Remove-Job -Job $job -Force
+            $script:ReportJobs.AuthMethods = $null
+            $controls['AuthReportStatusText'].Visibility = 'Collapsed'
+            $controls['GenerateAuthReportButton'].IsEnabled = $true
+            $controls['AuthReportResultMessage'].Text = "Report generation failed."
+            $controls['AuthReportResultMessage'].Foreground = $Window.Resources['ErrorBrush']
+            $controls['AuthReportResultsPanel'].Visibility = 'Visible'
+        }
+    }
+
+    # Check Inactive Users Report job
+    if ($script:ReportJobs.InactiveUsers) {
+        $job = $script:ReportJobs.InactiveUsers
+        if ($job.State -eq 'Completed') {
+            $result = Receive-Job -Job $job
+            Remove-Job -Job $job
+            $script:ReportJobs.InactiveUsers = $null
+
+            # Hide status, show results
+            $controls['InactiveReportStatusText'].Visibility = 'Collapsed'
+            $controls['GenerateInactiveReportButton'].IsEnabled = $true
+
+            if ($result.Success) {
+                $script:InactiveReportPath = $result.ReportPath
+                $controls['InactiveReportResultMessage'].Text = "Report generated successfully!"
+                $controls['InactiveReportResultsPanel'].Visibility = 'Visible'
+                Write-LogInfo -Message "Inactive Users Report completed: $($result.ReportPath)" -Source 'Reports'
+            }
+            else {
+                $controls['InactiveReportResultMessage'].Text = "Error: $($result.Error)"
+                $controls['InactiveReportResultMessage'].Foreground = $Window.Resources['ErrorBrush']
+                $controls['InactiveReportResultsPanel'].Visibility = 'Visible'
+                Write-LogError -Message "Inactive Users Report failed: $($result.Error)" -Source 'Reports'
+            }
+        }
+        elseif ($job.State -eq 'Failed') {
+            Remove-Job -Job $job -Force
+            $script:ReportJobs.InactiveUsers = $null
+            $controls['InactiveReportStatusText'].Visibility = 'Collapsed'
+            $controls['GenerateInactiveReportButton'].IsEnabled = $true
+            $controls['InactiveReportResultMessage'].Text = "Report generation failed."
+            $controls['InactiveReportResultMessage'].Foreground = $Window.Resources['ErrorBrush']
+            $controls['InactiveReportResultsPanel'].Visibility = 'Visible'
+        }
+    }
+
+    # Check Conditional Access Report job
+    if ($script:ReportJobs.ConditionalAccess) {
+        $job = $script:ReportJobs.ConditionalAccess
+        if ($job.State -eq 'Completed') {
+            $result = Receive-Job -Job $job
+            Remove-Job -Job $job
+            $script:ReportJobs.ConditionalAccess = $null
+
+            # Hide status, show results
+            $controls['CAReportStatusText'].Visibility = 'Collapsed'
+            $controls['GenerateCAReportButton'].IsEnabled = $true
+
+            if ($result.Success) {
+                $script:CAReportPath = $result.ReportPath
+                $controls['CAReportResultMessage'].Text = "Report generated successfully!"
+                $controls['CAReportResultsPanel'].Visibility = 'Visible'
+                Write-LogInfo -Message "Conditional Access Effectiveness Report completed: $($result.ReportPath)" -Source 'Reports'
+            }
+            else {
+                $controls['CAReportResultMessage'].Text = "Error: $($result.Error)"
+                $controls['CAReportResultMessage'].Foreground = $Window.Resources['ErrorBrush']
+                $controls['CAReportResultsPanel'].Visibility = 'Visible'
+                Write-LogError -Message "Conditional Access Effectiveness Report failed: $($result.Error)" -Source 'Reports'
+            }
+        }
+        elseif ($job.State -eq 'Failed') {
+            Remove-Job -Job $job -Force
+            $script:ReportJobs.ConditionalAccess = $null
+            $controls['CAReportStatusText'].Visibility = 'Collapsed'
+            $controls['GenerateCAReportButton'].IsEnabled = $true
+            $controls['CAReportResultMessage'].Text = "Report generation failed."
+            $controls['CAReportResultMessage'].Foreground = $Window.Resources['ErrorBrush']
+            $controls['CAReportResultsPanel'].Visibility = 'Visible'
+        }
+    }
+
+    # Check Shadow IT Report job
+    if ($script:ReportJobs.ShadowIT) {
+        $job = $script:ReportJobs.ShadowIT
+        if ($job.State -eq 'Completed') {
+            $result = Receive-Job -Job $job
+            Remove-Job -Job $job
+            $script:ReportJobs.ShadowIT = $null
+
+            # Hide status, show results
+            $controls['ShadowITReportStatusText'].Visibility = 'Collapsed'
+            $controls['GenerateShadowITReportButton'].IsEnabled = $true
+
+            if ($result.Success) {
+                $script:ShadowITReportPath = $result.ReportPath
+                $controls['ShadowITReportResultMessage'].Text = "Report generated successfully!"
+                $controls['ShadowITReportResultsPanel'].Visibility = 'Visible'
+                Write-LogInfo -Message "Shadow IT & Unmanaged Devices Report completed: $($result.ReportPath)" -Source 'Reports'
+            }
+            else {
+                $controls['ShadowITReportResultMessage'].Text = "Error: $($result.Error)"
+                $controls['ShadowITReportResultMessage'].Foreground = $Window.Resources['ErrorBrush']
+                $controls['ShadowITReportResultsPanel'].Visibility = 'Visible'
+                Write-LogError -Message "Shadow IT & Unmanaged Devices Report failed: $($result.Error)" -Source 'Reports'
+            }
+        }
+        elseif ($job.State -eq 'Failed') {
+            Remove-Job -Job $job -Force
+            $script:ReportJobs.ShadowIT = $null
+            $controls['ShadowITReportStatusText'].Visibility = 'Collapsed'
+            $controls['GenerateShadowITReportButton'].IsEnabled = $true
+            $controls['ShadowITReportResultMessage'].Text = "Report generation failed."
+            $controls['ShadowITReportResultMessage'].Foreground = $Window.Resources['ErrorBrush']
+            $controls['ShadowITReportResultsPanel'].Visibility = 'Visible'
+        }
+    }
+
+    # Stop timer if no jobs are running
+    if (-not $script:ReportJobs.AuthMethods -and -not $script:ReportJobs.InactiveUsers -and -not $script:ReportJobs.ConditionalAccess -and -not $script:ReportJobs.ShadowIT) {
+        $script:ReportTimer.Stop()
+    }
+})
+
+# Authentication Methods Report button
+if ($controls['GenerateAuthReportButton']) {
+    $controls['GenerateAuthReportButton'].Add_Click({
+        try {
+            Write-LogInfo -Message "Starting Authentication Methods Report generation" -Source 'Reports'
+
+            # Prepare report folder
+            if (-not (Test-Path -Path $script:ReportFolder)) {
+                New-Item -Path $script:ReportFolder -ItemType Directory -Force | Out-Null
+            }
+
+            # Hide results, show status
+            $controls['AuthReportResultsPanel'].Visibility = 'Collapsed'
+            $controls['AuthReportStatusText'].Visibility = 'Visible'
+            $controls['GenerateAuthReportButton'].IsEnabled = $false
+
+            # Start background job
+            $scriptPath = Join-Path -Path $ScriptRoot -ChildPath "Scripts\Reports\EntraAuthReport.ps1"
+            $script:ReportJobs.AuthMethods = Start-Job -ScriptBlock {
+                param($ScriptPath, $ReportFolder)
+                try {
+                    & $ScriptPath -outpath $ReportFolder -skipDetailedPhoneInfo
+                    $reportFile = Join-Path -Path $ReportFolder -ChildPath "Entra_Authentication_Methods_Report.html"
+                    if (Test-Path -Path $reportFile) {
+                        return @{ Success = $true; ReportPath = $reportFile }
+                    }
+                    else {
+                        return @{ Success = $false; Error = "Report file was not created" }
+                    }
+                }
+                catch {
+                    return @{ Success = $false; Error = $_.Exception.Message }
+                }
+            } -ArgumentList $scriptPath, $script:ReportFolder
+
+            # Start monitoring timer
+            $script:ReportTimer.Start()
+        }
+        catch {
+            $controls['AuthReportStatusText'].Visibility = 'Collapsed'
+            $controls['GenerateAuthReportButton'].IsEnabled = $true
+            $controls['AuthReportResultMessage'].Text = "Error: $($_.Exception.Message)"
+            $controls['AuthReportResultMessage'].Foreground = $Window.Resources['ErrorBrush']
+            $controls['AuthReportResultsPanel'].Visibility = 'Visible'
+            Write-LogError -Message "Failed to start Authentication Methods Report: $($_.Exception.Message)" -Source 'Reports'
+        }
+    })
+}
+
+# Inactive Users Report button
+if ($controls['GenerateInactiveReportButton']) {
+    $controls['GenerateInactiveReportButton'].Add_Click({
+        try {
+            Write-LogInfo -Message "Starting Inactive Users Report generation" -Source 'Reports'
+
+            # Prepare report folder
+            if (-not (Test-Path -Path $script:ReportFolder)) {
+                New-Item -Path $script:ReportFolder -ItemType Directory -Force | Out-Null
+            }
+
+            # Hide results, show status
+            $controls['InactiveReportResultsPanel'].Visibility = 'Collapsed'
+            $controls['InactiveReportStatusText'].Visibility = 'Visible'
+            $controls['GenerateInactiveReportButton'].IsEnabled = $false
+
+            # Start background job
+            $scriptPath = Join-Path -Path $ScriptRoot -ChildPath "Scripts\Reports\InactiveUsersReport.ps1"
+            $script:ReportJobs.InactiveUsers = Start-Job -ScriptBlock {
+                param($ScriptPath, $ReportFolder)
+                try {
+                    & $ScriptPath -SaveReportTo $ReportFolder
+                    $reportFile = Join-Path -Path $ReportFolder -ChildPath "Entra_Inactive_Users_Report.html"
+                    if (Test-Path -Path $reportFile) {
+                        return @{ Success = $true; ReportPath = $reportFile }
+                    }
+                    else {
+                        return @{ Success = $false; Error = "Report file was not created" }
+                    }
+                }
+                catch {
+                    return @{ Success = $false; Error = $_.Exception.Message }
+                }
+            } -ArgumentList $scriptPath, $script:ReportFolder
+
+            # Start monitoring timer
+            $script:ReportTimer.Start()
+        }
+        catch {
+            $controls['InactiveReportStatusText'].Visibility = 'Collapsed'
+            $controls['GenerateInactiveReportButton'].IsEnabled = $true
+            $controls['InactiveReportResultMessage'].Text = "Error: $($_.Exception.Message)"
+            $controls['InactiveReportResultMessage'].Foreground = $Window.Resources['ErrorBrush']
+            $controls['InactiveReportResultsPanel'].Visibility = 'Visible'
+            Write-LogError -Message "Failed to start Inactive Users Report: $($_.Exception.Message)" -Source 'Reports'
+        }
+    })
+}
+
+# Open Auth Report button
+if ($controls['OpenAuthReportButton']) {
+    $controls['OpenAuthReportButton'].Add_Click({
+        if ($script:AuthReportPath -and (Test-Path -Path $script:AuthReportPath)) {
+            Start-Process $script:AuthReportPath
+        }
+    })
+}
+
+# Open Auth Folder button
+if ($controls['OpenAuthFolderButton']) {
+    $controls['OpenAuthFolderButton'].Add_Click({
+        if (Test-Path -Path $script:ReportFolder) {
+            Start-Process explorer.exe $script:ReportFolder
+        }
+    })
+}
+
+# Open Inactive Report button
+if ($controls['OpenInactiveReportButton']) {
+    $controls['OpenInactiveReportButton'].Add_Click({
+        if ($script:InactiveReportPath -and (Test-Path -Path $script:InactiveReportPath)) {
+            Start-Process $script:InactiveReportPath
+        }
+    })
+}
+
+# Open Inactive Folder button
+if ($controls['OpenInactiveFolderButton']) {
+    $controls['OpenInactiveFolderButton'].Add_Click({
+        if (Test-Path -Path $script:ReportFolder) {
+            Start-Process explorer.exe $script:ReportFolder
+        }
+    })
+}
+
+# Conditional Access Effectiveness Report button
+if ($controls['GenerateCAReportButton']) {
+    $controls['GenerateCAReportButton'].Add_Click({
+        try {
+            Write-LogInfo -Message "Starting Conditional Access Effectiveness Report generation" -Source 'Reports'
+
+            # Get selected days from ComboBox
+            $selectedDays = 30  # Default
+            if ($controls['CAReportDaysComboBox'] -and $controls['CAReportDaysComboBox'].SelectedItem) {
+                $selectedDays = [int]$controls['CAReportDaysComboBox'].SelectedItem.Tag
+            }
+
+            # Prepare report folder
+            if (-not (Test-Path -Path $script:ReportFolder)) {
+                New-Item -Path $script:ReportFolder -ItemType Directory -Force | Out-Null
+            }
+
+            # Hide results, show status
+            $controls['CAReportResultsPanel'].Visibility = 'Collapsed'
+            $controls['CAReportStatusText'].Visibility = 'Visible'
+            $controls['GenerateCAReportButton'].IsEnabled = $false
+
+            # Start background job
+            $scriptPath = Join-Path -Path $ScriptRoot -ChildPath "Scripts\Reports\ConditionalAccessEffectivenessReport.ps1"
+            $script:ReportJobs.ConditionalAccess = Start-Job -ScriptBlock {
+                param($ScriptPath, $ReportFolder, $Days)
+                try {
+                    & $ScriptPath -outpath $ReportFolder -days $Days
+                    $reportFile = Join-Path -Path $ReportFolder -ChildPath "ConditionalAccess_Effectiveness_Report.html"
+                    if (Test-Path -Path $reportFile) {
+                        return @{ Success = $true; ReportPath = $reportFile }
+                    }
+                    else {
+                        return @{ Success = $false; Error = "Report file not found after execution" }
+                    }
+                }
+                catch {
+                    return @{ Success = $false; Error = $_.Exception.Message }
+                }
+            } -ArgumentList $scriptPath, $script:ReportFolder, $selectedDays
+
+            # Start monitoring timer
+            $script:ReportTimer.Start()
+        }
+        catch {
+            $controls['CAReportStatusText'].Visibility = 'Collapsed'
+            $controls['GenerateCAReportButton'].IsEnabled = $true
+            $controls['CAReportResultMessage'].Text = "Error: $($_.Exception.Message)"
+            $controls['CAReportResultMessage'].Foreground = $Window.Resources['ErrorBrush']
+            $controls['CAReportResultsPanel'].Visibility = 'Visible'
+            Write-LogError -Message "Failed to start Conditional Access Effectiveness Report: $($_.Exception.Message)" -Source 'Reports'
+        }
+    })
+}
+
+# Shadow IT & Unmanaged Devices Report button
+if ($controls['GenerateShadowITReportButton']) {
+    $controls['GenerateShadowITReportButton'].Add_Click({
+        try {
+            Write-LogInfo -Message "Starting Shadow IT & Unmanaged Devices Report generation" -Source 'Reports'
+
+            # Get selected days from ComboBox
+            $selectedDays = 10  # Default
+            if ($controls['ShadowITReportDaysComboBox'] -and $controls['ShadowITReportDaysComboBox'].SelectedItem) {
+                $selectedDays = [int]$controls['ShadowITReportDaysComboBox'].SelectedItem.Tag
+            }
+
+            # Prepare report folder
+            if (-not (Test-Path -Path $script:ReportFolder)) {
+                New-Item -Path $script:ReportFolder -ItemType Directory -Force | Out-Null
+            }
+
+            # Hide results, show status
+            $controls['ShadowITReportResultsPanel'].Visibility = 'Collapsed'
+            $controls['ShadowITReportStatusText'].Visibility = 'Visible'
+            $controls['GenerateShadowITReportButton'].IsEnabled = $false
+
+            # Start background job
+            $scriptPath = Join-Path -Path $ScriptRoot -ChildPath "Scripts\Reports\ShadowIT-UnmanagedDevices.ps1"
+            $script:ReportJobs.ShadowIT = Start-Job -ScriptBlock {
+                param($ScriptPath, $ReportFolder, $Days)
+                try {
+                    & $ScriptPath -SaveReportTo $ReportFolder -Days $Days
+                    $reportFile = Join-Path -Path $ReportFolder -ChildPath "ShadowIT_UnmanagedDevices_Report.html"
+                    if (Test-Path -Path $reportFile) {
+                        return @{ Success = $true; ReportPath = $reportFile }
+                    }
+                    else {
+                        return @{ Success = $false; Error = "Report file not found after execution" }
+                    }
+                }
+                catch {
+                    return @{ Success = $false; Error = $_.Exception.Message }
+                }
+            } -ArgumentList $scriptPath, $script:ReportFolder, $selectedDays
+
+            # Start monitoring timer
+            $script:ReportTimer.Start()
+        }
+        catch {
+            $controls['ShadowITReportStatusText'].Visibility = 'Collapsed'
+            $controls['GenerateShadowITReportButton'].IsEnabled = $true
+            $controls['ShadowITReportResultMessage'].Text = "Error: $($_.Exception.Message)"
+            $controls['ShadowITReportResultMessage'].Foreground = $Window.Resources['ErrorBrush']
+            $controls['ShadowITReportResultsPanel'].Visibility = 'Visible'
+            Write-LogError -Message "Failed to start Shadow IT & Unmanaged Devices Report: $($_.Exception.Message)" -Source 'Reports'
+        }
+    })
+}
+
+# Open CA Report button
+if ($controls['OpenCAReportButton']) {
+    $controls['OpenCAReportButton'].Add_Click({
+        if ($script:CAReportPath -and (Test-Path -Path $script:CAReportPath)) {
+            Start-Process $script:CAReportPath
+        }
+    })
+}
+
+# Open CA Folder button
+if ($controls['OpenCAFolderButton']) {
+    $controls['OpenCAFolderButton'].Add_Click({
+        if (Test-Path -Path $script:ReportFolder) {
+            Start-Process explorer.exe $script:ReportFolder
+        }
+    })
+}
+
+# Open Shadow IT Report button
+if ($controls['OpenShadowITReportButton']) {
+    $controls['OpenShadowITReportButton'].Add_Click({
+        if ($script:ShadowITReportPath -and (Test-Path -Path $script:ShadowITReportPath)) {
+            Start-Process $script:ShadowITReportPath
+        }
+    })
+}
+
+# Open Shadow IT Folder button
+if ($controls['OpenShadowITFolderButton']) {
+    $controls['OpenShadowITFolderButton'].Add_Click({
+        if (Test-Path -Path $script:ReportFolder) {
+            Start-Process explorer.exe $script:ReportFolder
+        }
     })
 }
 
@@ -3884,6 +4407,15 @@ if ($controls['SearchDeviceGroupsButton']) {
             return
         }
 
+        # Check if authenticated
+        $authState = Get-AuthenticationState
+        if (-not $authState.IsAuthenticated) {
+            $authenticated = Show-AuthenticationPrompt -Message "You must be signed in to search.`n`nWould you like to sign in now?"
+            if (-not $authenticated) {
+                return
+            }
+        }
+
         try {
             if ($isDeviceGroup) {
                 # Search for device group
@@ -4093,6 +4625,15 @@ if ($controls['SearchUserGroupsButton']) {
             return
         }
 
+        # Check if authenticated
+        $authState = Get-AuthenticationState
+        if (-not $authState.IsAuthenticated) {
+            $authenticated = Show-AuthenticationPrompt -Message "You must be signed in to search.`n`nWould you like to sign in now?"
+            if (-not $authenticated) {
+                return
+            }
+        }
+
         try {
             if ($isUserGroup) {
                 # Search for user group
@@ -4291,6 +4832,15 @@ if ($controls['FetchUserGroupAssignmentsButton']) {
 # Find Orphaned Assignments Button
 if ($controls['FindOrphanedButton']) {
     $controls['FindOrphanedButton'].Add_Click({
+        # Check if authenticated
+        $authState = Get-AuthenticationState
+        if (-not $authState.IsAuthenticated) {
+            $authenticated = Show-AuthenticationPrompt -Message "You must be signed in to find orphaned assignments.`n`nWould you like to sign in now?"
+            if (-not $authenticated) {
+                return
+            }
+        }
+
         try {
             Write-LogInfo -Message "Scanning for orphaned assignments..." -Source 'Assignments'
             $controls['OrphanedLoadingText'].Visibility = 'Visible'
@@ -4458,6 +5008,15 @@ if ($controls['SearchOwnershipGroupButton']) {
         if ([string]::IsNullOrWhiteSpace($searchText) -or $searchText -eq "Enter group display name...") {
             [System.Windows.MessageBox]::Show("Please enter a group name to search.", "Input Required", [System.Windows.MessageBoxButton]::OK, [System.Windows.MessageBoxImage]::Warning)
             return
+        }
+
+        # Check if authenticated
+        $authState = Get-AuthenticationState
+        if (-not $authState.IsAuthenticated) {
+            $authenticated = Show-AuthenticationPrompt -Message "You must be signed in to search for groups.`n`nWould you like to sign in now?"
+            if (-not $authenticated) {
+                return
+            }
         }
 
         try {
