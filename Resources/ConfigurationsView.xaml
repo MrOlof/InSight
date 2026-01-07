@@ -37,7 +37,7 @@
                     <!-- Settings Catalog -->
                     <Button Grid.Column="0" x:Name="SettingsCatalogButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
                         <StackPanel>
-                            <TextBlock Text="&#xE713;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                            <TextBlock Text="&#xE713;" FontFamily="Segoe Fluent Icons" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                             <TextBlock Text="Settings Catalog" FontWeight="SemiBold" HorizontalAlignment="Center"/>
                             <TextBlock x:Name="SettingsCatalogCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                         </StackPanel>
@@ -46,7 +46,7 @@
                     <!-- Device Restrictions -->
                     <Button Grid.Column="2" x:Name="DeviceRestrictionsButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
                         <StackPanel>
-                            <TextBlock Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                            <TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                             <TextBlock Text="Device Restrictions" FontWeight="SemiBold" HorizontalAlignment="Center"/>
                             <TextBlock x:Name="DeviceRestrictionsCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                         </StackPanel>
@@ -55,7 +55,7 @@
                     <!-- Administrative Templates -->
                     <Button Grid.Column="4" x:Name="AdminTemplatesButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
                         <StackPanel>
-                            <TextBlock Text="&#xE8B7;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                            <TextBlock Text="&#xE8B7;" FontFamily="Segoe Fluent Icons" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                             <TextBlock Text="Administrative Templates" FontWeight="SemiBold" HorizontalAlignment="Center"/>
                             <TextBlock x:Name="AdminTemplatesCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                         </StackPanel>
@@ -83,7 +83,7 @@
                     <!-- Android App Protection -->
                     <Button Grid.Column="0" x:Name="AndroidAppProtectionButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
                         <StackPanel>
-                            <TextBlock Text="&#xE8EA;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                            <TextBlock Text="&#xE8EA;" FontFamily="Segoe Fluent Icons" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                             <TextBlock Text="Android" FontWeight="SemiBold" HorizontalAlignment="Center"/>
                             <TextBlock x:Name="AndroidAppProtectionCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                         </StackPanel>
@@ -92,7 +92,7 @@
                     <!-- iOS App Protection -->
                     <Button Grid.Column="2" x:Name="iOSAppProtectionButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
                         <StackPanel>
-                            <TextBlock Text="&#xE8B8;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                            <TextBlock Text="&#xE8B8;" FontFamily="Segoe Fluent Icons" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                             <TextBlock Text="iOS/iPadOS" FontWeight="SemiBold" HorizontalAlignment="Center"/>
                             <TextBlock x:Name="iOSAppProtectionCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                         </StackPanel>

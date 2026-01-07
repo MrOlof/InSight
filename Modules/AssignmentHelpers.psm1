@@ -265,7 +265,7 @@ function Show-AssignmentResults {
         <!-- Summary -->
         <Border Grid.Row="1" Background="White" BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="8" Padding="16" Margin="0,0,0,16">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="&#xE946;" FontFamily="Segoe MDL2 Assets" FontSize="20" Foreground="#0078D4" VerticalAlignment="Center" Margin="0,0,12,0"/>
+                <TextBlock Text="&#xE946;" FontFamily="Segoe Fluent Icons" FontSize="20" Foreground="#0078D4" VerticalAlignment="Center" Margin="0,0,12,0"/>
                 <TextBlock FontSize="14" VerticalAlignment="Center">
                     <Run Text="Total Assignments Found:" FontWeight="SemiBold"/>
                     <Run Text="$($Assignments.Count)" FontWeight="Bold" Foreground="#0078D4"/>
@@ -751,7 +751,7 @@ function Show-ModernNotification {
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Column="0" Text="$($config.Symbol)" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="$($config.Color)" VerticalAlignment="Center" Margin="0,0,16,0"/>
+                <TextBlock Grid.Column="0" Text="$($config.Symbol)" FontFamily="Segoe Fluent Icons" FontSize="32" Foreground="$($config.Color)" VerticalAlignment="Center" Margin="0,0,16,0"/>
                 <TextBlock Grid.Column="1" Text="$Title" FontSize="18" FontWeight="SemiBold" Foreground="#333333" VerticalAlignment="Center"/>
             </Grid>
 

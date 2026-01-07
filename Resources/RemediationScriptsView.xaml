@@ -115,7 +115,7 @@
         <!-- No Results Message -->
         <Border x:Name="RemediationNoResults" Style="{StaticResource CardStyle}" Padding="40" Visibility="Collapsed">
             <StackPanel HorizontalAlignment="Center">
-                <TextBlock Text="&#xE11A;" FontFamily="Segoe MDL2 Assets" FontSize="48" HorizontalAlignment="Center" Foreground="{DynamicResource TextTertiaryBrush}" Margin="0,0,0,16"/>
+                <TextBlock Text="&#xE11A;" FontFamily="Segoe Fluent Icons" FontSize="48" HorizontalAlignment="Center" Foreground="{DynamicResource TextTertiaryBrush}" Margin="0,0,0,16"/>
                 <TextBlock Text="No scripts found" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                 <TextBlock Text="Try adjusting your search or filter criteria" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center"/>
             </StackPanel>

@@ -35,7 +35,7 @@ $script:ScriptInfo = @{
     Author              = 'Your Name'
     Category            = 'Devices'  # Devices, Applications, Configuration, Compliance, Users, Groups, Reports
     RequiredPermissions = @('DeviceManagementManagedDevices.Read.All')
-    Icon                = [char]0xE756  # Segoe MDL2 Assets icon
+    Icon                = [char]0xE756  # Segoe Fluent Icons icon
 }
 
 #region Prerequisite Check

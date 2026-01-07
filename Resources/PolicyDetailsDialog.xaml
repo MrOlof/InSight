@@ -114,7 +114,7 @@
                 <!-- Search box -->
                 <Grid Grid.Row="2" Margin="0,16,0,0">
                     <TextBox x:Name="SearchBox" Style="{StaticResource SearchBoxStyle}"/>
-                    <TextBlock Text="&#xE721;" FontFamily="Segoe MDL2 Assets" FontSize="14" Foreground="{StaticResource TextTertiaryBrush}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="12,0,0,0" IsHitTestVisible="False"/>
+                    <TextBlock Text="&#xE721;" FontFamily="Segoe Fluent Icons" FontSize="14" Foreground="{StaticResource TextTertiaryBrush}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="12,0,0,0" IsHitTestVisible="False"/>
                     <TextBlock x:Name="SearchPlaceholder" Text="Search policies..." FontSize="{StaticResource FontSizeNormal}" Foreground="{StaticResource TextTertiaryBrush}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="36,0,0,0" IsHitTestVisible="False"/>
                 </Grid>
             </Grid>

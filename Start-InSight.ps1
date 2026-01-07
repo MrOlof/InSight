@@ -245,13 +245,17 @@ function Update-Theme {
         if ($colors.ContainsKey($colorKey)) {
             $colorValue = $colors[$colorKey]
             try {
-                $brush = $resources[$brushName]
-                if ($brush -and $brush -is [System.Windows.Media.SolidColorBrush]) {
-                    $brush.Color = [System.Windows.Media.ColorConverter]::ConvertFromString($colorValue)
+                # Brushes in XAML are frozen (read-only), so we need to replace them entirely
+                $newColor = [System.Windows.Media.ColorConverter]::ConvertFromString($colorValue)
+                if ($newColor) {
+                    # Create a new SolidColorBrush and replace the resource
+                    $newBrush = New-Object System.Windows.Media.SolidColorBrush($newColor)
+                    $resources[$brushName] = $newBrush
+                    Write-LogDebug -Message "Updated brush: $brushName → $colorValue" -Source 'Theme'
                 }
             }
             catch {
-                Write-LogWarning -Message "Failed to update brush: $brushName" -Source 'Theme'
+                Write-LogWarning -Message "Failed to update brush: $brushName - $_" -Source 'Theme'
             }
         }
     }
@@ -3007,7 +3011,17 @@ if ($controls['MenuSignOut']) {
 # Navigation button clicks
 if ($controls['NavDashboard']) {
     $controls['NavDashboard'].Add_Click({
-        Show-View -ViewName 'Dashboard'
+        # Check authentication state before showing Dashboard
+        $authState = Get-AuthenticationState
+        if (-not $authState.IsAuthenticated) {
+            # Redirect to Welcome view if not authenticated
+            Show-View -ViewName 'Welcome'
+            Write-LogWarning -Message "Dashboard requires authentication. Redirected to Welcome view." -Source 'Navigation'
+        }
+        else {
+            # Show Dashboard if authenticated
+            Show-View -ViewName 'Dashboard'
+        }
         Update-SelectedNavButton -ViewName 'Dashboard'
     })
 }
@@ -5350,7 +5364,10 @@ $Window.Add_Loaded({
     $themeMode = Get-Configuration -Section 'Theme' -Key 'Mode'
     $isDark = $themeMode -eq 'Dark'
     if ($controls['DarkModeToggle']) { $controls['DarkModeToggle'].IsChecked = $isDark }
-    Update-Theme -IsDark $isDark
+    # Only update theme if it's Dark mode (XAML defaults to Light)
+    if ($isDark) {
+        Update-Theme -IsDark $isDark
+    }
 
     # Load saved settings
     if ($controls['AnimationsToggle']) {

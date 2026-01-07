@@ -60,7 +60,7 @@ $script:ScriptInfo = @{
         'GroupMember.Read.All',
         'User.Read.All'
     )
-    Icon                = [char]0xE9D9  # Segoe MDL2 Assets icon for analytics
+    Icon                = [char]0xE9D9  # Segoe Fluent Icons icon for analytics
 }
 
 #region Prerequisite Check

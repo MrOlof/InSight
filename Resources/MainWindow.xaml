@@ -238,12 +238,12 @@
             <Grid Margin="20,0">
                 <Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock Text="&#xE770;" FontFamily="Segoe MDL2 Assets" FontSize="24" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center"/>
+                    <TextBlock Text="&#xE770;" FontFamily="Segoe Fluent Icons" FontSize="24" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center"/>
                     <TextBlock Text="InSight" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" VerticalAlignment="Center" Margin="12,0,0,0"/>
                 </StackPanel>
                 <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
                     <StackPanel x:Name="SigningInPanel" Orientation="Horizontal" Visibility="Collapsed" Margin="0,0,10,0">
-                        <TextBlock Text="&#xE117;" FontFamily="Segoe MDL2 Assets" FontSize="14" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                        <TextBlock Text="&#xE117;" FontFamily="Segoe Fluent Icons" FontSize="14" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,8,0"/>
                         <TextBlock Text="Signing in..." Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center"/>
                     </StackPanel>
                     <Grid x:Name="UserProfileSection" Visibility="Collapsed">
@@ -251,17 +251,17 @@
                             <StackPanel Orientation="Horizontal">
                                 <Border Width="32" Height="32" CornerRadius="16" Background="{DynamicResource AccentBrush}" Margin="0,0,10,0"><TextBlock x:Name="HeaderUserInitials" Text="U" FontSize="12" FontWeight="SemiBold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/></Border>
                                 <StackPanel VerticalAlignment="Center" Margin="0,0,8,0"><TextBlock x:Name="HeaderUserName" Text="User Name" FontSize="{DynamicResource FontSizeNormal}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock x:Name="HeaderUserEmail" Text="user@tenant.onmicrosoft.com" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextTertiaryBrush}"/></StackPanel>
-                                <TextBlock Text="&#xE70D;" FontFamily="Segoe MDL2 Assets" FontSize="10" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center"/>
+                                <TextBlock Text="&#xE70D;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center"/>
                             </StackPanel>
                         </Button>
                         <Popup x:Name="UserDropdownPopup" PlacementTarget="{Binding ElementName=UserProfileButton}" Placement="Bottom" StaysOpen="False" AllowsTransparency="True">
                             <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="8" Margin="0,4,0,0" MinWidth="200">
                                 <Border.Effect><DropShadowEffect BlurRadius="16" ShadowDepth="4" Opacity="0.15" Color="Black"/></Border.Effect>
                                 <StackPanel Margin="4">
-                                    <Button x:Name="MenuRefreshToken" Style="{StaticResource DropdownMenuItemStyle}"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE72C;" FontFamily="Segoe MDL2 Assets" FontSize="14" Width="24" Foreground="{DynamicResource TextSecondaryBrush}"/><TextBlock Text="Refresh Token" Margin="8,0,0,0"/></StackPanel></Button>
-                                    <Button x:Name="MenuSettings" Style="{StaticResource DropdownMenuItemStyle}"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE713;" FontFamily="Segoe MDL2 Assets" FontSize="14" Width="24" Foreground="{DynamicResource TextSecondaryBrush}"/><TextBlock Text="Settings" Margin="8,0,0,0"/></StackPanel></Button>
+                                    <Button x:Name="MenuRefreshToken" Style="{StaticResource DropdownMenuItemStyle}"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE72C;" FontFamily="Segoe Fluent Icons" FontSize="14" Width="24" Foreground="{DynamicResource TextSecondaryBrush}"/><TextBlock Text="Refresh Token" Margin="8,0,0,0"/></StackPanel></Button>
+                                    <Button x:Name="MenuSettings" Style="{StaticResource DropdownMenuItemStyle}"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE713;" FontFamily="Segoe Fluent Icons" FontSize="14" Width="24" Foreground="{DynamicResource TextSecondaryBrush}"/><TextBlock Text="Settings" Margin="8,0,0,0"/></StackPanel></Button>
                                     <Border Height="1" Background="{DynamicResource DividerBrush}" Margin="12,4"/>
-                                    <Button x:Name="MenuSignOut" Style="{StaticResource DropdownMenuItemStyle}"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE8BB;" FontFamily="Segoe MDL2 Assets" FontSize="14" Width="24" Foreground="{DynamicResource ErrorBrush}"/><TextBlock Text="Sign Out" Margin="8,0,0,0" Foreground="{DynamicResource ErrorBrush}"/></StackPanel></Button>
+                                    <Button x:Name="MenuSignOut" Style="{StaticResource DropdownMenuItemStyle}"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE8BB;" FontFamily="Segoe Fluent Icons" FontSize="14" Width="24" Foreground="{DynamicResource ErrorBrush}"/><TextBlock Text="Sign Out" Margin="8,0,0,0" Foreground="{DynamicResource ErrorBrush}"/></StackPanel></Button>
                                 </StackPanel>
                             </Border>
                         </Popup>
@@ -279,16 +279,16 @@
                     <!-- Search box removed -->
                     <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
                         <StackPanel x:Name="NavigationPanel" Margin="0,6,0,10">
-                            <Button x:Name="NavDashboard" Style="{StaticResource NavButtonStyle}" Tag="Dashboard"><TextBlock Text="&#xE80F;" FontFamily="Segoe MDL2 Assets" FontSize="16"/></Button>
+                            <Button x:Name="NavDashboard" Style="{StaticResource NavButtonStyle}" Tag="Dashboard"><TextBlock Text="&#xE80F;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button>
                             <Border Height="1" Background="{DynamicResource DividerBrush}" Margin="20,12"/>
                             <TextBlock Text="TOOLS" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource TextTertiaryBrush}" Margin="20,8,20,8"/>
-                            <Grid><Button x:Name="NavApps" Style="{StaticResource NavButtonStyle}" Tag="Applications" IsEnabled="False"><TextBlock Text="&#xE71D;" FontFamily="Segoe MDL2 Assets" FontSize="16"/></Button><TextBlock x:Name="NavAppsLock" Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
-                            <Grid><Button x:Name="NavConfiguration" Style="{StaticResource NavButtonStyle}" Tag="Configurations" IsEnabled="False"><TextBlock Text="&#xE713;" FontFamily="Segoe MDL2 Assets" FontSize="16"/></Button><TextBlock x:Name="NavConfigurationLock" Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
-                            <Grid><Button x:Name="NavAssignments" Style="{StaticResource NavButtonStyle}" Tag="Assignments" IsEnabled="False"><TextBlock Text="&#xE8F4;" FontFamily="Segoe MDL2 Assets" FontSize="16"/></Button><TextBlock x:Name="NavAssignmentsLock" Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
-                            <Grid><Button x:Name="NavDeviceOwnership" Style="{StaticResource NavButtonStyle}" Tag="Device Ownership" IsEnabled="False"><TextBlock Text="&#xE770;" FontFamily="Segoe MDL2 Assets" FontSize="16"/></Button><TextBlock x:Name="NavDeviceOwnershipLock" Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
-                            <Grid><Button x:Name="NavRemediation" Style="{StaticResource NavButtonStyle}" Tag="Remediation Scripts" IsEnabled="False"><TextBlock Text="&#xE90F;" FontFamily="Segoe MDL2 Assets" FontSize="16"/></Button><TextBlock x:Name="NavRemediationLock" Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
-                            <Grid><Button x:Name="NavBackup" Style="{StaticResource NavButtonStyle}" Tag="Backup" IsEnabled="False"><TextBlock Text="&#xE8C8;" FontFamily="Segoe MDL2 Assets" FontSize="16"/></Button><TextBlock x:Name="NavBackupLock" Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
-                            <Grid><Button x:Name="NavReports" Style="{StaticResource NavButtonStyle}" Tag="Reports - Coming soon" IsEnabled="False"><TextBlock Text="&#xE9F9;" FontFamily="Segoe MDL2 Assets" FontSize="16"/></Button><TextBlock x:Name="NavReportsLock" Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
+                            <Grid><Button x:Name="NavApps" Style="{StaticResource NavButtonStyle}" Tag="Applications" IsEnabled="False"><TextBlock Text="&#xE71D;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavAppsLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
+                            <Grid><Button x:Name="NavConfiguration" Style="{StaticResource NavButtonStyle}" Tag="Configurations" IsEnabled="False"><TextBlock Text="&#xE713;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavConfigurationLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
+                            <Grid><Button x:Name="NavAssignments" Style="{StaticResource NavButtonStyle}" Tag="Assignments" IsEnabled="False"><TextBlock Text="&#xE8F4;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavAssignmentsLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
+                            <Grid><Button x:Name="NavDeviceOwnership" Style="{StaticResource NavButtonStyle}" Tag="Device Ownership" IsEnabled="False"><TextBlock Text="&#xE770;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavDeviceOwnershipLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
+                            <Grid><Button x:Name="NavRemediation" Style="{StaticResource NavButtonStyle}" Tag="Remediation Scripts" IsEnabled="False"><TextBlock Text="&#xE90F;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavRemediationLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
+                            <Grid><Button x:Name="NavBackup" Style="{StaticResource NavButtonStyle}" Tag="Backup" IsEnabled="False"><TextBlock Text="&#xE8C8;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavBackupLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
+                            <Grid><Button x:Name="NavReports" Style="{StaticResource NavButtonStyle}" Tag="Reports - Coming soon" IsEnabled="False"><TextBlock Text="&#xE9F9;" FontFamily="Segoe Fluent Icons" FontSize="16"/></Button><TextBlock x:Name="NavReportsLock" Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="10" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/></Grid>
                         </StackPanel>
                     </ScrollViewer>
                     <Border Grid.Row="2" BorderBrush="{DynamicResource DividerBrush}" BorderThickness="0,1,0,0" Padding="16,12">
@@ -314,19 +314,19 @@
                             <StackPanel Grid.Row="0" Margin="0,0,0,50">
                                 <TextBlock Text="Welcome to InSight" FontSize="36" FontWeight="Light" Foreground="{DynamicResource TextPrimaryBrush}"/>
                                 <TextBlock Text="Sign in with your Microsoft account to access Intune management features" FontSize="{DynamicResource FontSizeMedium}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,12,0,0"/>
-                                <Button x:Name="WelcomeSignInButton" Style="{StaticResource ModernButtonStyle}" Margin="0,30,0,0" HorizontalAlignment="Left" Padding="24,14"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE77B;" FontFamily="Segoe MDL2 Assets" FontSize="16" Margin="0,0,12,0" VerticalAlignment="Center"/><TextBlock Text="Sign in with Microsoft" FontSize="{DynamicResource FontSizeMedium}" VerticalAlignment="Center"/></StackPanel></Button>
+                                <Button x:Name="WelcomeSignInButton" Style="{StaticResource ModernButtonStyle}" Margin="0,30,0,0" HorizontalAlignment="Left" Padding="24,14"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE77B;" FontFamily="Segoe Fluent Icons" FontSize="16" Margin="0,0,12,0" VerticalAlignment="Center"/><TextBlock Text="Sign in with Microsoft" FontSize="{DynamicResource FontSizeMedium}" VerticalAlignment="Center"/></StackPanel></Button>
                             </StackPanel>
                             <StackPanel Grid.Row="1">
                                 <TextBlock Text="Available Features" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" Margin="0,0,0,20"/>
                                 <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="20"/><ColumnDefinition Width="*"/><ColumnDefinition Width="20"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="20"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
-                                    <Border Grid.Column="0" Grid.Row="0" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE71D;" FontFamily="Segoe MDL2 Assets" FontSize="28" Foreground="{DynamicResource AccentBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Applications" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="View Intune applications with version checking and export capabilities" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
-                                    <Border Grid.Column="2" Grid.Row="0" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE713;" FontFamily="Segoe MDL2 Assets" FontSize="28" Foreground="{DynamicResource InfoBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Configurations" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="View and browse device configuration policies and app protection" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
-                                    <Border Grid.Column="4" Grid.Row="0" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE8F4;" FontFamily="Segoe MDL2 Assets" FontSize="28" Foreground="{DynamicResource SuccessBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Assignments" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Check policy and profile assignments across your tenant" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
-                                    <Border Grid.Column="0" Grid.Row="2" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE770;" FontFamily="Segoe MDL2 Assets" FontSize="28" Foreground="{DynamicResource WarningBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Device Ownership" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Check and verify device ownership status" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
-                                    <Border Grid.Column="2" Grid.Row="2" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE90F;" FontFamily="Segoe MDL2 Assets" FontSize="28" Foreground="{DynamicResource AccentBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Remediation Scripts" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Browse community remediation scripts for deployment to Intune" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
-                                    <Border Grid.Column="4" Grid.Row="2" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE8C8;" FontFamily="Segoe MDL2 Assets" FontSize="28" Foreground="{DynamicResource InfoBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Backup" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Create a comprehensive backup of your Intune environment as JSON" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
+                                    <Border Grid.Column="0" Grid.Row="0" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE71D;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource AccentBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Applications" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="View Intune applications with version checking and export capabilities" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
+                                    <Border Grid.Column="2" Grid.Row="0" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE713;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource InfoBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Configurations" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="View and browse device configuration policies and app protection" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
+                                    <Border Grid.Column="4" Grid.Row="0" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE8F4;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource SuccessBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Assignments" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Check policy and profile assignments across your tenant" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
+                                    <Border Grid.Column="0" Grid.Row="2" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE770;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource WarningBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Device Ownership" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Check and verify device ownership status" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
+                                    <Border Grid.Column="2" Grid.Row="2" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE90F;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource AccentBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Remediation Scripts" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Browse community remediation scripts for deployment to Intune" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
+                                    <Border Grid.Column="4" Grid.Row="2" Style="{StaticResource CardStyle}" Opacity="0.7"><StackPanel><Grid Margin="0,0,0,12"><TextBlock Text="&#xE8C8;" FontFamily="Segoe Fluent Icons" FontSize="28" Foreground="{DynamicResource InfoBrush}"/><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="12" Foreground="{DynamicResource TextDisabledBrush}" HorizontalAlignment="Right" VerticalAlignment="Top"/></Grid><TextBlock Text="Backup" FontSize="{DynamicResource FontSizeMedium}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Create a comprehensive backup of your Intune environment as JSON" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" TextWrapping="Wrap" Margin="0,8,0,0"/></StackPanel></Border>
                                 </Grid>
-                                <Border Background="{DynamicResource NavItemSelectedBrush}" BorderBrush="{DynamicResource AccentBrush}" BorderThickness="1" CornerRadius="8" Padding="20" Margin="0,30,0,0"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="20" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,16,0"/><StackPanel><TextBlock Text="Sign in required" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Sign in with your Microsoft account to unlock all features and access your Intune environment." FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,4,0,0"/></StackPanel></StackPanel></Border>
+                                <Border Background="{DynamicResource NavItemSelectedBrush}" BorderBrush="{DynamicResource AccentBrush}" BorderThickness="1" CornerRadius="8" Padding="20" Margin="0,30,0,0"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="20" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,16,0"/><StackPanel><TextBlock Text="Sign in required" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="Sign in with your Microsoft account to unlock all features and access your Intune environment." FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,4,0,0"/></StackPanel></StackPanel></Border>
                             </StackPanel>
                         </Grid>
                     </ScrollViewer>
@@ -334,7 +334,7 @@
                         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                             <!-- Welcome Icon -->
                             <Border Background="{DynamicResource SurfaceBrush}" CornerRadius="100" Width="140" Height="140" HorizontalAlignment="Center" Margin="0,0,0,40">
-                                <TextBlock Text="&#xE909;" FontFamily="Segoe MDL2 Assets" FontSize="64" Foreground="{DynamicResource AccentBrush}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <TextBlock Text="&#xE909;" FontFamily="Segoe Fluent Icons" FontSize="64" Foreground="{DynamicResource AccentBrush}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
 
                             <!-- Welcome Message -->
@@ -349,9 +349,9 @@
                             <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
                                 <StackPanel Grid.Column="0"><TextBlock Text="Applications" FontSize="{DynamicResource FontSizeHeader}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/><TextBlock Text="View applications | MS Store apps | Version checker" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,8,0,0"/></StackPanel>
                                 <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
-                                    <Button x:Name="ExportAppsButton" Style="{StaticResource SecondaryButtonStyle}" Padding="16,10" Margin="0,0,12,0"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE74E;" FontFamily="Segoe MDL2 Assets" FontSize="14" Margin="0,0,8,0"/><TextBlock Text="Export"/></StackPanel></Button>
-                                    <Button x:Name="CheckVersionsButton" Style="{StaticResource SecondaryButtonStyle}" Padding="16,10" Margin="0,0,12,0" IsEnabled="False"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE895;" FontFamily="Segoe MDL2 Assets" FontSize="14" Margin="0,0,8,0"/><TextBlock Text="Check Versions"/></StackPanel></Button>
-                                    <Button x:Name="LoadAppsButton" Style="{StaticResource ModernButtonStyle}" Padding="16,10"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE896;" FontFamily="Segoe MDL2 Assets" FontSize="14" Margin="0,0,8,0"/><TextBlock Text="Fetch Applications"/></StackPanel></Button>
+                                    <Button x:Name="ExportAppsButton" Style="{StaticResource SecondaryButtonStyle}" Padding="16,10" Margin="0,0,12,0"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE74E;" FontFamily="Segoe Fluent Icons" FontSize="14" Margin="0,0,8,0"/><TextBlock Text="Export"/></StackPanel></Button>
+                                    <Button x:Name="CheckVersionsButton" Style="{StaticResource SecondaryButtonStyle}" Padding="16,10" Margin="0,0,12,0" IsEnabled="False"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE895;" FontFamily="Segoe Fluent Icons" FontSize="14" Margin="0,0,8,0"/><TextBlock Text="Check Versions"/></StackPanel></Button>
+                                    <Button x:Name="LoadAppsButton" Style="{StaticResource ModernButtonStyle}" Padding="16,10"><StackPanel Orientation="Horizontal"><TextBlock Text="&#xE896;" FontFamily="Segoe Fluent Icons" FontSize="14" Margin="0,0,8,0"/><TextBlock Text="Fetch Applications"/></StackPanel></Button>
                                 </StackPanel>
                             </Grid>
                         </Border>
@@ -368,7 +368,7 @@
                                 </Border>
 
                                 <StackPanel x:Name="AppsEmptyState" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Visible">
-                                    <TextBlock Text="&#xE71D;" FontFamily="Segoe MDL2 Assets" FontSize="64" Foreground="{DynamicResource TextTertiaryBrush}" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="&#xE71D;" FontFamily="Segoe Fluent Icons" FontSize="64" Foreground="{DynamicResource TextTertiaryBrush}" HorizontalAlignment="Center"/>
                                     <TextBlock Text="No applications loaded" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" HorizontalAlignment="Center" Margin="0,16,0,0"/>
                                     <TextBlock Text="Click 'Fetch Applications' to load applications from Intune" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" TextAlignment="Center" MaxWidth="400" TextWrapping="Wrap" Margin="0,8,0,0"/>
                                 </StackPanel>
@@ -454,21 +454,21 @@
                                         <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="20"/><ColumnDefinition Width="*"/><ColumnDefinition Width="20"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
                                         <Button Grid.Column="0" x:Name="SettingsCatalogButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE713;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                                                <TextBlock Text="&#xE713;" FontFamily="Segoe Fluent Icons" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                                                 <TextBlock Text="Settings Catalog" FontWeight="SemiBold" HorizontalAlignment="Center"/>
                                                 <TextBlock x:Name="SettingsCatalogCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                                             </StackPanel>
                                         </Button>
                                         <Button Grid.Column="2" x:Name="DeviceRestrictionsButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE72E;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                                                <TextBlock Text="&#xE72E;" FontFamily="Segoe Fluent Icons" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                                                 <TextBlock Text="Device Restrictions" FontWeight="SemiBold" HorizontalAlignment="Center"/>
                                                 <TextBlock x:Name="DeviceRestrictionsCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                                             </StackPanel>
                                         </Button>
                                         <Button Grid.Column="4" x:Name="AdminTemplatesButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE8B7;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                                                <TextBlock Text="&#xE8B7;" FontFamily="Segoe Fluent Icons" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                                                 <TextBlock Text="Administrative Templates" FontWeight="SemiBold" HorizontalAlignment="Center"/>
                                                 <TextBlock x:Name="AdminTemplatesCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                                             </StackPanel>
@@ -491,14 +491,14 @@
                                         <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="20"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
                                         <Button Grid.Column="0" x:Name="AndroidAppProtectionButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE8EA;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                                                <TextBlock Text="&#xE8EA;" FontFamily="Segoe Fluent Icons" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                                                 <TextBlock Text="Android" FontWeight="SemiBold" HorizontalAlignment="Center"/>
                                                 <TextBlock x:Name="AndroidAppProtectionCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                                             </StackPanel>
                                         </Button>
                                         <Button Grid.Column="2" x:Name="iOSAppProtectionButton" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Stretch" Padding="16,12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE8B8;" FontFamily="Segoe MDL2 Assets" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                                                <TextBlock Text="&#xE8B8;" FontFamily="Segoe Fluent Icons" FontSize="24" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                                                 <TextBlock Text="iOS/iPadOS" FontWeight="SemiBold" HorizontalAlignment="Center"/>
                                                 <TextBlock x:Name="iOSAppProtectionCount" Text="0 policies" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                                             </StackPanel>
@@ -574,7 +574,7 @@
 
                                         <Border Grid.Column="0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="8" Padding="16,12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE7BA;" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="{DynamicResource WarningBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
+                                                <TextBlock Text="&#xE7BA;" FontFamily="Segoe Fluent Icons" FontSize="32" Foreground="{DynamicResource WarningBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
                                                 <TextBlock Text="No Assignments" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="{DynamicResource FontSizeMedium}"/>
                                                 <TextBlock x:Name="NoAssignmentsCount" Text="0 items" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,8"/>
                                                 <Button x:Name="ViewNoAssignmentsButton" Content="View Details" Style="{StaticResource SecondaryButtonStyle}" Padding="8,4" FontSize="{DynamicResource FontSizeSmall}" HorizontalAlignment="Center" Visibility="Collapsed"/>
@@ -583,7 +583,7 @@
 
                                         <Border Grid.Column="2" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="8" Padding="16,12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE7E8;" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="{DynamicResource ErrorBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
+                                                <TextBlock Text="&#xE7E8;" FontFamily="Segoe Fluent Icons" FontSize="32" Foreground="{DynamicResource ErrorBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
                                                 <TextBlock Text="Empty Groups" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="{DynamicResource FontSizeMedium}"/>
                                                 <TextBlock x:Name="EmptyGroupsCount" Text="0 items" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,8"/>
                                                 <Button x:Name="ViewEmptyGroupsButton" Content="View Details" Style="{StaticResource SecondaryButtonStyle}" Padding="8,4" FontSize="{DynamicResource FontSizeSmall}" HorizontalAlignment="Center" Visibility="Collapsed"/>
@@ -592,7 +592,7 @@
 
                                         <Border Grid.Column="4" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="8" Padding="16,12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE946;" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="{DynamicResource InfoBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
+                                                <TextBlock Text="&#xE946;" FontFamily="Segoe Fluent Icons" FontSize="32" Foreground="{DynamicResource InfoBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
                                                 <TextBlock Text="Total Orphaned" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="{DynamicResource FontSizeMedium}"/>
                                                 <TextBlock x:Name="TotalOrphanedCount" Text="0 items" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,8"/>
                                                 <Button x:Name="ViewAllOrphanedButton" Content="View All" Style="{StaticResource SecondaryButtonStyle}" Padding="8,4" FontSize="{DynamicResource FontSizeSmall}" HorizontalAlignment="Center" Visibility="Collapsed"/>
@@ -632,7 +632,7 @@
                                         <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="20"/><ColumnDefinition Width="*"/><ColumnDefinition Width="20"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
                                         <Border Grid.Column="0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource WarningBrush}" BorderThickness="2" CornerRadius="8" Padding="16,12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE7BA;" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="{DynamicResource WarningBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
+                                                <TextBlock Text="&#xE7BA;" FontFamily="Segoe Fluent Icons" FontSize="32" Foreground="{DynamicResource WarningBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
                                                 <TextBlock Text="No Devices" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="{DynamicResource FontSizeMedium}"/>
                                                 <TextBlock x:Name="NoDevicesCount" Text="0 users" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,8"/>
                                                 <Button x:Name="ViewNoDevicesButton" Content="View Details" Style="{StaticResource SecondaryButtonStyle}" Padding="8,4" FontSize="{DynamicResource FontSizeSmall}" HorizontalAlignment="Center"/>
@@ -640,7 +640,7 @@
                                         </Border>
                                         <Border Grid.Column="2" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource InfoBrush}" BorderThickness="2" CornerRadius="8" Padding="16,12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE8B7;" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="{DynamicResource InfoBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
+                                                <TextBlock Text="&#xE8B7;" FontFamily="Segoe Fluent Icons" FontSize="32" Foreground="{DynamicResource InfoBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
                                                 <TextBlock Text="Multiple Devices" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="{DynamicResource FontSizeMedium}"/>
                                                 <TextBlock x:Name="MultipleDevicesCount" Text="0 users" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,8"/>
                                                 <Button x:Name="ViewMultipleDevicesButton" Content="View Details" Style="{StaticResource SecondaryButtonStyle}" Padding="8,4" FontSize="{DynamicResource FontSizeSmall}" HorizontalAlignment="Center"/>
@@ -648,7 +648,7 @@
                                         </Border>
                                         <Border Grid.Column="4" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource SuccessBrush}" BorderThickness="2" CornerRadius="8" Padding="16,12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE8EA;" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="{DynamicResource SuccessBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
+                                                <TextBlock Text="&#xE8EA;" FontFamily="Segoe Fluent Icons" FontSize="32" Foreground="{DynamicResource SuccessBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
                                                 <TextBlock Text="Single Device" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="{DynamicResource FontSizeMedium}"/>
                                                 <TextBlock x:Name="SingleDeviceCount" Text="0 users" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,8"/>
                                                 <Button x:Name="ViewSingleDeviceButton" Content="View Details" Style="{StaticResource SecondaryButtonStyle}" Padding="8,4" FontSize="{DynamicResource FontSizeSmall}" HorizontalAlignment="Center"/>
@@ -677,7 +677,7 @@
                             <!-- Coming Soon Banner -->
                             <Border Background="{DynamicResource NavItemSelectedBrush}" BorderBrush="{DynamicResource AccentBrush}" BorderThickness="1.5" CornerRadius="8" Padding="24" Margin="0,0,0,40">
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="&#xE946;" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,20,0"/>
+                                    <TextBlock Text="&#xE946;" FontFamily="Segoe Fluent Icons" FontSize="32" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,20,0"/>
                                     <StackPanel>
                                         <TextBlock Text="Feature Coming Soon" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}"/>
                                         <TextBlock Text="The reporting engine is currently in development and will be available in a future update." FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" Margin="0,6,0,0"/>
@@ -696,7 +696,7 @@
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Text="&#xE73E;" FontFamily="Segoe MDL2 Assets" FontSize="20" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,16,0"/>
+                                        <TextBlock Grid.Column="0" Text="&#xE73E;" FontFamily="Segoe Fluent Icons" FontSize="20" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,16,0"/>
                                         <TextBlock Grid.Column="1" Text="Conditional Access Overview" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                                     </Grid>
 
@@ -706,7 +706,7 @@
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Text="&#xE73E;" FontFamily="Segoe MDL2 Assets" FontSize="20" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,16,0"/>
+                                        <TextBlock Grid.Column="0" Text="&#xE73E;" FontFamily="Segoe Fluent Icons" FontSize="20" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,16,0"/>
                                         <TextBlock Grid.Column="1" Text="Inactive User Reports" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                                     </Grid>
 
@@ -716,7 +716,7 @@
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Text="&#xE73E;" FontFamily="Segoe MDL2 Assets" FontSize="20" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,16,0"/>
+                                        <TextBlock Grid.Column="0" Text="&#xE73E;" FontFamily="Segoe Fluent Icons" FontSize="20" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,16,0"/>
                                         <TextBlock Grid.Column="1" Text="Tenant Health Report" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                                     </Grid>
 
@@ -726,7 +726,7 @@
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Text="&#xE73E;" FontFamily="Segoe MDL2 Assets" FontSize="20" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,16,0"/>
+                                        <TextBlock Grid.Column="0" Text="&#xE73E;" FontFamily="Segoe Fluent Icons" FontSize="20" Foreground="{DynamicResource AccentBrush}" VerticalAlignment="Center" Margin="0,0,16,0"/>
                                         <TextBlock Grid.Column="1" Text="Security Baseline Report" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                                     </Grid>
                                 </StackPanel>
@@ -773,7 +773,7 @@
                             <StackPanel x:Name="RemediationScriptsContainer"/>
                             <Border x:Name="RemediationNoResults" Style="{StaticResource CardStyle}" Padding="40" Visibility="Collapsed">
                                 <StackPanel HorizontalAlignment="Center">
-                                    <TextBlock Text="&#xE11A;" FontFamily="Segoe MDL2 Assets" FontSize="48" HorizontalAlignment="Center" Foreground="{DynamicResource TextTertiaryBrush}" Margin="0,0,0,16"/>
+                                    <TextBlock Text="&#xE11A;" FontFamily="Segoe Fluent Icons" FontSize="48" HorizontalAlignment="Center" Foreground="{DynamicResource TextTertiaryBrush}" Margin="0,0,0,16"/>
                                     <TextBlock Text="No scripts found" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                                     <TextBlock Text="Try adjusting your search or filter criteria" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center"/>
                                 </StackPanel>
@@ -880,7 +880,7 @@
                                 <StackPanel>
                                     <Grid Margin="0,0,0,20">
                                         <StackPanel Orientation="Horizontal">
-                                            <TextBlock x:Name="BackupResultIcon" Text="&#xE73E;" FontFamily="Segoe MDL2 Assets" FontSize="24" Foreground="{DynamicResource SuccessBrush}" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                                            <TextBlock x:Name="BackupResultIcon" Text="&#xE73E;" FontFamily="Segoe Fluent Icons" FontSize="24" Foreground="{DynamicResource SuccessBrush}" Margin="0,0,12,0" VerticalAlignment="Center"/>
                                             <TextBlock x:Name="BackupResultTitle" Text="Backup Complete" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimaryBrush}" VerticalAlignment="Center"/>
                                         </StackPanel>
                                     </Grid>
@@ -899,7 +899,7 @@
 
                                         <Border Grid.Column="0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="6" Padding="12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE8FD;" FontFamily="Segoe MDL2 Assets" FontSize="20" Foreground="{DynamicResource InfoBrush}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                                                <TextBlock Text="&#xE8FD;" FontFamily="Segoe Fluent Icons" FontSize="20" Foreground="{DynamicResource InfoBrush}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                                                 <TextBlock x:Name="BackupItemsCount" Text="0" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" HorizontalAlignment="Center" Foreground="{DynamicResource TextPrimaryBrush}"/>
                                                 <TextBlock Text="Items Backed Up" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                                             </StackPanel>
@@ -907,7 +907,7 @@
 
                                         <Border Grid.Column="2" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="6" Padding="12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE838;" FontFamily="Segoe MDL2 Assets" FontSize="20" Foreground="{DynamicResource SuccessBrush}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                                                <TextBlock Text="&#xE838;" FontFamily="Segoe Fluent Icons" FontSize="20" Foreground="{DynamicResource SuccessBrush}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                                                 <TextBlock x:Name="BackupFilesCount" Text="0" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" HorizontalAlignment="Center" Foreground="{DynamicResource TextPrimaryBrush}"/>
                                                 <TextBlock Text="Files Created" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                                             </StackPanel>
@@ -915,7 +915,7 @@
 
                                         <Border Grid.Column="4" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="6" Padding="12">
                                             <StackPanel>
-                                                <TextBlock Text="&#xE823;" FontFamily="Segoe MDL2 Assets" FontSize="20" Foreground="{DynamicResource AccentBrush}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                                                <TextBlock Text="&#xE823;" FontFamily="Segoe Fluent Icons" FontSize="20" Foreground="{DynamicResource AccentBrush}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                                                 <TextBlock x:Name="BackupDuration" Text="0s" FontSize="{DynamicResource FontSizeLarge}" FontWeight="SemiBold" HorizontalAlignment="Center" Foreground="{DynamicResource TextPrimaryBrush}"/>
                                                 <TextBlock Text="Duration" FontSize="{DynamicResource FontSizeSmall}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                                             </StackPanel>

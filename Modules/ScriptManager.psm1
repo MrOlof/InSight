@@ -42,7 +42,7 @@ function Register-IntuneScript {
         Array of Graph API permissions required by the script.
 
     .PARAMETER Icon
-        Icon character from Segoe MDL2 Assets font.
+        Icon character from Segoe Fluent Icons font.
 
     .PARAMETER Parameters
         Hashtable defining script parameters for GUI input fields.

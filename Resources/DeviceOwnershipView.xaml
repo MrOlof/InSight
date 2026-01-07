@@ -52,7 +52,7 @@
                     <!-- Users with No Devices -->
                     <Border Grid.Column="0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource WarningBrush}" BorderThickness="2" CornerRadius="8" Padding="16,12">
                         <StackPanel>
-                            <TextBlock Text="&#xE7BA;" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="{DynamicResource WarningBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
+                            <TextBlock Text="&#xE7BA;" FontFamily="Segoe Fluent Icons" FontSize="32" Foreground="{DynamicResource WarningBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
                             <TextBlock Text="No Devices" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="{DynamicResource FontSizeMedium}"/>
                             <TextBlock x:Name="NoDevicesCount" Text="0 users" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,8"/>
                             <Button x:Name="ViewNoDevicesButton" Content="View Details" Style="{StaticResource SecondaryButtonStyle}" Padding="8,4" FontSize="{DynamicResource FontSizeSmall}" HorizontalAlignment="Center"/>
@@ -62,7 +62,7 @@
                     <!-- Users with Multiple Devices -->
                     <Border Grid.Column="2" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource InfoBrush}" BorderThickness="2" CornerRadius="8" Padding="16,12">
                         <StackPanel>
-                            <TextBlock Text="&#xE8B7;" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="{DynamicResource InfoBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
+                            <TextBlock Text="&#xE8B7;" FontFamily="Segoe Fluent Icons" FontSize="32" Foreground="{DynamicResource InfoBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
                             <TextBlock Text="Multiple Devices" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="{DynamicResource FontSizeMedium}"/>
                             <TextBlock x:Name="MultipleDevicesCount" Text="0 users" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,8"/>
                             <Button x:Name="ViewMultipleDevicesButton" Content="View Details" Style="{StaticResource SecondaryButtonStyle}" Padding="8,4" FontSize="{DynamicResource FontSizeSmall}" HorizontalAlignment="Center"/>
@@ -72,7 +72,7 @@
                     <!-- Users with Single Device -->
                     <Border Grid.Column="4" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource SuccessBrush}" BorderThickness="2" CornerRadius="8" Padding="16,12">
                         <StackPanel>
-                            <TextBlock Text="&#xE8EA;" FontFamily="Segoe MDL2 Assets" FontSize="32" Foreground="{DynamicResource SuccessBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
+                            <TextBlock Text="&#xE8EA;" FontFamily="Segoe Fluent Icons" FontSize="32" Foreground="{DynamicResource SuccessBrush}" HorizontalAlignment="Center" Margin="0,0,0,12"/>
                             <TextBlock Text="Single Device" FontWeight="SemiBold" HorizontalAlignment="Center" FontSize="{DynamicResource FontSizeMedium}"/>
                             <TextBlock x:Name="SingleDeviceCount" Text="0 users" FontSize="{DynamicResource FontSizeNormal}" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center" Margin="0,4,0,8"/>
                             <Button x:Name="ViewSingleDeviceButton" Content="View Details" Style="{StaticResource SecondaryButtonStyle}" Padding="8,4" FontSize="{DynamicResource FontSizeSmall}" HorizontalAlignment="Center"/>

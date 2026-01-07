@@ -91,7 +91,7 @@
 
                     <Grid Grid.Column="0">
                         <TextBox x:Name="SearchBox" Style="{StaticResource SearchBoxStyle}"/>
-                        <TextBlock Text="&#xE721;" FontFamily="Segoe MDL2 Assets" FontSize="14" Foreground="{StaticResource TextTertiaryBrush}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="12,0,0,0" IsHitTestVisible="False"/>
+                        <TextBlock Text="&#xE721;" FontFamily="Segoe Fluent Icons" FontSize="14" Foreground="{StaticResource TextTertiaryBrush}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="12,0,0,0" IsHitTestVisible="False"/>
                         <TextBlock x:Name="SearchPlaceholder" Text="Search for settings (e.g., 'edge', 'firewall', 'password')..." FontSize="{StaticResource FontSizeNormal}" Foreground="{StaticResource TextTertiaryBrush}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="36,0,0,0" IsHitTestVisible="False"/>
                     </Grid>
 
@@ -108,7 +108,7 @@
             <Grid>
                 <!-- Empty state -->
                 <StackPanel x:Name="EmptyState" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Visible">
-                    <TextBlock Text="&#xE721;" FontFamily="Segoe MDL2 Assets" FontSize="64" Foreground="{StaticResource TextTertiaryBrush}" HorizontalAlignment="Center"/>
+                    <TextBlock Text="&#xE721;" FontFamily="Segoe Fluent Icons" FontSize="64" Foreground="{StaticResource TextTertiaryBrush}" HorizontalAlignment="Center"/>
                     <TextBlock Text="Enter a search term to find policies" FontSize="{StaticResource FontSizeLarge}" FontWeight="SemiBold" Foreground="{StaticResource TextPrimaryBrush}" HorizontalAlignment="Center" Margin="0,16,0,0"/>
                     <TextBlock Text="Search through policy names, descriptions, Settings Catalog settings, and Device Configuration properties. Administrative Templates are searchable by name only." FontSize="{StaticResource FontSizeNormal}" Foreground="{StaticResource TextSecondaryBrush}" HorizontalAlignment="Center" TextAlignment="Center" MaxWidth="500" TextWrapping="Wrap" Margin="0,8,0,0"/>
                 </StackPanel>
