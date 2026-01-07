@@ -4,6 +4,8 @@
 
 A PowerShell GUI tool for Microsoft Intune that provides insights and visibility where the Intune portal falls short.
 
+BLOG Post: https://mrolof.dev/blog/insight-intune-gui
+
 </div>
 
 ## Features
