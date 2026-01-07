@@ -5121,6 +5121,22 @@ function Create-ScriptCard {
             [void]$buttonStack.Children.Add($viewRemediationBtn)
         }
 
+        # Save Script Button
+        $saveScriptBtn = New-Object System.Windows.Controls.Button
+        $saveScriptBtn.Content = "Save Script"
+        if ($secondaryStyle) {
+            $saveScriptBtn.Style = $secondaryStyle
+        }
+        $saveScriptBtn.Padding = "10,6"
+        $saveScriptBtn.SetResourceReference([System.Windows.Controls.Button]::FontSizeProperty, "FontSizeSmall")
+        $saveScriptBtn.Tag = $Script
+        $saveScriptBtn.Margin = "8,0,0,0"
+        $saveScriptBtn.Add_Click({
+            param($sender, $e)
+            Save-RemediationScript -Script $sender.Tag
+        })
+        [void]$buttonStack.Children.Add($saveScriptBtn)
+
         [System.Windows.Controls.Grid]::SetColumn($buttonStack, 0)
         [void]$buttonGrid.Children.Add($buttonStack)
 
@@ -5149,6 +5165,119 @@ function Create-ScriptCard {
     catch {
         Write-LogError -Message "Failed to create script card for '$($Script.Name)': $_" -Source 'RemediationScripts'
         return $null
+    }
+}
+
+function Save-RemediationScript {
+    <#
+    .SYNOPSIS
+    Saves all files from a remediation script to a user-selected folder.
+
+    .DESCRIPTION
+    Opens a folder browser dialog allowing the user to select a destination folder.
+    Creates a subfolder named after the script and copies all files from the script's
+    source folder to the destination.
+
+    .PARAMETER Script
+    The script object containing Name, DetectionScript, and other properties.
+    #>
+    param(
+        [Parameter(Mandatory = $true)]
+        [PSCustomObject]$Script
+    )
+
+    try {
+        Write-LogInfo -Message "Starting save operation for script: $($Script.Name)" -Source 'RemediationScripts'
+
+        # Show folder browser dialog
+        $folderBrowser = New-Object System.Windows.Forms.FolderBrowserDialog
+        $folderBrowser.Description = "Select destination folder to save '$($Script.Name)'"
+        $folderBrowser.ShowNewFolderButton = $true
+
+        if ($folderBrowser.ShowDialog() -ne 'OK') {
+            Write-LogInfo -Message "User cancelled save operation for script: $($Script.Name)" -Source 'RemediationScripts'
+            return
+        }
+
+        $selectedPath = $folderBrowser.SelectedPath
+
+        # Find the detection script file to locate the source folder
+        $detectionScriptFile = Get-ChildItem -Path $script:RemediationScriptsSourcePath -Filter $Script.DetectionScript -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+
+        # Fallback to second source path if not found
+        if (-not $detectionScriptFile) {
+            $detectionScriptFile = Get-ChildItem -Path $script:RemediationScriptsSourcePath2 -Filter $Script.DetectionScript -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
+        }
+
+        if (-not $detectionScriptFile) {
+            throw "Could not locate detection script file: $($Script.DetectionScript)"
+        }
+
+        # Get the source folder (parent directory of the detection script)
+        $sourceFolder = $detectionScriptFile.DirectoryName
+        Write-LogInfo -Message "Source folder located: $sourceFolder" -Source 'RemediationScripts'
+
+        # Sanitize folder name (remove invalid characters)
+        $folderName = $Script.Name -replace '[\\/:*?"<>|]', '-'
+        $destinationFolder = Join-Path -Path $selectedPath -ChildPath $folderName
+
+        # Check if destination folder exists and prompt for confirmation
+        if (Test-Path -Path $destinationFolder) {
+            $result = [System.Windows.MessageBox]::Show(
+                "The folder '$folderName' already exists in the selected location. Do you want to overwrite it?",
+                "Folder Exists",
+                [System.Windows.MessageBoxButton]::YesNo,
+                [System.Windows.MessageBoxImage]::Question
+            )
+
+            if ($result -ne 'Yes') {
+                Write-LogInfo -Message "User chose not to overwrite existing folder for script: $($Script.Name)" -Source 'RemediationScripts'
+                return
+            }
+        }
+
+        # Create destination folder
+        if (-not (Test-Path -Path $destinationFolder)) {
+            New-Item -Path $destinationFolder -ItemType Directory -Force | Out-Null
+        }
+
+        # Copy all files from source folder to destination
+        $copiedFiles = @()
+        Get-ChildItem -Path $sourceFolder -File | ForEach-Object {
+            Copy-Item -Path $_.FullName -Destination $destinationFolder -Force -ErrorAction Stop
+            $copiedFiles += $_.Name
+            Write-LogInfo -Message "Copied file: $($_.Name)" -Source 'RemediationScripts'
+        }
+
+        # Show success message
+        $fileCount = $copiedFiles.Count
+        $message = "Successfully saved $fileCount file(s) to:`n$destinationFolder`n`nFiles copied:`n" + ($copiedFiles -join "`n")
+        [System.Windows.MessageBox]::Show(
+            $message,
+            "Save Successful",
+            [System.Windows.MessageBoxButton]::OK,
+            [System.Windows.MessageBoxImage]::Information
+        )
+
+        Write-LogInfo -Message "Successfully saved $fileCount file(s) for script '$($Script.Name)' to: $destinationFolder" -Source 'RemediationScripts'
+    }
+    catch [System.UnauthorizedAccessException] {
+        Write-LogError -Message "Access denied while saving script '$($Script.Name)': $_" -Source 'RemediationScripts'
+        [System.Windows.MessageBox]::Show(
+            "Access denied. You do not have permission to write to the selected location.`n`nPlease select a different folder or run the application with appropriate permissions.",
+            "Access Denied",
+            [System.Windows.MessageBoxButton]::OK,
+            [System.Windows.MessageBoxImage]::Error
+        )
+    }
+    catch {
+        Write-LogError -Message "Failed to save script '$($Script.Name)': $_" -Source 'RemediationScripts'
+        [System.Windows.MessageBox]::Show(
+            "Failed to save script files.`n`nError: $($_.Exception.Message)",
+            "Save Error",
+            [System.Windows.MessageBoxButton]::OK,
+            [System.Windows.MessageBoxImage]::Error
+        )
     }
 }
 
