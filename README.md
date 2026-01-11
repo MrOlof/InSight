@@ -2,6 +2,8 @@
 
 # InSight
 
+### v1.3.0
+
 A PowerShell GUI tool for Microsoft Intune that provides insights and visibility where the Intune portal falls short.
 
 Blog Post
@@ -10,17 +12,33 @@ https://mrolof.dev/blog/insight-intune-gui
 
 </div>
 
+## What's New in v1.3.0
+
+🆕 **Reports Feature**: Generate comprehensive reports for your Intune and Entra ID environment
+- Authentication Methods Analysis
+- Inactive Users Detection
+- Conditional Access Effectiveness
+- Shadow IT and Unmanaged Devices
+
+⚡ **Device Ownership Performance**: Significantly improved query performance for large user groups in enterprise deployments
+
+🔗 **Nested Groups Support**: Device ownership analysis now recursively processes nested Entra ID groups
+
+💾 **Save Remediation Scripts**: Export scripts directly to disk for version control and automation workflows
+
 ## Features
 
-📊 **Device Ownership**: Analyze device ownership for user groups.
+📊 **Reports**: Generate comprehensive reports for authentication methods, inactive users, conditional access effectiveness, and shadow IT detection.
 
-💾 **Configuration Backup**: Export your entire Intune configuration to JSON files. 
+📈 **Device Ownership**: Analyze device ownership for user groups with support for nested groups and optimized performance.
+
+💾 **Configuration Backup**: Export your entire Intune configuration to JSON files.
 
 🎯 **Assignment Tracking**: View policy and app assignments for specific groups and find orphaned policies.
 
 📱 **Application Insights**: View all Intune applications with version tracking and export capabilities.
 
-🔨 **Remediation Scripts**: Browse a library of community remediation scripts ready for deployment.
+🔨 **Remediation Scripts**: Browse and save community remediation scripts ready for deployment.
 
 
 ## Screenshots
@@ -63,12 +81,20 @@ Run the application:
 ## Usage
 
 1. **Launch the Application**: Run `Start-InSight.ps1`
-2. **Sign In**: Authenticate with your Microsoft Account
-3. **Grant Permissions**: Accept the required Microsoft Graph API permissions
-4. **Select a Tool**: Choose from the left sidebar (Applications, Configurations, Assignments, etc.)
+2. **Select a Tool**: Choose from the left sidebar (Applications, Configurations, Assignments, Reports, etc.)
+3. **Authenticate When Needed**: Each feature will prompt for authentication when you use it
+4. **Grant Permissions**: Accept the required Microsoft Graph API permissions when prompted
 5. **Perform Analysis**: Use the tool's features to analyze or export data
 
 ### Common Workflows
+
+**Generate Reports:**
+1. Click Reports in the left menu
+2. Select the report type you want to generate
+3. Choose the analysis timeframe (7, 14, or 30 days for Conditional Access and Shadow IT reports)
+4. Click Generate Report
+5. Review results in the application
+6. Open the HTML report in your browser or navigate to the output folder
 
 **Backup Intune Configuration:**
 1. Click Backup in the left menu
@@ -81,7 +107,7 @@ Run the application:
 1. Click Device Ownership
 2. Search for a user group
 3. Click Analyze Devices
-4. Review results categorized by device count
+4. Review results categorized by device count (now includes nested groups)
 5. Export to CSV if needed
 
 **Find Orphaned Policies:**
@@ -94,11 +120,41 @@ Run the application:
 
 ## Features in Detail
 
+### Reports
+Generate comprehensive HTML reports for security and compliance insights:
+
+**Authentication Methods Report:**
+- Overview of MFA adoption across your organization
+- Breakdown by authentication method (Phone, Authenticator, FIDO2, etc.)
+- User-level details with registration status
+- Identifies users without MFA configured
+
+**Inactive Users Report:**
+- Detect dormant accounts that haven't signed in recently
+- Configurable inactivity threshold
+- Security risk assessment
+- Export capabilities for cleanup workflows
+
+**Conditional Access Effectiveness Report:**
+- Analyze sign-in logs against Conditional Access policies
+- Identify authentication patterns and policy coverage
+- Configurable analysis period (7, 14, or 30 days)
+- Performance optimized for large tenants
+
+**Shadow IT and Unmanaged Devices Report:**
+- Discover devices accessing your environment that aren't managed by Intune
+- Identify BYOD and compliance gaps
+- Risk assessment based on sign-in activity
+- Configurable analysis period (7, 14, or 30 days)
+
+All reports are generated as styled HTML files with interactive tables and can be opened directly from the application.
+
 ### Authentication
 - MSAL-based OAuth2 authentication
 - Automatic token refresh
 - Session management with PIM support
 - Permission tracking and validation
+- On-demand authentication per feature (no upfront sign-in required)
 
 ### Configuration Backup
 Supported resource types:
@@ -117,6 +173,13 @@ Optional features:
 - Exclude built-in policies
 - API version selection (v1.0 or Beta)
 - Timestamped backup folders
+
+### Device Ownership Analysis
+- Recursive nested group support for complete visibility
+- Optimized performance for enterprise-scale deployments
+- Device categorization by ownership count
+- User-level device distribution
+- Export to CSV for further analysis
 
 ### Assignment Analysis
 - Device group assignment tracking
@@ -150,6 +213,11 @@ InSight/
 │   ├── DeviceOwnershipView.xaml    # Device ownership UI
 │   └── RemediationScripts.json     # Script library
 ├── Scripts/
+│   ├── Reports/
+│   │   ├── EntraAuthReport.ps1                           # Authentication methods report
+│   │   ├── InactiveUsersReport.ps1                       # Inactive users report
+│   │   ├── ConditionalAccessEffectivenessReport.ps1      # Conditional Access analysis
+│   │   └── ShadowIT-UnmanagedDevices.ps1                 # Shadow IT detection
 │   ├── Get-GroupDeviceOwnershipAnalysis.ps1
 │   └── ScriptTemplate.ps1
 └── Logs/                           # Application logs
@@ -174,21 +242,27 @@ Settings are stored in `%LOCALAPPDATA%\IntuneAdmin\config.json`:
 ## Security
 
 - Read-only by default for safety
+- On-demand authentication (features authenticate only when used)
 - MSAL OAuth2 authentication
 - Local token caching with encryption
 - Automatic token refresh
 - No credentials stored in code
 - Comprehensive logging with sensitive data redaction
+- Minimal permission requests (only what each feature needs)
 
 ## Required Permissions
 
 The application requests the following Microsoft Graph API permissions:
-- `DeviceManagementManagedDevices.Read.All`
-- `DeviceManagementApps.Read.All`
-- `DeviceManagementConfiguration.Read.All`
-- `User.Read.All`
-- `Directory.Read.All`
-- `Group.Read.All`
+- `DeviceManagementManagedDevices.Read.All` - Read Intune managed devices
+- `DeviceManagementApps.Read.All` - Read Intune applications
+- `DeviceManagementConfiguration.Read.All` - Read Intune configuration policies
+- `User.Read.All` - Read user profiles and authentication methods
+- `Directory.Read.All` - Read directory data
+- `Group.Read.All` - Read group memberships (including nested groups)
+- `AuditLog.Read.All` - Read sign-in logs for reports
+- `Policy.Read.All` - Read Conditional Access policies
+
+Permissions are requested on-demand when you use each feature. Admin consent may be required for some permissions.
 
 ## Logging
 
